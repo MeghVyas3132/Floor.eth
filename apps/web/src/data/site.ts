@@ -38,7 +38,7 @@ export const hero = {
   ] satisfies HeroLine[],
   /** The plain sentence, for the heading's accessible name. */
   label: "Security ratings for onchain collateral, with bounded enforcement.",
-  sub: "Floor continuously checks the effective security of collateral: who can create or release it, which independent verifiers must agree, and how quickly its controls can change. Lenders can use the evidence to reduce new exposure automatically.",
+  sub: "Floor checks the effective security of collateral: who can create or release it, which independent verifiers must agree, and how quickly its controls can change. Lenders can use the evidence to reduce new exposure automatically.",
   stages: ["Resolve", "Assess", "Evidence", "Respond"],
   foot: "Security posture, at a pinned block",
   /**
@@ -54,7 +54,7 @@ export const hero = {
     "Rate limits",
     "Mint authority",
     "Send and receive libraries",
-    "Oracle pins",
+    "Inbound limits",
     "Delegates and owners",
     "Pinned block",
     "Recomputable evidence",
@@ -539,8 +539,8 @@ export const footer = {
     {
       head: "Capabilities",
       links: [
-        { to: "#/blast", label: "Floor Graph — the dependency map" },
-        { to: "#/check", label: "Floor Check — pre-sign and CI" },
+        { to: "#/blast", label: "Floor Graph — the dependency map (preview)" },
+        { to: "#/check", label: "Floor Check — pre-sign and CI (planned)" },
         { to: "#/docs#spec", label: "Floor Rating — graded against a rule pack" },
         { to: "#/enforcement", label: "Floor Enforcers — opt-in, reduce only" },
       ],

@@ -1,5 +1,5 @@
 {
- "block": 132061699,
+ "block": 132148654,
  "rpcs": [
   "bsc-dataseed.bnbchain.org",
   "bsc-rpc.publicnode.com"
@@ -11,6 +11,7 @@
    "symbol": "BTCB",
    "underlying": "0x7130d2a12b9bcbfae4f2634d864a1ee1ce3ead9c",
    "type": "OFT_ADAPTER",
+   "lzVersion": "v2",
    "kind": "adapter",
    "sharedDecimals": 6,
    "tokenDecimals": 18,
@@ -26,7 +27,7 @@
     {
      "name": "inbound-limit",
      "eid": 30361,
-     "forkBlock": 132061699,
+     "forkBlock": 132148654,
      "escrowSD": "1801982",
      "outcome": "NO_INBOUND_LIMIT",
      "revert": null,
@@ -41,6 +42,7 @@
    "symbol": "Cake",
    "underlying": "0x0e09fabb73bd3ade0a17ecc321fd13a19e81ce82",
    "type": "OFT_ADAPTER",
+   "lzVersion": "v1",
    "eids": [],
    "outcome": "NO_PEERS",
    "results": []
@@ -50,6 +52,7 @@
    "symbol": "WBNB",
    "underlying": "0xbb4cdb9cbd36b01bd1cbaebf2de08d9173bc095c",
    "type": "OFT_ADAPTER",
+   "lzVersion": "v1",
    "eids": [],
    "outcome": "NO_PEERS",
    "results": []

@@ -1,8 +1,8 @@
 {
- "block": 26357878,
+ "block": 26361030,
  "rpcs": [
   "eth-mainnet.public.blastapi.io",
-  "gateway.tenderly.co",
+  "api.zan.top",
   "rpc.mevblocker.io"
  ],
  "method": "eth_call from EndpointV2 (no broadcast); docs/09",
@@ -12,6 +12,7 @@
    "symbol": "BAL",
    "underlying": "0xba100000625a3754423978a60c9317c58a424e3d",
    "type": "OFT_ADAPTER",
+   "lzVersion": "v1",
    "eids": [],
    "outcome": "NO_PEERS",
    "results": []
@@ -21,6 +22,7 @@
    "symbol": "CRV",
    "underlying": "0xd533a949740bb3306d119cc777fa900ba034cd52",
    "type": "OFT_ADAPTER",
+   "lzVersion": "v1",
    "eids": [],
    "outcome": "NO_PEERS",
    "results": []
@@ -30,6 +32,7 @@
    "symbol": "DAI",
    "underlying": "0x6b175474e89094c44da98b954eedeac495271d0f",
    "type": "OFT_ADAPTER",
+   "lzVersion": "v1",
    "eids": [],
    "outcome": "NO_PEERS",
    "results": []
@@ -39,6 +42,7 @@
    "symbol": "ETHx",
    "underlying": "0xa35b1b31ce002fbf2058d22f30f95d405200a15b",
    "type": "OFT_ADAPTER",
+   "lzVersion": "v2",
    "eids": [],
    "outcome": "NO_PEERS",
    "results": []
@@ -48,6 +52,7 @@
    "symbol": "FBTC",
    "underlying": "0xc96de26018a54d51c097160568752c4e3bd6c364",
    "type": "OFT_ADAPTER",
+   "lzVersion": "v2",
    "kind": "adapter",
    "sharedDecimals": 8,
    "tokenDecimals": 8,
@@ -63,7 +68,7 @@
     {
      "name": "inbound-limit",
      "eid": 30362,
-     "forkBlock": 26357878,
+     "forkBlock": 26361030,
      "escrowSD": "1797963",
      "outcome": "TEST_ERROR",
      "revert": "Error(from is blocked)",
@@ -78,6 +83,7 @@
    "symbol": "FRAX",
    "underlying": "0x853d955acef822db058eb8505911ed77f175b99e",
    "type": "OFT_ADAPTER",
+   "lzVersion": "v2",
    "eids": [],
    "outcome": "NO_PEERS",
    "results": []
@@ -87,272 +93,31 @@
    "symbol": "FRAX",
    "underlying": "0x853d955acef822db058eb8505911ed77f175b99e",
    "type": "OFT_ADAPTER",
-   "kind": "adapter",
-   "sharedDecimals": 6,
-   "tokenDecimals": 18,
-   "escrowTokens": 73.93235,
-   "eids": [
-    30168,
-    30184
-   ],
-   "outcome": "NO_INBOUND_LIMIT",
-   "routeCounts": {
-    "NO_INBOUND_LIMIT": 2
-   },
-   "results": [
-    {
-     "name": "inbound-limit",
-     "eid": 30168,
-     "forkBlock": 26357878,
-     "escrowSD": "73932350",
-     "outcome": "NO_INBOUND_LIMIT",
-     "revert": null,
-     "maxAcceptedSD": "73932350",
-     "proof": "full escrow released in one inbound message · full+1 reverts (Error(ERC20: transfer amount exceeds balance)) → escrow is the only ceiling"
-    },
-    {
-     "name": "inbound-limit",
-     "eid": 30184,
-     "forkBlock": 26357878,
-     "escrowSD": "73932350",
-     "outcome": "NO_INBOUND_LIMIT",
-     "revert": null,
-     "maxAcceptedSD": "73932350",
-     "proof": "full escrow released in one inbound message · full+1 reverts (Error(ERC20: transfer amount exceeds balance)) → escrow is the only ceiling"
-    }
-   ],
-   "crossCheck": "agree"
+   "lzVersion": "v2",
+   "error": "RPC Request failed."
   },
   {
    "oapp": "0xc6f59a4fd50cac677b51558489e03138ac1784ec",
    "symbol": "FXS",
    "underlying": "0x3432b6a60d23ca0dfca7761b7ab56459d9c964d0",
    "type": "OFT_ADAPTER",
-   "kind": "adapter",
-   "sharedDecimals": 6,
-   "tokenDecimals": 18,
-   "escrowTokens": 0,
-   "eids": [
-    30102,
-    30106,
-    30109,
-    30110,
-    30111,
-    30158,
-    30168,
-    30184,
-    30243,
-    30255,
-    30260,
-    30274,
-    30280,
-    30332,
-    30339
-   ],
-   "outcome": "UNKNOWN",
-   "routeCounts": {
-    "UNKNOWN": 15
-   },
-   "results": [
-    {
-     "name": "inbound-limit",
-     "eid": 30102,
-     "forkBlock": 26357878,
-     "escrowSD": "0",
-     "outcome": "UNKNOWN",
-     "revert": "Error(FXS::_moveVotes: vote amount underflows)",
-     "maxAcceptedSD": null,
-     "proof": "escrow is empty: nothing to bound (1-unit credit reverts: Error(FXS::_moveVotes: vote amount underflows))"
-    },
-    {
-     "name": "inbound-limit",
-     "eid": 30106,
-     "forkBlock": 26357878,
-     "escrowSD": "0",
-     "outcome": "UNKNOWN",
-     "revert": "Error(FXS::_moveVotes: vote amount underflows)",
-     "maxAcceptedSD": null,
-     "proof": "escrow is empty: nothing to bound (1-unit credit reverts: Error(FXS::_moveVotes: vote amount underflows))"
-    },
-    {
-     "name": "inbound-limit",
-     "eid": 30109,
-     "forkBlock": 26357878,
-     "escrowSD": "0",
-     "outcome": "UNKNOWN",
-     "revert": "Error(FXS::_moveVotes: vote amount underflows)",
-     "maxAcceptedSD": null,
-     "proof": "escrow is empty: nothing to bound (1-unit credit reverts: Error(FXS::_moveVotes: vote amount underflows))"
-    },
-    {
-     "name": "inbound-limit",
-     "eid": 30110,
-     "forkBlock": 26357878,
-     "escrowSD": "0",
-     "outcome": "UNKNOWN",
-     "revert": "Error(FXS::_moveVotes: vote amount underflows)",
-     "maxAcceptedSD": null,
-     "proof": "escrow is empty: nothing to bound (1-unit credit reverts: Error(FXS::_moveVotes: vote amount underflows))"
-    },
-    {
-     "name": "inbound-limit",
-     "eid": 30111,
-     "forkBlock": 26357878,
-     "escrowSD": "0",
-     "outcome": "UNKNOWN",
-     "revert": "Error(FXS::_moveVotes: vote amount underflows)",
-     "maxAcceptedSD": null,
-     "proof": "escrow is empty: nothing to bound (1-unit credit reverts: Error(FXS::_moveVotes: vote amount underflows))"
-    },
-    {
-     "name": "inbound-limit",
-     "eid": 30158,
-     "forkBlock": 26357878,
-     "escrowSD": "0",
-     "outcome": "UNKNOWN",
-     "revert": "Error(FXS::_moveVotes: vote amount underflows)",
-     "maxAcceptedSD": null,
-     "proof": "escrow is empty: nothing to bound (1-unit credit reverts: Error(FXS::_moveVotes: vote amount underflows))"
-    },
-    {
-     "name": "inbound-limit",
-     "eid": 30168,
-     "forkBlock": 26357878,
-     "escrowSD": "0",
-     "outcome": "UNKNOWN",
-     "revert": "Error(FXS::_moveVotes: vote amount underflows)",
-     "maxAcceptedSD": null,
-     "proof": "escrow is empty: nothing to bound (1-unit credit reverts: Error(FXS::_moveVotes: vote amount underflows))"
-    },
-    {
-     "name": "inbound-limit",
-     "eid": 30184,
-     "forkBlock": 26357878,
-     "escrowSD": "0",
-     "outcome": "UNKNOWN",
-     "revert": "Error(FXS::_moveVotes: vote amount underflows)",
-     "maxAcceptedSD": null,
-     "proof": "escrow is empty: nothing to bound (1-unit credit reverts: Error(FXS::_moveVotes: vote amount underflows))"
-    },
-    {
-     "name": "inbound-limit",
-     "eid": 30243,
-     "forkBlock": 26357878,
-     "escrowSD": "0",
-     "outcome": "UNKNOWN",
-     "revert": "Error(FXS::_moveVotes: vote amount underflows)",
-     "maxAcceptedSD": null,
-     "proof": "escrow is empty: nothing to bound (1-unit credit reverts: Error(FXS::_moveVotes: vote amount underflows))"
-    },
-    {
-     "name": "inbound-limit",
-     "eid": 30255,
-     "forkBlock": 26357878,
-     "escrowSD": "0",
-     "outcome": "UNKNOWN",
-     "revert": "Error(FXS::_moveVotes: vote amount underflows)",
-     "maxAcceptedSD": null,
-     "proof": "escrow is empty: nothing to bound (1-unit credit reverts: Error(FXS::_moveVotes: vote amount underflows))"
-    },
-    {
-     "name": "inbound-limit",
-     "eid": 30260,
-     "forkBlock": 26357878,
-     "escrowSD": "0",
-     "outcome": "UNKNOWN",
-     "revert": "Error(FXS::_moveVotes: vote amount underflows)",
-     "maxAcceptedSD": null,
-     "proof": "escrow is empty: nothing to bound (1-unit credit reverts: Error(FXS::_moveVotes: vote amount underflows))"
-    },
-    {
-     "name": "inbound-limit",
-     "eid": 30274,
-     "forkBlock": 26357878,
-     "escrowSD": "0",
-     "outcome": "UNKNOWN",
-     "revert": "Error(FXS::_moveVotes: vote amount underflows)",
-     "maxAcceptedSD": null,
-     "proof": "escrow is empty: nothing to bound (1-unit credit reverts: Error(FXS::_moveVotes: vote amount underflows))"
-    },
-    {
-     "name": "inbound-limit",
-     "eid": 30280,
-     "forkBlock": 26357878,
-     "escrowSD": "0",
-     "outcome": "UNKNOWN",
-     "revert": "Error(FXS::_moveVotes: vote amount underflows)",
-     "maxAcceptedSD": null,
-     "proof": "escrow is empty: nothing to bound (1-unit credit reverts: Error(FXS::_moveVotes: vote amount underflows))"
-    },
-    {
-     "name": "inbound-limit",
-     "eid": 30332,
-     "forkBlock": 26357878,
-     "escrowSD": "0",
-     "outcome": "UNKNOWN",
-     "revert": "Error(FXS::_moveVotes: vote amount underflows)",
-     "maxAcceptedSD": null,
-     "proof": "escrow is empty: nothing to bound (1-unit credit reverts: Error(FXS::_moveVotes: vote amount underflows))"
-    },
-    {
-     "name": "inbound-limit",
-     "eid": 30339,
-     "forkBlock": 26357878,
-     "escrowSD": "0",
-     "outcome": "UNKNOWN",
-     "revert": "Error(FXS::_moveVotes: vote amount underflows)",
-     "maxAcceptedSD": null,
-     "proof": "escrow is empty: nothing to bound (1-unit credit reverts: Error(FXS::_moveVotes: vote amount underflows))"
-    }
-   ],
-   "crossCheck": "agree"
+   "lzVersion": "v2",
+   "error": "RPC Request failed."
   },
   {
    "oapp": "0x23432452b720c80553458496d4d9d7c5003280d0",
    "symbol": "FXS",
    "underlying": "0x3432b6a60d23ca0dfca7761b7ab56459d9c964d0",
    "type": "OFT_ADAPTER",
-   "kind": "adapter",
-   "sharedDecimals": 6,
-   "tokenDecimals": 18,
-   "escrowTokens": 14220.839929,
-   "eids": [
-    30168,
-    30184
-   ],
-   "outcome": "NO_INBOUND_LIMIT",
-   "routeCounts": {
-    "NO_INBOUND_LIMIT": 2
-   },
-   "results": [
-    {
-     "name": "inbound-limit",
-     "eid": 30168,
-     "forkBlock": 26357878,
-     "escrowSD": "14220839929",
-     "outcome": "NO_INBOUND_LIMIT",
-     "revert": null,
-     "maxAcceptedSD": "14220839929",
-     "proof": "full escrow released in one inbound message · full+1 reverts (Error(FXS::_moveVotes: vote amount underflows)) → REVIEW: full+1 revert is not a known balance error"
-    },
-    {
-     "name": "inbound-limit",
-     "eid": 30184,
-     "forkBlock": 26357878,
-     "escrowSD": "14220839929",
-     "outcome": "NO_INBOUND_LIMIT",
-     "revert": null,
-     "maxAcceptedSD": "14220839929",
-     "proof": "full escrow released in one inbound message · full+1 reverts (Error(FXS::_moveVotes: vote amount underflows)) → REVIEW: full+1 revert is not a known balance error"
-    }
-   ],
-   "crossCheck": "agree"
+   "lzVersion": "v2",
+   "error": "RPC Request failed."
   },
   {
    "oapp": "0x3a7647c1323144a16e7d0d71a581e3fe5bd95299",
    "symbol": "LBTC",
    "underlying": "0x8236a87084f8b84306f72007f36f2618a5634494",
    "type": "OFT_ADAPTER",
+   "lzVersion": "v2",
    "eids": [],
    "outcome": "NO_PEERS",
    "results": []
@@ -362,6 +127,7 @@
    "symbol": "LBTC",
    "underlying": "0x8236a87084f8b84306f72007f36f2618a5634494",
    "type": "OFT_ADAPTER",
+   "lzVersion": "v2",
    "eids": [],
    "outcome": "NO_PEERS",
    "results": []
@@ -371,6 +137,7 @@
    "symbol": "LBTC",
    "underlying": "0x8236a87084f8b84306f72007f36f2618a5634494",
    "type": "OFT_ADAPTER",
+   "lzVersion": "v2",
    "eids": [],
    "outcome": "NO_PEERS",
    "results": []
@@ -380,6 +147,7 @@
    "symbol": "LBTC",
    "underlying": "0x8236a87084f8b84306f72007f36f2618a5634494",
    "type": "OFT_ADAPTER",
+   "lzVersion": "v2",
    "eids": [],
    "outcome": "NO_PEERS",
    "results": []
@@ -389,6 +157,7 @@
    "symbol": "USDC",
    "underlying": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
    "type": "OFT_ADAPTER",
+   "lzVersion": "v1",
    "eids": [],
    "outcome": "NO_PEERS",
    "results": []
@@ -398,6 +167,7 @@
    "symbol": "WETH",
    "underlying": "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2",
    "type": "OFT_ADAPTER",
+   "lzVersion": "v1",
    "eids": [],
    "outcome": "NO_PEERS",
    "results": []
@@ -407,36 +177,15 @@
    "symbol": "cbBTC",
    "underlying": "0xcbb7c0000ab88b473b1f5afd9ef808440eed33bf",
    "type": "OFT_ADAPTER",
-   "kind": "adapter",
-   "sharedDecimals": 8,
-   "tokenDecimals": 8,
-   "escrowTokens": 4.66381731,
-   "eids": [
-    30377
-   ],
-   "outcome": "NO_INBOUND_LIMIT",
-   "routeCounts": {
-    "NO_INBOUND_LIMIT": 1
-   },
-   "results": [
-    {
-     "name": "inbound-limit",
-     "eid": 30377,
-     "forkBlock": 26357878,
-     "escrowSD": "466381731",
-     "outcome": "NO_INBOUND_LIMIT",
-     "revert": null,
-     "maxAcceptedSD": "466381731",
-     "proof": "full escrow released in one inbound message · full+1 reverts (Error(ERC20: transfer amount exceeds balance)) → escrow is the only ceiling"
-    }
-   ],
-   "crossCheck": "agree"
+   "lzVersion": "v2",
+   "error": "RPC Request failed."
   },
   {
    "oapp": "0xaa798bf5ec09b6e3bc059ea4d36d4ca53e063ef7",
    "symbol": "crvUSD",
    "underlying": "0xf939e0a03fb07f59a73314e73794be0e57ac1b4e",
    "type": "OFT_ADAPTER",
+   "lzVersion": "v1",
    "eids": [],
    "outcome": "NO_PEERS",
    "results": []
@@ -446,67 +195,21 @@
    "symbol": "wstETH",
    "underlying": "0x7f39c581f595b53c5cb19bd0b3f8da6c935e2ca0",
    "type": "OFT_ADAPTER",
-   "kind": "adapter",
-   "sharedDecimals": 6,
-   "tokenDecimals": 18,
-   "escrowTokens": 1.994564,
-   "eids": [
-    30280
-   ],
-   "outcome": "NO_INBOUND_LIMIT",
-   "routeCounts": {
-    "NO_INBOUND_LIMIT": 1
-   },
-   "results": [
-    {
-     "name": "inbound-limit",
-     "eid": 30280,
-     "forkBlock": 26357878,
-     "escrowSD": "1994564",
-     "outcome": "NO_INBOUND_LIMIT",
-     "revert": null,
-     "maxAcceptedSD": "1994564",
-     "proof": "full escrow released in one inbound message · full+1 reverts (Error(ERC20: transfer amount exceeds balance)) → escrow is the only ceiling"
-    }
-   ],
-   "crossCheck": "agree"
+   "lzVersion": "v2",
+   "error": "RPC Request failed."
   },
   {
    "oapp": "0x6cea302b297bb8c49e56d04cc080480822795848",
    "symbol": "wstETH",
    "underlying": "0x7f39c581f595b53c5cb19bd0b3f8da6c935e2ca0",
    "type": "OFT_ADAPTER",
-   "kind": "adapter",
-   "sharedDecimals": 6,
-   "tokenDecimals": 18,
-   "escrowTokens": 0.382748,
-   "eids": [
-    30377
-   ],
-   "outcome": "NO_INBOUND_LIMIT",
-   "routeCounts": {
-    "NO_INBOUND_LIMIT": 1
-   },
-   "results": [
-    {
-     "name": "inbound-limit",
-     "eid": 30377,
-     "forkBlock": 26357878,
-     "escrowSD": "382748",
-     "outcome": "NO_INBOUND_LIMIT",
-     "revert": null,
-     "maxAcceptedSD": "382748",
-     "proof": "full escrow released in one inbound message · full+1 reverts (Error(ERC20: transfer amount exceeds balance)) → escrow is the only ceiling"
-    }
-   ],
-   "crossCheck": "agree"
+   "lzVersion": "v2",
+   "error": "RPC Request failed."
   }
  ],
  "tally": {
   "NO_PEERS": 12,
-  "TEST_ERROR": 1,
-  "NO_INBOUND_LIMIT": 5,
-  "UNKNOWN": 1
+  "TEST_ERROR": 1
  },
  "selfCheck": {
   "ok": true,

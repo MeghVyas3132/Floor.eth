@@ -1,5 +1,5 @@
 {
- "block": 132245811,
+ "block": 132275358,
  "rpcs": [
   "bsc-dataseed.bnbchain.org",
   "bsc-rpc.publicnode.com"
@@ -27,7 +27,7 @@
     {
      "name": "inbound-limit",
      "eid": 30361,
-     "forkBlock": 132245811,
+     "forkBlock": 132275358,
      "escrowSD": "1801965",
      "outcome": "NO_INBOUND_LIMIT",
      "revert": null,

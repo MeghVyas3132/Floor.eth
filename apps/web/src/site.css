@@ -33,20 +33,20 @@
    * --color-void matches the WebGL clear colour in components/VolumetricLight,
    * so the hero section and its canvas agree on black.
    */
-  --color-ghost: #f8f8ff;
+  --color-ghost: #ffffff;
   --color-void: #010204;
-  --color-ink: #0e0e14;
-  --color-rule: #dcdce8;
+  --color-ink: #0a0a0a;
+  --color-rule: #e5e5e5;
 
   /*
    * Ink on ghost white, as explicit steps rather than ad-hoc alphas, because
    * the contrast ratio is the thing being chosen: 60% is 4.90:1, 65% is 5.84:1
-   * and 70% is 7.01:1 against #f8f8ff. Nothing below 60 exists here — 55% is
+   * and 70% is 7.01:1 against #ffffff. Nothing below 60 exists here — 55% is
    * 4.14:1 and fails body text.
    */
-  --ink-60: rgb(14 14 20 / 0.6);
-  --ink-65: rgb(14 14 20 / 0.65);
-  --ink-70: rgb(14 14 20 / 0.7);
+  --ink-60: rgb(10 10 10 / 0.6);
+  --ink-65: rgb(10 10 10 / 0.65);
+  --ink-70: rgb(10 10 10 / 0.7);
 
   /* Ghost on void, the same way: 55% is 7.4:1 and 70% is 12.0:1. */
   --ghost-55: rgb(248 248 255 / 0.55);
@@ -454,8 +454,8 @@
 @media (hover: hover) {
   .fl a.fl-cta--solid:hover,
   .fl button.fl-cta--solid:hover {
-    background: #26263a;
-    border-color: #26263a;
+    background: #262626;
+    border-color: #262626;
   }
 }
 
@@ -1778,7 +1778,7 @@
 
 @media (hover: hover) {
   .fl .fl-index a:hover {
-    background: #f1f1fa;
+    background: #f5f5f5;
   }
 }
 
@@ -1860,4 +1860,15 @@
   .fl-toc a {
     transition: none;
   }
+}
+
+/* Black on white: the bands that were dark take the page's white. */
+.fl-dark {
+  --color-void: #ffffff;
+  --color-ghost: #0a0a0a;
+  --ghost-55: rgb(10 10 10 / 0.6);
+  --ghost-70: rgb(10 10 10 / 0.7);
+  --ghost-rule: rgb(10 10 10 / 0.12);
+  background: #ffffff;
+  color: #0a0a0a;
 }

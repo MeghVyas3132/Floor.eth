@@ -580,19 +580,19 @@ button {
 	letter-spacing: 0.14em;
 	text-transform: uppercase;
 }
-.live-ledger__n { color: rgb(248 248 255 / 0.6); grid-row: span 3; padding-top: 0.15rem; }
-.live-ledger__who { color: rgb(248 248 255 / 0.75); }
+.live-ledger__n { color: rgb(10 10 10 / 0.6); grid-row: span 3; padding-top: 0.15rem; }
+.live-ledger__who { color: rgb(10 10 10 / 0.75); }
 .live-ledger p {
 	max-width: 62ch;
 	font-size: 0.9rem;
 	line-height: 1.6;
-	color: rgb(248 248 255 / 0.7);
+	color: rgb(10 10 10 / 0.7);
 	text-wrap: pretty;
 }
 .live-ledger a {
 	justify-self: start;
 	color: var(--color-ghost);
-	border-bottom: 1px solid rgb(248 248 255 / 0.3);
+	border-bottom: 1px solid rgb(10 10 10 / 0.3);
 	padding-bottom: 0.15rem;
 	transition: border-color var(--dur-1) var(--ease);
 }
@@ -611,4 +611,41 @@ button {
 
 @media (prefers-reduced-motion: reduce) {
 	.live-dot::after { animation: none; opacity: 0.4; transform: scale(1.4); }
+}
+
+/* ---------- black on white ---------- */
+
+/*
+ * Every page is black on white. The home page used to run on a dark ramp; it
+ * now takes white surfaces and black text by re-pointing the same tokens, so
+ * no markup changes. Amber still means "exposed", darkened to read on white.
+ */
+:root {
+	--color-ghost: #ffffff;
+	--color-ink: #0a0a0a;
+	--color-rule: #e5e5e5;
+	--panel-hover: #fafafa;
+}
+.theme-dark {
+	--color-ghost: #0a0a0a;
+	--color-page: #ffffff;
+	--color-surface: #fafafa;
+	--color-raise: #f2f2f2;
+	--color-edge: #e5e5e5;
+	--color-void: #ffffff;
+	--color-flag: #b45309;
+}
+
+/* Artwork stays as rendered: the WebGL hero and the photo plates are dark
+   images, so the text laid over them keeps its light colour. */
+#hero,
+figure,
+#texture {
+	--color-ghost: #f8f8ff;
+	--color-void: #010204;
+	--color-page: #0d0f15;
+	--color-surface: #151822;
+	--color-raise: #1d212c;
+	--color-edge: #2d3340;
+	--color-flag: #fcd34d;
 }

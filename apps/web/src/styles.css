@@ -234,7 +234,7 @@ td {
 }
 tbody tr:last-child td { border-bottom: 0; }
 tbody tr { transition: background 0.12s; }
-tbody tr:hover { background: rgb(14 14 20 / 0.025); }
+tbody tr:hover { background: rgb(10 10 10 / 0.025); }
 td.num { font-family: var(--mono); font-variant-numeric: tabular-nums; }
 td.nowrap { white-space: nowrap; }
 .mono td { font-family: var(--mono); font-size: 12px; color: var(--ink-65); }
@@ -256,15 +256,15 @@ td.nowrap { white-space: nowrap; }
   white-space: nowrap;
   color: var(--unknown);
   background: var(--unknown-wash);
-  border-color: rgb(90 97 107 / 0.3);
+  border-color: rgb(97 97 97 / 0.3);
 }
 .chip-ok { color: var(--ok); background: var(--ok-wash); border-color: rgb(11 122 53 / 0.3); }
 .chip-degraded { color: var(--degraded); background: var(--degraded-wash); border-color: rgb(138 98 0 / 0.3); }
 .chip-breached { color: var(--breached); background: var(--breached-wash); border-color: rgb(192 36 26 / 0.32); }
-.chip-unknown { color: var(--unknown); background: var(--unknown-wash); border-color: rgb(90 97 107 / 0.3); }
+.chip-unknown { color: var(--unknown); background: var(--unknown-wash); border-color: rgb(97 97 97 / 0.3); }
 .chip-skipped { color: var(--ink-60); background: transparent; border-color: var(--line); }
-.chip-mock { color: var(--mock); background: var(--mock-wash); border-color: rgb(91 63 196 / 0.3); }
-.chip-real { color: var(--real); background: var(--real-wash); border-color: rgb(14 110 128 / 0.3); }
+.chip-mock { color: var(--mock); background: var(--mock-wash); border-color: rgb(97 97 97 / 0.3); }
+.chip-real { color: var(--real); background: var(--real-wash); border-color: rgb(10 10 10 / 0.3); }
 
 /* Event kinds on the enforcement timeline. Not grades, so deliberately
    desaturated against the four grade colours. */
@@ -572,7 +572,7 @@ blockquote {
 }
 
 .vbar-label { font-size: 12px; color: var(--ink-70); }
-.vbar-track { display: block; height: 14px; background: rgb(14 14 20 / 0.045); }
+.vbar-track { display: block; height: 14px; background: rgb(10 10 10 / 0.045); }
 /* Solid, at full strength. A chart is where the grade colours earn their
    saturation — the restraint belongs in the table, not here. */
 .vbar-fill { display: block; height: 100%; background: var(--g); }
@@ -666,3 +666,10 @@ blockquote {
 /* ---------- live screens (Live market, Kelp simulation) ---------- */
 .row { display: flex; gap: 10px; align-items: center; flex-wrap: wrap; }
 .tablebox { overflow-x: auto; }
+
+/* ---------- black on white ---------- */
+
+/* The strip and every band that used to be dark are white now; text is black.
+   Grade colours (OK / DEGRADED / BREACHED) keep their hue: they carry meaning. */
+.proto { background: var(--bg); color: var(--ink-60); border-bottom: 1px solid var(--line); }
+.proto::before { background: var(--ink-60); }

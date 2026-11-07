@@ -15,22 +15,22 @@
   color-scheme: light;
 
   /* The four the landing declares in its @theme block; same hexes. */
-  --color-ghost: #f8f8ff;
+  --color-ghost: #ffffff;
   --color-void: #010204;
-  --color-ink: #0e0e14;
-  --color-rule: #dcdce8;
+  --color-ink: #0a0a0a;
+  --color-rule: #e5e5e5;
 
   /*
    * Ink on ghost white as explicit steps, because the contrast ratio is the
    * thing being chosen: 60% is 4.90:1, 65% is 5.84:1, 70% is 7.01:1. Nothing
    * below 60 exists — 55% is 4.14:1 and fails body text.
    */
-  --ink-60: rgb(14 14 20 / 0.6);
-  --ink-65: rgb(14 14 20 / 0.65);
-  --ink-70: rgb(14 14 20 / 0.7);
+  --ink-60: rgb(10 10 10 / 0.6);
+  --ink-65: rgb(10 10 10 / 0.65);
+  --ink-70: rgb(10 10 10 / 0.7);
   /* Non-text only: hairlines, chart gridlines, wireframe strokes. */
-  --ink-12: rgb(14 14 20 / 0.12);
-  --ink-30: rgb(14 14 20 / 0.3);
+  --ink-12: rgb(10 10 10 / 0.12);
+  --ink-30: rgb(10 10 10 / 0.3);
 
   /* Ghost on void, for the banner and the footer: 55% is 7.4:1, 70% is 12.0:1. */
   --ghost-55: rgb(248 248 255 / 0.55);
@@ -53,12 +53,12 @@
    */
   --ok: #0b7a35;
   --degraded: #8a6200;
-  --unknown: #5a616b;
+  --unknown: #616161;
   --breached: #c0241a;
 
   /* Provenance badges: whether a row is a real scan or a UI placeholder. */
-  --real: #0e6e80;
-  --mock: #5b3fc4;
+  --real: #0a0a0a;
+  --mock: #616161;
 
   /*
    * Grade washes for chart bars and chip grounds. 10% of the grade over white
@@ -66,12 +66,12 @@
    */
   --ok-wash: rgb(11 122 53 / 0.1);
   --degraded-wash: rgb(138 98 0 / 0.1);
-  --unknown-wash: rgb(90 97 107 / 0.1);
+  --unknown-wash: rgb(97 97 97 / 0.1);
   --breached-wash: rgb(192 36 26 / 0.1);
-  --real-wash: rgb(14 110 128 / 0.1);
-  --mock-wash: rgb(91 63 196 / 0.1);
+  --real-wash: rgb(10 10 10 / 0.1);
+  --mock-wash: rgb(97 97 97 / 0.1);
 
-  --accent: #1f4fd8;
+  --accent: #0a0a0a;
 
   --mono: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, monospace;
   --sans: "Lato", ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;

@@ -1,5 +1,5 @@
 {
- "block": 99634730,
+ "block": 99609899,
  "rpcs": [
   "api.avax.network",
   "avalanche-c-chain-rpc.publicnode.com"
@@ -11,7 +11,6 @@
    "symbol": "BTC.b",
    "underlying": "0x152b9d0fdc40c096757f570a51e494bd4b943e50",
    "type": "OFT_ADAPTER",
-   "lzVersion": "v1",
    "eids": [],
    "outcome": "NO_PEERS",
    "results": []

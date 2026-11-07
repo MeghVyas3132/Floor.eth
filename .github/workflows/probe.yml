@@ -23,6 +23,8 @@ jobs:
           cache: pnpm
       - run: pnpm install --frozen-lockfile
       - run: scripts/probe-all.sh
+      - name: Keep good results if this run came back partial
+        run: python3 scripts/guard-probe.py
       - name: Commit results
         run: |
           git config user.name "floor-scheduler"

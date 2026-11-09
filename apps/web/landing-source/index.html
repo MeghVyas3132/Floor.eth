@@ -14,6 +14,9 @@
 			content="Floor continuously rates the effective security of onchain collateral and gives lenders evidence to reduce exposure with bounded enforcement."
 		/>
 		<meta name="theme-color" content="#010204" />
+		<!-- The app's own icons, one level up: without a link the browser asks for /favicon.ico, which does not exist. -->
+		<link rel="icon" type="image/png" sizes="32x32" href="../icon-32.png" />
+		<link rel="apple-touch-icon" sizes="180x180" href="../icon-180.png" />
 
 		<!--
 			Geist Pixel sets the hero wordmark, Inter italic sets the one on the
@@ -94,6 +97,28 @@
 						and how quickly its controls can change. Lenders can use the
 						evidence to reduce new exposure automatically.
 					</p>
+					<!--
+						What Floor finds today, in the first screen, so the page leads with a
+						measurement rather than a promise. The figure is the inbound probe's
+						rerun (docs/09-inbound-limit-test.md, site.ts `measured`). The probe
+						is a simulation and does not claim a route is drainable: an attack
+						also needs the verifiers, so the copy says only what was measured.
+						pointer-events-auto because the copy column above it ignores the cursor.
+					-->
+					<a
+						data-fade="2"
+						href="../#/live"
+						target="_top"
+						class="pointer-events-auto mt-6 block max-w-[26rem] border-l border-ghost/40 pl-4 text-sm leading-relaxed text-ghost/90 transition-colors hover:border-ghost"
+					>
+						<span class="text-ghost">31 of 64</span> LayerZero adapters behind
+						Aave-listed tokens have no per-message limit: in a simulated inbound
+						message, each released its entire escrow.
+						<span
+							class="mt-2 block font-mono text-[0.65rem] uppercase tracking-[0.2em] text-ghost/50"
+							>Probe at a pinned block &middot; 7 Nov 2026 &middot; Live market &rarr;</span
+						>
+					</a>
 				</div>
 
 				<!--

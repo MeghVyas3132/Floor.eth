@@ -53,11 +53,29 @@ const ago = (t: number, now: number) => `${Math.max(0, Math.round((now - t) / 10
 
 type Row = Reserve & { market: string; chainId: number };
 
+/** Probe outcomes that settle nothing, in words a reader can act on (the raw codes live in docs/evidence/inbound). */
+const OUTCOME_LABEL: Record<string, string> = {
+  TEST_ERROR: "probe inconclusive (the 1-unit check credit did not go through)",
+  PAUSED: "adapter paused",
+  UNKNOWN: "probe inconclusive",
+};
 const outcomeText = (o?: string) =>
   o === "NO_INBOUND_LIMIT" ? <b className="bad">one message can release all escrow</b>
   : o === "INBOUND_LIMIT" ? <b className="ok">rate-limited per message</b>
-  : o ? <span className="muted">{o.toLowerCase().replace(/_/g, " ")}</span>
+  : o ? <span className="muted">{OUTCOME_LABEL[o] ?? o.toLowerCase().replace(/_/g, " ")}</span>
   : <span className="muted">home adapter not probed</span>;
+
+/**
+ * Aave retires collateral by setting the liquidation threshold to 0.1% (10 bps) with LTV at or near 0: loans already
+ * open stay backed, new borrowing against it stops. Those reserves still carry exposure, so they stay in the table,
+ * but they are labelled and counted apart rather than shown as "0%".
+ */
+const WIND_DOWN_LT_BPS = 10;
+const windingDown = (r: Reserve) => !r.collateralViaEModeOnly && r.liquidationThresholdBps > 0 && r.liquidationThresholdBps <= WIND_DOWN_LT_BPS;
+const ltText = (r: Reserve) =>
+  r.collateralViaEModeOnly ? "E-mode only"
+  : windingDown(r) ? <span className="muted">0.1% · wind-down</span>
+  : `${(r.liquidationThresholdBps / 100).toFixed(0)}%`;
 
 function bridgeCell(r: Row) {
   const e = exposure(r);
@@ -106,7 +124,7 @@ export function LiveMarket() {
         which of them are bridged by LayerZero. <span className={stale ? "warn" : "muted"}>Markets live: {live}/{MARKETS.length}{oldest !== Infinity ? ` · oldest read ${ago(oldest, now)}` : " · reading…"}</span>
       </p>
       <div className="stats">
-        <Stat value={String(rows.length)} label="collateral assets" source={`${live} markets`} />
+        <Stat value={String(rows.length)} label="collateral assets" source={`${live} markets · ${rows.filter(windingDown).length} being wound down`} />
         <Stat value={usd(rows.reduce((s, r) => s + (r.suppliedUsd ?? 0), 0))} label="supplied as collateral" source="Aave oracle prices" />
         <Stat value={`${minted.length} · ${usd(minted.reduce((s, r) => s + (r.suppliedUsd ?? 0), 0))}`} label="collateral minted by LayerZero messages on its chain" source="LayerZero OFT registry" />
         <Stat value={`${mintedDrainable.length} · ${usd(mintedDrainable.reduce((s, r) => s + (r.suppliedUsd ?? 0), 0))}`} label="of which the backing adapter can release all escrow in one message (the Kelp pattern)" source={PROBE_SOURCE} />
@@ -135,7 +153,7 @@ export function LiveMarket() {
                   <td className="num">{usd(r.suppliedUsd)}</td>
                   <td>{bridgeCell(r)}</td>
                   <td className="num">{r.bridge.escrow != null ? `${tokens(r.bridge.escrow)} ${r.symbol}` : "—"}</td>
-                  <td className="num">{r.collateralViaEModeOnly ? "E-mode only" : `${(r.liquidationThresholdBps / 100).toFixed(0)}%`}</td>
+                  <td className="num">{ltText(r)}</td>
                   <td>{r.frozen ? <span className="warn">frozen</span> : r.active ? "active" : "inactive"}</td>
                 </tr>
               ))}

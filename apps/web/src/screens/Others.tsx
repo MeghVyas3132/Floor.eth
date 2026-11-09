@@ -46,7 +46,7 @@ export function Enforcement() {
         </Card>
         <Card title="How long it took (block timestamps)">
           <p className="big">{mins(STEPS[0]!.at, STEPS[2]!.at)} min <span className="muted">from the CRE write on Ethereum to the rating on Base</span></p>
-          <p className="muted">{mins(STEPS[1]!.at, STEPS[2]!.at)} min of that is CCIP waiting for Ethereum finality before delivering. The cap cut is a permissionless <code>poke</code>; in this run it was sent by hand {mins(STEPS[2]!.at, STEPS[3]!.at)} min after delivery. At Kelp, the attacked route sat on a single verifier for 381 days.</p>
+          <p className="muted">{mins(STEPS[1]!.at, STEPS[2]!.at)} min of that is CCIP waiting for Ethereum finality before delivering. The cap cut is a permissionless <code>poke</code> that any keeper can send; in this test run we sent it ourselves, {mins(STEPS[2]!.at, STEPS[3]!.at)} min after delivery. The relay time only matters for a setting that changes. At Kelp the weak setting was already in force: the route sat on a single verifier for 381 days, so Floor's grade would have read BREACHED, and an opted-in lender's cap would have been at 0, long before the drain.</p>
         </Card>
       </div>
       <Card title="What happened, transaction by transaction">
@@ -134,7 +134,7 @@ export function About() {
       <Card title="CROPS">
         <ul>
           <li><b>C</b>: no Floor server on the verification path. Data from Arkiv + Swarm, reads via Anon-RPC; site mirrored on Swarm.</li>
-          <li><b>O</b>: open-source licence (TBD); build and run from the repo alone.</li>
+          <li><b>O</b>: open source under Apache-2.0; build and run from the repo alone.</li>
           <li><b>P</b>: Anon-RPC hides which assets you check from RPC providers. No trackers or analytics.</li>
           <li><b>S</b>: no keys in the browser; evidence hashes match the CRE-signed report.</li>
         </ul>

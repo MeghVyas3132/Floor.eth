@@ -1,5 +1,5 @@
 {
- "block": 26372522,
+ "block": 26373819,
  "rpcs": [
   "eth-mainnet.public.blastapi.io",
   "api.zan.top",
@@ -98,7 +98,7 @@
    "kind": "adapter",
    "sharedDecimals": 6,
    "tokenDecimals": 6,
-   "escrowTokens": 25265046.978408,
+   "escrowTokens": 25928242.565309,
    "eids": [
     30110,
     30125,
@@ -114,8 +114,8 @@
     {
      "name": "inbound-limit",
      "eid": 30110,
-     "forkBlock": 26372522,
-     "escrowSD": "25265046978408",
+     "forkBlock": 26373819,
+     "escrowSD": "25928242565309",
      "outcome": "TEST_ERROR",
      "revert": "InvalidMsgType(0)",
      "maxAcceptedSD": null,
@@ -124,8 +124,8 @@
     {
      "name": "inbound-limit",
      "eid": 30125,
-     "forkBlock": 26372522,
-     "escrowSD": "25265046978408",
+     "forkBlock": 26373819,
+     "escrowSD": "25928242565309",
      "outcome": "TEST_ERROR",
      "revert": "InvalidMsgType(0)",
      "maxAcceptedSD": null,
@@ -134,8 +134,8 @@
     {
      "name": "inbound-limit",
      "eid": 30168,
-     "forkBlock": 26372522,
-     "escrowSD": "25265046978408",
+     "forkBlock": 26373819,
+     "escrowSD": "25928242565309",
      "outcome": "TEST_ERROR",
      "revert": "InvalidMsgType(0)",
      "maxAcceptedSD": null,
@@ -144,8 +144,8 @@
     {
      "name": "inbound-limit",
      "eid": 30343,
-     "forkBlock": 26372522,
-     "escrowSD": "25265046978408",
+     "forkBlock": 26373819,
+     "escrowSD": "25928242565309",
      "outcome": "TEST_ERROR",
      "revert": "InvalidMsgType(0)",
      "maxAcceptedSD": null,
@@ -154,8 +154,8 @@
     {
      "name": "inbound-limit",
      "eid": 30420,
-     "forkBlock": 26372522,
-     "escrowSD": "25265046978408",
+     "forkBlock": 26373819,
+     "escrowSD": "25928242565309",
      "outcome": "TEST_ERROR",
      "revert": "InvalidMsgType(0)",
      "maxAcceptedSD": null,
@@ -212,7 +212,7 @@
     {
      "name": "inbound-limit",
      "eid": 30110,
-     "forkBlock": 26372522,
+     "forkBlock": 26373819,
      "escrowSD": "10900",
      "outcome": "TEST_ERROR",
      "revert": "InvalidMsgType(0)",
@@ -222,7 +222,7 @@
     {
      "name": "inbound-limit",
      "eid": 30125,
-     "forkBlock": 26372522,
+     "forkBlock": 26373819,
      "escrowSD": "10900",
      "outcome": "TEST_ERROR",
      "revert": "InvalidMsgType(0)",
@@ -232,7 +232,7 @@
     {
      "name": "inbound-limit",
      "eid": 30343,
-     "forkBlock": 26372522,
+     "forkBlock": 26373819,
      "escrowSD": "10900",
      "outcome": "TEST_ERROR",
      "revert": "InvalidMsgType(0)",
@@ -242,7 +242,7 @@
     {
      "name": "inbound-limit",
      "eid": 30420,
-     "forkBlock": 26372522,
+     "forkBlock": 26373819,
      "escrowSD": "10900",
      "outcome": "TEST_ERROR",
      "revert": "InvalidMsgType(0)",
@@ -304,7 +304,30 @@
    "underlying": "0x4c9edd5852cd905f086c759e8383e09bff1e68b3",
    "issuer": "anubis-bridge",
    "type": "ProxyOFT",
-   "error": "RPC Request failed."
+   "kind": "adapter",
+   "sharedDecimals": 6,
+   "tokenDecimals": 18,
+   "escrowTokens": 0,
+   "eids": [
+    30465
+   ],
+   "outcome": "UNKNOWN",
+   "routeCounts": {
+    "UNKNOWN": 1
+   },
+   "results": [
+    {
+     "name": "inbound-limit",
+     "eid": 30465,
+     "forkBlock": 26373819,
+     "escrowSD": "0",
+     "outcome": "UNKNOWN",
+     "revert": "Error(ERC20: transfer amount exceeds balance)",
+     "maxAcceptedSD": null,
+     "proof": "escrow is empty: nothing to bound (1-unit credit reverts: Error(ERC20: transfer amount exceeds balance))"
+    }
+   ],
+   "crossCheck": "agree"
   },
   {
    "oapp": "0xc708b6887db46005da033501f8aebee72d191a5d",
@@ -379,7 +402,7 @@
     {
      "name": "inbound-limit",
      "eid": 30465,
-     "forkBlock": 26372522,
+     "forkBlock": 26373819,
      "escrowSD": "0",
      "outcome": "UNKNOWN",
      "revert": "Error(ERC20: transfer amount exceeds balance)",
@@ -460,17 +483,17 @@
     {
      "name": "inbound-limit",
      "eid": 30102,
-     "forkBlock": 26372522,
+     "forkBlock": 26373819,
      "escrowSD": "0",
      "outcome": "UNKNOWN",
-     "revert": "revert (no data)",
+     "revert": "Error(ERC20: transfer amount exceeds balance)",
      "maxAcceptedSD": null,
-     "proof": "escrow is empty: nothing to bound (1-unit credit reverts: revert (no data))"
+     "proof": "escrow is empty: nothing to bound (1-unit credit reverts: Error(ERC20: transfer amount exceeds balance))"
     },
     {
      "name": "inbound-limit",
      "eid": 30110,
-     "forkBlock": 26372522,
+     "forkBlock": 26373819,
      "escrowSD": "0",
      "outcome": "UNKNOWN",
      "revert": "Error(ERC20: transfer amount exceeds balance)",
@@ -480,7 +503,7 @@
     {
      "name": "inbound-limit",
      "eid": 30111,
-     "forkBlock": 26372522,
+     "forkBlock": 26373819,
      "escrowSD": "0",
      "outcome": "UNKNOWN",
      "revert": "Error(ERC20: transfer amount exceeds balance)",
@@ -490,7 +513,7 @@
     {
      "name": "inbound-limit",
      "eid": 30165,
-     "forkBlock": 26372522,
+     "forkBlock": 26373819,
      "escrowSD": "0",
      "outcome": "UNKNOWN",
      "revert": "Error(ERC20: transfer amount exceeds balance)",
@@ -500,7 +523,7 @@
     {
      "name": "inbound-limit",
      "eid": 30183,
-     "forkBlock": 26372522,
+     "forkBlock": 26373819,
      "escrowSD": "0",
      "outcome": "UNKNOWN",
      "revert": "Error(ERC20: transfer amount exceeds balance)",
@@ -510,7 +533,7 @@
     {
      "name": "inbound-limit",
      "eid": 30184,
-     "forkBlock": 26372522,
+     "forkBlock": 26373819,
      "escrowSD": "0",
      "outcome": "UNKNOWN",
      "revert": "Error(ERC20: transfer amount exceeds balance)",
@@ -520,7 +543,7 @@
     {
      "name": "inbound-limit",
      "eid": 30214,
-     "forkBlock": 26372522,
+     "forkBlock": 26373819,
      "escrowSD": "0",
      "outcome": "UNKNOWN",
      "revert": "Error(ERC20: transfer amount exceeds balance)",
@@ -530,7 +553,7 @@
     {
      "name": "inbound-limit",
      "eid": 30243,
-     "forkBlock": 26372522,
+     "forkBlock": 26373819,
      "escrowSD": "0",
      "outcome": "UNKNOWN",
      "revert": "Error(ERC20: transfer amount exceeds balance)",
@@ -540,7 +563,7 @@
     {
      "name": "inbound-limit",
      "eid": 30260,
-     "forkBlock": 26372522,
+     "forkBlock": 26373819,
      "escrowSD": "0",
      "outcome": "UNKNOWN",
      "revert": "Error(ERC20: transfer amount exceeds balance)",
@@ -550,7 +573,7 @@
     {
      "name": "inbound-limit",
      "eid": 30280,
-     "forkBlock": 26372522,
+     "forkBlock": 26373819,
      "escrowSD": "0",
      "outcome": "UNKNOWN",
      "revert": "Error(ERC20: transfer amount exceeds balance)",
@@ -560,7 +583,7 @@
     {
      "name": "inbound-limit",
      "eid": 30303,
-     "forkBlock": 26372522,
+     "forkBlock": 26373819,
      "escrowSD": "0",
      "outcome": "UNKNOWN",
      "revert": "Error(ERC20: transfer amount exceeds balance)",
@@ -574,7 +597,7 @@
  "tally": {
   "NO_PEERS": 6,
   "TEST_ERROR": 2,
-  "UNKNOWN": 2
+  "UNKNOWN": 3
  },
  "selfCheck": {
   "ok": true,

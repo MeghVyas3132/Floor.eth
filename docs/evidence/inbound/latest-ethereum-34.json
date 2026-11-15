@@ -1,5 +1,5 @@
 {
- "block": 26415867,
+ "block": 26417186,
  "rpcs": [
   "eth-mainnet.public.blastapi.io",
   "api.zan.top",
@@ -21,7 +21,7 @@
    "underlying": "0x514910771af9ca656af840dff83e8264ecf986ca",
    "issuer": "hybridge",
    "type": "ProxyOFT",
-   "error": "HTTP request failed."
+   "error": "RPC Request failed."
   },
   {
    "oapp": "0xee381e476b4335b8584a2026f3e845edac2c69de",
@@ -29,7 +29,9 @@
    "underlying": "0x514910771af9ca656af840dff83e8264ecf986ca",
    "issuer": "harmony",
    "type": "ProxyOFT",
-   "error": "HTTP request failed."
+   "eids": [],
+   "outcome": "NO_PEERS",
+   "results": []
   },
   {
    "oapp": "0x53e1c2647a6c7fb34c3b18377061cb05ab64d816",
@@ -37,7 +39,7 @@
    "underlying": "0x6c3ea9036406852006290770bedfcaba0e23a0e8",
    "issuer": "glue",
    "type": "ProxyOFT",
-   "error": "HTTP request failed."
+   "error": "RPC Request failed."
   },
   {
    "oapp": "0x688e72142674041f8f6af4c808a4045ca1d6ac82",
@@ -45,7 +47,7 @@
    "underlying": "0x6c3ea9036406852006290770bedfcaba0e23a0e8",
    "issuer": "byusd",
    "type": "ProxyOFT",
-   "error": "HTTP request failed."
+   "error": "RPC Request failed."
   },
   {
    "oapp": "0xa2c323fe5a74adffad2bf3e007e36bb029606444",
@@ -53,7 +55,7 @@
    "underlying": "0x6c3ea9036406852006290770bedfcaba0e23a0e8",
    "issuer": "paypal",
    "type": "ProxyOFT",
-   "error": "HTTP request failed."
+   "error": "RPC Request failed."
   },
   {
    "oapp": "0xe9e8330a71912f03e54e7d93795acd9a56f070aa",
@@ -61,7 +63,7 @@
    "underlying": "0x6c3ea9036406852006290770bedfcaba0e23a0e8",
    "issuer": "plume",
    "type": "ProxyOFT",
-   "error": "HTTP request failed."
+   "error": "RPC Request failed."
   },
   {
    "oapp": "0xfa0e06b54986ad96de87a8c56fea76fbd8d493f8",
@@ -69,7 +71,7 @@
    "underlying": "0x6c3ea9036406852006290770bedfcaba0e23a0e8",
    "issuer": "flow",
    "type": "ProxyOFT",
-   "error": "HTTP request failed."
+   "error": "RPC Request failed."
   },
   {
    "oapp": "0x147bde4f997f0d4c7544ed0c55eacf1e5e6bf9c4",
@@ -96,7 +98,7 @@
    "kind": "adapter",
    "sharedDecimals": 6,
    "tokenDecimals": 6,
-   "escrowTokens": 26055707.535324,
+   "escrowTokens": 24650028.929798,
    "eids": [
     30110,
     30125,
@@ -112,8 +114,8 @@
     {
      "name": "inbound-limit",
      "eid": 30110,
-     "forkBlock": 26415867,
-     "escrowSD": "26055707535324",
+     "forkBlock": 26417186,
+     "escrowSD": "24650028929798",
      "outcome": "TEST_ERROR",
      "revert": "InvalidMsgType(0)",
      "maxAcceptedSD": null,
@@ -122,8 +124,8 @@
     {
      "name": "inbound-limit",
      "eid": 30125,
-     "forkBlock": 26415867,
-     "escrowSD": "26055707535324",
+     "forkBlock": 26417186,
+     "escrowSD": "24650028929798",
      "outcome": "TEST_ERROR",
      "revert": "InvalidMsgType(0)",
      "maxAcceptedSD": null,
@@ -132,8 +134,8 @@
     {
      "name": "inbound-limit",
      "eid": 30168,
-     "forkBlock": 26415867,
-     "escrowSD": "26055707535324",
+     "forkBlock": 26417186,
+     "escrowSD": "24650028929798",
      "outcome": "TEST_ERROR",
      "revert": "InvalidMsgType(0)",
      "maxAcceptedSD": null,
@@ -142,8 +144,8 @@
     {
      "name": "inbound-limit",
      "eid": 30343,
-     "forkBlock": 26415867,
-     "escrowSD": "26055707535324",
+     "forkBlock": 26417186,
+     "escrowSD": "24650028929798",
      "outcome": "TEST_ERROR",
      "revert": "InvalidMsgType(0)",
      "maxAcceptedSD": null,
@@ -152,8 +154,8 @@
     {
      "name": "inbound-limit",
      "eid": 30420,
-     "forkBlock": 26415867,
-     "escrowSD": "26055707535324",
+     "forkBlock": 26417186,
+     "escrowSD": "24650028929798",
      "outcome": "TEST_ERROR",
      "revert": "InvalidMsgType(0)",
      "maxAcceptedSD": null,
@@ -176,7 +178,7 @@
    "underlying": "0xdac17f958d2ee523a2206206994597c13d831ec7",
    "issuer": "citrea",
    "type": "ProxyOFT",
-   "error": "HTTP request failed."
+   "error": "RPC Request failed."
   },
   {
    "oapp": "0x6c96de32cea08842dcc4058c14d3aaad7fa41dee",
@@ -184,7 +186,7 @@
    "underlying": "0xdac17f958d2ee523a2206206994597c13d831ec7",
    "issuer": "usdt0",
    "type": "ProxyOFT",
-   "error": "HTTP request failed."
+   "error": "RPC Request failed."
   },
   {
    "oapp": "0x811ed79db9d34e83bdb73df6c3e07961cfb0d5c0",
@@ -192,7 +194,63 @@
    "underlying": "0xdac17f958d2ee523a2206206994597c13d831ec7",
    "issuer": "usdt0",
    "type": "ProxyOFT",
-   "error": "HTTP request failed."
+   "kind": "adapter",
+   "sharedDecimals": 6,
+   "tokenDecimals": 6,
+   "escrowTokens": 0.0109,
+   "eids": [
+    30110,
+    30125,
+    30343,
+    30420
+   ],
+   "outcome": "TEST_ERROR",
+   "routeCounts": {
+    "TEST_ERROR": 4
+   },
+   "results": [
+    {
+     "name": "inbound-limit",
+     "eid": 30110,
+     "forkBlock": 26417186,
+     "escrowSD": "10900",
+     "outcome": "TEST_ERROR",
+     "revert": "InvalidMsgType(0)",
+     "maxAcceptedSD": null,
+     "proof": "custom message codec (InvalidMsgType(0)): standard OFT payload rejected, needs an adapter-specific probe"
+    },
+    {
+     "name": "inbound-limit",
+     "eid": 30125,
+     "forkBlock": 26417186,
+     "escrowSD": "10900",
+     "outcome": "TEST_ERROR",
+     "revert": "InvalidMsgType(0)",
+     "maxAcceptedSD": null,
+     "proof": "custom message codec (InvalidMsgType(0)): standard OFT payload rejected, needs an adapter-specific probe"
+    },
+    {
+     "name": "inbound-limit",
+     "eid": 30343,
+     "forkBlock": 26417186,
+     "escrowSD": "10900",
+     "outcome": "TEST_ERROR",
+     "revert": "InvalidMsgType(0)",
+     "maxAcceptedSD": null,
+     "proof": "custom message codec (InvalidMsgType(0)): standard OFT payload rejected, needs an adapter-specific probe"
+    },
+    {
+     "name": "inbound-limit",
+     "eid": 30420,
+     "forkBlock": 26417186,
+     "escrowSD": "10900",
+     "outcome": "TEST_ERROR",
+     "revert": "InvalidMsgType(0)",
+     "maxAcceptedSD": null,
+     "proof": "custom message codec (InvalidMsgType(0)): standard OFT payload rejected, needs an adapter-specific probe"
+    }
+   ],
+   "crossCheck": "agree"
   },
   {
    "oapp": "0x933597a323eb81cae705c5bc29985172fd5a3973",
@@ -246,7 +304,30 @@
    "underlying": "0x4c9edd5852cd905f086c759e8383e09bff1e68b3",
    "issuer": "anubis-bridge",
    "type": "ProxyOFT",
-   "error": "HTTP request failed."
+   "kind": "adapter",
+   "sharedDecimals": 6,
+   "tokenDecimals": 18,
+   "escrowTokens": 0,
+   "eids": [
+    30465
+   ],
+   "outcome": "UNKNOWN",
+   "routeCounts": {
+    "UNKNOWN": 1
+   },
+   "results": [
+    {
+     "name": "inbound-limit",
+     "eid": 30465,
+     "forkBlock": 26417186,
+     "escrowSD": "0",
+     "outcome": "UNKNOWN",
+     "revert": "Error(ERC20: transfer amount exceeds balance)",
+     "maxAcceptedSD": null,
+     "proof": "escrow is empty: nothing to bound (1-unit credit reverts: Error(ERC20: transfer amount exceeds balance))"
+    }
+   ],
+   "crossCheck": "agree"
   },
   {
    "oapp": "0xc708b6887db46005da033501f8aebee72d191a5d",
@@ -254,7 +335,7 @@
    "underlying": "0xc139190f447e929f090edeb554d95abb8b18ac1c",
    "issuer": "ethena",
    "type": "ProxyOFT",
-   "error": "HTTP request failed."
+   "error": "RPC Request failed."
   },
   {
    "oapp": "0x0555e30da8f98308edb960aa94c0db47230d2b9c",
@@ -262,7 +343,7 @@
    "underlying": "0x2260fac5e5542a773aa44fbcfedf7c193bc2c599",
    "issuer": "wbtc",
    "type": "ProxyOFT",
-   "error": "HTTP request failed."
+   "error": "RPC Request failed."
   },
   {
    "oapp": "0x2c01390e10e44c968b73a7bcff7e4b4f50ba76ed",
@@ -270,7 +351,7 @@
    "underlying": "0x2260fac5e5542a773aa44fbcfedf7c193bc2c599",
    "issuer": "citrea",
    "type": "ProxyOFT",
-   "error": "HTTP request failed."
+   "error": "RPC Request failed."
   },
   {
    "oapp": "0x713441e6e7865ad91c3a89620dff1cdad49900a6",
@@ -278,7 +359,7 @@
    "underlying": "0x2260fac5e5542a773aa44fbcfedf7c193bc2c599",
    "issuer": "anubis-bridge",
    "type": "ProxyOFT",
-   "error": "HTTP request failed."
+   "error": "RPC Request failed."
   },
   {
    "oapp": "0xab6ebe9472e2e4b6fe720dad16701f32ab905cc6",
@@ -286,7 +367,9 @@
    "underlying": "0x2260fac5e5542a773aa44fbcfedf7c193bc2c599",
    "issuer": "harmony",
    "type": "ProxyOFT",
-   "error": "HTTP request failed."
+   "eids": [],
+   "outcome": "NO_PEERS",
+   "results": []
   },
   {
    "oapp": "0xf1648c50d2863f780c57849d812b4b7686031a3d",
@@ -294,7 +377,9 @@
    "underlying": "0x2260fac5e5542a773aa44fbcfedf7c193bc2c599",
    "issuer": "layerzero",
    "type": "ProxyOFT",
-   "error": "HTTP request failed."
+   "eids": [],
+   "outcome": "NO_PEERS",
+   "results": []
   },
   {
    "oapp": "0x1f033d91919ff79bb0fa66fcb378549f6746f03d",
@@ -302,7 +387,30 @@
    "underlying": "0x68749665ff8d2d112fa859aa293f07a622782f38",
    "issuer": "anubis-bridge",
    "type": "ProxyOFT",
-   "error": "HTTP request failed."
+   "kind": "adapter",
+   "sharedDecimals": 6,
+   "tokenDecimals": 6,
+   "escrowTokens": 0,
+   "eids": [
+    30465
+   ],
+   "outcome": "UNKNOWN",
+   "routeCounts": {
+    "UNKNOWN": 1
+   },
+   "results": [
+    {
+     "name": "inbound-limit",
+     "eid": 30465,
+     "forkBlock": 26417186,
+     "escrowSD": "0",
+     "outcome": "UNKNOWN",
+     "revert": "Error(ERC20: transfer amount exceeds balance)",
+     "maxAcceptedSD": null,
+     "proof": "escrow is empty: nothing to bound (1-unit credit reverts: Error(ERC20: transfer amount exceeds balance))"
+    }
+   ],
+   "crossCheck": "agree"
   },
   {
    "oapp": "0xb9c2321bb7d0db468f570d10a424d1cc8efd696c",
@@ -310,7 +418,7 @@
    "underlying": "0x68749665ff8d2d112fa859aa293f07a622782f38",
    "issuer": "usdt0",
    "type": "ProxyOFT",
-   "error": "HTTP request failed."
+   "error": "RPC Request failed."
   },
   {
    "oapp": "0x85d456b2dff1fd8245387c0bfb64dfb700e98ef3",
@@ -350,146 +458,13 @@
    "underlying": "0xcd5fe23c85820f7b72d0926fc9b05b43e359b7ee",
    "issuer": "etherfi",
    "type": "ProxyOFT",
-   "kind": "adapter",
-   "sharedDecimals": 6,
-   "tokenDecimals": 18,
-   "escrowTokens": 0,
-   "eids": [
-    30102,
-    30110,
-    30111,
-    30165,
-    30183,
-    30184,
-    30214,
-    30243,
-    30260,
-    30280,
-    30303
-   ],
-   "outcome": "UNKNOWN",
-   "routeCounts": {
-    "UNKNOWN": 11
-   },
-   "results": [
-    {
-     "name": "inbound-limit",
-     "eid": 30102,
-     "forkBlock": 26415867,
-     "escrowSD": "0",
-     "outcome": "UNKNOWN",
-     "revert": "Error(ERC20: transfer amount exceeds balance)",
-     "maxAcceptedSD": null,
-     "proof": "escrow is empty: nothing to bound (1-unit credit reverts: Error(ERC20: transfer amount exceeds balance))"
-    },
-    {
-     "name": "inbound-limit",
-     "eid": 30110,
-     "forkBlock": 26415867,
-     "escrowSD": "0",
-     "outcome": "UNKNOWN",
-     "revert": "Error(ERC20: transfer amount exceeds balance)",
-     "maxAcceptedSD": null,
-     "proof": "escrow is empty: nothing to bound (1-unit credit reverts: Error(ERC20: transfer amount exceeds balance))"
-    },
-    {
-     "name": "inbound-limit",
-     "eid": 30111,
-     "forkBlock": 26415867,
-     "escrowSD": "0",
-     "outcome": "UNKNOWN",
-     "revert": "Error(ERC20: transfer amount exceeds balance)",
-     "maxAcceptedSD": null,
-     "proof": "escrow is empty: nothing to bound (1-unit credit reverts: Error(ERC20: transfer amount exceeds balance))"
-    },
-    {
-     "name": "inbound-limit",
-     "eid": 30165,
-     "forkBlock": 26415867,
-     "escrowSD": "0",
-     "outcome": "UNKNOWN",
-     "revert": "Error(ERC20: transfer amount exceeds balance)",
-     "maxAcceptedSD": null,
-     "proof": "escrow is empty: nothing to bound (1-unit credit reverts: Error(ERC20: transfer amount exceeds balance))"
-    },
-    {
-     "name": "inbound-limit",
-     "eid": 30183,
-     "forkBlock": 26415867,
-     "escrowSD": "0",
-     "outcome": "UNKNOWN",
-     "revert": "Error(ERC20: transfer amount exceeds balance)",
-     "maxAcceptedSD": null,
-     "proof": "escrow is empty: nothing to bound (1-unit credit reverts: Error(ERC20: transfer amount exceeds balance))"
-    },
-    {
-     "name": "inbound-limit",
-     "eid": 30184,
-     "forkBlock": 26415867,
-     "escrowSD": "0",
-     "outcome": "UNKNOWN",
-     "revert": "Error(ERC20: transfer amount exceeds balance)",
-     "maxAcceptedSD": null,
-     "proof": "escrow is empty: nothing to bound (1-unit credit reverts: Error(ERC20: transfer amount exceeds balance))"
-    },
-    {
-     "name": "inbound-limit",
-     "eid": 30214,
-     "forkBlock": 26415867,
-     "escrowSD": "0",
-     "outcome": "UNKNOWN",
-     "revert": "Error(ERC20: transfer amount exceeds balance)",
-     "maxAcceptedSD": null,
-     "proof": "escrow is empty: nothing to bound (1-unit credit reverts: Error(ERC20: transfer amount exceeds balance))"
-    },
-    {
-     "name": "inbound-limit",
-     "eid": 30243,
-     "forkBlock": 26415867,
-     "escrowSD": "0",
-     "outcome": "UNKNOWN",
-     "revert": "Error(ERC20: transfer amount exceeds balance)",
-     "maxAcceptedSD": null,
-     "proof": "escrow is empty: nothing to bound (1-unit credit reverts: Error(ERC20: transfer amount exceeds balance))"
-    },
-    {
-     "name": "inbound-limit",
-     "eid": 30260,
-     "forkBlock": 26415867,
-     "escrowSD": "0",
-     "outcome": "UNKNOWN",
-     "revert": "Error(ERC20: transfer amount exceeds balance)",
-     "maxAcceptedSD": null,
-     "proof": "escrow is empty: nothing to bound (1-unit credit reverts: Error(ERC20: transfer amount exceeds balance))"
-    },
-    {
-     "name": "inbound-limit",
-     "eid": 30280,
-     "forkBlock": 26415867,
-     "escrowSD": "0",
-     "outcome": "UNKNOWN",
-     "revert": "Error(ERC20: transfer amount exceeds balance)",
-     "maxAcceptedSD": null,
-     "proof": "escrow is empty: nothing to bound (1-unit credit reverts: Error(ERC20: transfer amount exceeds balance))"
-    },
-    {
-     "name": "inbound-limit",
-     "eid": 30303,
-     "forkBlock": 26415867,
-     "escrowSD": "0",
-     "outcome": "UNKNOWN",
-     "revert": "Error(ERC20: transfer amount exceeds balance)",
-     "maxAcceptedSD": null,
-     "proof": "escrow is empty: nothing to bound (1-unit credit reverts: Error(ERC20: transfer amount exceeds balance))"
-    }
-   ],
-   "crossCheck": "agree"
+   "error": "RPC Request failed."
   }
  ],
  "tally": {
-  "TEST_ERROR": 1,
-  "NO_PEERS": 3,
-  "UNKNOWN": 1
+  "NO_PEERS": 6,
+  "TEST_ERROR": 2,
+  "UNKNOWN": 2
  },
  "selfCheck": {
   "ok": true,

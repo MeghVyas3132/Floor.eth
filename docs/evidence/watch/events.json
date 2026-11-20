@@ -2,6 +2,18 @@
  {
   "chainId": 42161,
   "chain": "arbitrum",
+  "block": 526045746,
+  "tx": "0x378396625048aad70a1fdb789af47709f3154ff9fbd94b7eb4ecd4725d857971",
+  "logIndex": 0,
+  "event": "DelegateSet",
+  "symbol": "ZRO",
+  "kind": "layerzero-oft",
+  "oapp": "0x6985884c4392d348587b19cb9eaaf157f13271cd",
+  "delegate": "0x61ceb2953F0581C69C5A633DF639E791C740137B"
+ },
+ {
+  "chainId": 42161,
+  "chain": "arbitrum",
   "block": 525395057,
   "tx": "0x58d488762fe4ebed9523c85011bfb7614d66f4d4365d03c66671b06087224356",
   "logIndex": 3,
@@ -56,6 +68,18 @@
  {
   "chainId": 10,
   "chain": "optimism",
+  "block": 159805131,
+  "tx": "0xa8543c318eec54e93899014060fb3df6505a399523988ed562869beb74a3b74a",
+  "logIndex": 67,
+  "event": "DelegateSet",
+  "symbol": "ZRO",
+  "kind": "layerzero-oft",
+  "oapp": "0x6985884c4392d348587b19cb9eaaf157f13271cd",
+  "delegate": "0xCD52C21AFCDff54693590b83850D14114ce6D999"
+ },
+ {
+  "chainId": 10,
+  "chain": "optimism",
   "block": 159464152,
   "tx": "0xb81688d6ce7feaf0b62abf6a487c31b96c33fbaa45d736bb8c114fd6dcd0c974",
   "logIndex": 7,
@@ -64,6 +88,18 @@
   "kind": "layerzero-oft",
   "oapp": "0x7ff7fa94b8b66ef313f7970d4eebd2cb3103a2c0",
   "delegate": "0xDDF71a6ddf3FCABBbA4D607b57f0f6Fc0265bb84"
+ },
+ {
+  "chainId": 56,
+  "chain": "bsc",
+  "block": 134764850,
+  "tx": "0xb3c1a255e8ba37f7370c9985ae2505b6027e061d459389b212070c29acc0cbed",
+  "logIndex": 75,
+  "event": "DelegateSet",
+  "symbol": "ZRO",
+  "kind": "layerzero-oft",
+  "oapp": "0x6985884c4392d348587b19cb9eaaf157f13271cd",
+  "delegate": "0x791792eCC81D698Dde6d780240ee012599137007"
  },
  {
   "chainId": 56,
@@ -95,6 +131,18 @@
  {
   "chainId": 43114,
   "chain": "avalanche",
+  "block": 100914634,
+  "tx": "0x6ac515c1de5192128a2d6b928e161572ce7f37999841a84fce9332781b1a2d11",
+  "logIndex": 0,
+  "event": "DelegateSet",
+  "symbol": "ZRO",
+  "kind": "layerzero-oft",
+  "oapp": "0x6985884c4392d348587b19cb9eaaf157f13271cd",
+  "delegate": "0x1203651A00da99c5194211737e3C7d94D4054a11"
+ },
+ {
+  "chainId": 43114,
+  "chain": "avalanche",
   "block": 100154254,
   "tx": "0x30ba07ccc8c93521938161360379684ae09c1c1d13b7403ed99f2810f66c6aaf",
   "logIndex": 7,
@@ -107,6 +155,18 @@
  {
   "chainId": 137,
   "chain": "polygon",
+  "block": 97669048,
+  "tx": "0x9ebaa0b09717c4d8372f9317952e6229bfee2d2af530853d6010d14364e922dc",
+  "logIndex": 106,
+  "event": "DelegateSet",
+  "symbol": "ZRO",
+  "kind": "layerzero-oft",
+  "oapp": "0x6985884c4392d348587b19cb9eaaf157f13271cd",
+  "delegate": "0x18bfe07DdD58e6C0f0999e875Dfe48F424DC29af"
+ },
+ {
+  "chainId": 137,
+  "chain": "polygon",
   "block": 97214365,
   "tx": "0x6e2eac06797289bb9b40644fa8edeffbfac931aa43b214ead6ec99a290190677",
   "logIndex": 509,
@@ -115,6 +175,30 @@
   "kind": "layerzero-oft",
   "oapp": "0x7ff7fa94b8b66ef313f7970d4eebd2cb3103a2c0",
   "delegate": "0xDDF71a6ddf3FCABBbA4D607b57f0f6Fc0265bb84"
+ },
+ {
+  "chainId": 8453,
+  "chain": "base",
+  "block": 60093321,
+  "tx": "0xf0d85f00728de9c69fdb9fa848bd210f5bab9609d9b41e692c4fe39ceb935b96",
+  "logIndex": 122,
+  "event": "DelegateSet",
+  "symbol": "ZRO",
+  "kind": "layerzero-oft",
+  "oapp": "0x6985884c4392d348587b19cb9eaaf157f13271cd",
+  "delegate": "0xC38009aA39ebDeF11850dfac9033632d88D4a282"
+ },
+ {
+  "chainId": 8453,
+  "chain": "base",
+  "block": 60083283,
+  "tx": "0xb88593f89469d2f49e1ba64a6717391a08a80650d6e1f0dc4ee150a75b178710",
+  "logIndex": 46,
+  "event": "DelegateSet",
+  "symbol": "MOR",
+  "kind": "layerzero-oft",
+  "oapp": "0x7431ada8a591c955a994a21710752ef9b882b8e3",
+  "delegate": "0x1FE04BC15Cf2c5A2d41a0b3a96725596676eBa1E"
  },
  {
   "chainId": 8453,
@@ -140,6 +224,18 @@
   "oapp": "0x6bd83abc39391af1e24826e90237c4bd3468b5d2",
   "eid": 30168,
   "newLib": "0xc70AB6f32772f59fBfc23889Caf4Ba3376C84bAf"
+ },
+ {
+  "chainId": 1,
+  "chain": "ethereum",
+  "block": 26458906,
+  "tx": "0x726b1d77da73a551766c2d668a2dc1ffe19630e997dda9d0161a47eff34d6dcd",
+  "logIndex": 459,
+  "event": "DelegateSet",
+  "symbol": "ZRO",
+  "kind": "layerzero-oft",
+  "oapp": "0x6985884c4392d348587b19cb9eaaf157f13271cd",
+  "delegate": "0xf2C6eBc0AaD6e8024A2bD2623F97FEA5D0cA8Ef8"
  },
  {
   "chainId": 1,

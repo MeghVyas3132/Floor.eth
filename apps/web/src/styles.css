@@ -415,6 +415,7 @@ textarea, select {
 .warn { color: var(--breached); font-weight: 700; font-size: 11px; font-family: var(--mono); }
 .big { font-size: 20px; letter-spacing: -0.02em; }
 .bad { color: var(--breached); }
+.caution { color: var(--degraded); }
 .ok { color: var(--ok); }
 
 /* ---------- verification run ---------- */

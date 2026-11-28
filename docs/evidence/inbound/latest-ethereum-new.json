@@ -1,5 +1,5 @@
 {
- "block": 26513073,
+ "block": 26514045,
  "rpcs": [
   "eth-mainnet.public.blastapi.io",
   "api.zan.top",
@@ -60,6 +60,25 @@
    "eids": [
     30362
    ],
+   "peers": {
+    "30362": "0x0b835f07a2a54c0e80c1f585e5b6dd732816da3f"
+   },
+   "routes": [
+    {
+     "eid": 30362,
+     "status": "LIVE",
+     "verifiers": 2,
+     "operators": [
+      "fbtc-new",
+      "layerzero-labs"
+     ],
+     "unmapped": [],
+     "library": "0xc02Ab410f0734EFa3F14628780e6e695156024C2",
+     "libraryIsDefault": false,
+     "confirmations": "120"
+    }
+   ],
+   "closedEids": [],
    "outcome": "TEST_ERROR",
    "routeCounts": {
     "TEST_ERROR": 1
@@ -68,7 +87,7 @@
     {
      "name": "inbound-limit",
      "eid": 30362,
-     "forkBlock": 26513073,
+     "forkBlock": 26514045,
      "escrowSD": "1797963",
      "outcome": "TEST_ERROR",
      "revert": "Error(from is blocked)",
@@ -76,7 +95,8 @@
      "proof": "small (1 SD) reverts: Error(from is blocked)"
     }
    ],
-   "crossCheck": "agree"
+   "crossCheck": "unavailable",
+   "weakestUnboundedVerifiers": null
   },
   {
    "oapp": "0xe41228a455700caf09e551805a8ab37caa39d08c",
@@ -94,7 +114,75 @@
    "underlying": "0x853d955acef822db058eb8505911ed77f175b99e",
    "type": "OFT_ADAPTER",
    "lzVersion": "v2",
-   "error": "RPC Request failed."
+   "kind": "adapter",
+   "sharedDecimals": 6,
+   "tokenDecimals": 18,
+   "escrowTokens": 73.93235,
+   "eids": [
+    30168,
+    30184
+   ],
+   "peers": {
+    "30168": "0x656d91ab3d464c05cd1345ce21c78e36140a36491e102fbb08c58af73aafe89b",
+    "30184": "0x909dbde1ebe906af95660033e478d59efe831fed"
+   },
+   "routes": [
+    {
+     "eid": 30168,
+     "status": "LIVE",
+     "verifiers": 2,
+     "operators": [
+      "horizen-labs",
+      "layerzero-labs"
+     ],
+     "unmapped": [],
+     "library": "0xc02Ab410f0734EFa3F14628780e6e695156024C2",
+     "libraryIsDefault": true,
+     "confirmations": "32"
+    },
+    {
+     "eid": 30184,
+     "status": "LIVE",
+     "verifiers": 2,
+     "operators": [
+      "horizen-labs",
+      "layerzero-labs"
+     ],
+     "unmapped": [],
+     "library": "0xc02Ab410f0734EFa3F14628780e6e695156024C2",
+     "libraryIsDefault": false,
+     "confirmations": "10"
+    }
+   ],
+   "closedEids": [],
+   "outcome": "NO_INBOUND_LIMIT",
+   "routeCounts": {
+    "NO_INBOUND_LIMIT": 2
+   },
+   "results": [
+    {
+     "name": "inbound-limit",
+     "eid": 30168,
+     "forkBlock": 26514045,
+     "escrowSD": "73932350",
+     "outcome": "NO_INBOUND_LIMIT",
+     "revert": null,
+     "maxAcceptedSD": "73932350",
+     "proof": "full escrow released in one inbound message · full+1 reverts (Error(ERC20: transfer amount exceeds balance)) → escrow is the only ceiling"
+    },
+    {
+     "name": "inbound-limit",
+     "eid": 30184,
+     "forkBlock": 26514045,
+     "escrowSD": "73932350",
+     "outcome": "NO_INBOUND_LIMIT",
+     "revert": null,
+     "maxAcceptedSD": "73932350",
+     "proof": "full escrow released in one inbound message · full+1 reverts (Error(ERC20: transfer amount exceeds balance)) → escrow is the only ceiling"
+    }
+   ],
+   "crossCheck": "agree",
+   "weakestUnboundedVerifiers": 2
   },
   {
    "oapp": "0xc6f59a4fd50cac677b51558489e03138ac1784ec",
@@ -123,6 +211,221 @@
     30332,
     30339
    ],
+   "peers": {
+    "30102": "0x64445f0aecc51e94ad52d8ac56b7190e764e561a",
+    "30106": "0x64445f0aecc51e94ad52d8ac56b7190e764e561a",
+    "30109": "0x64445f0aecc51e94ad52d8ac56b7190e764e561a",
+    "30110": "0x64445f0aecc51e94ad52d8ac56b7190e764e561a",
+    "30111": "0x64445f0aecc51e94ad52d8ac56b7190e764e561a",
+    "30158": "0x64445f0aecc51e94ad52d8ac56b7190e764e561a",
+    "30168": "0x4939035f8dd13d15a9386e28b6705519aa6f488791323466a3c0116a201e51aa",
+    "30184": "0x0ceac003b0d2479bebec9f4b2ebad0a803759bbf",
+    "30243": "0x64445f0aecc51e94ad52d8ac56b7190e764e561a",
+    "30255": "0xedea7befb3024618ce8f148fa3803f14966b6252",
+    "30260": "0x64445f0aecc51e94ad52d8ac56b7190e764e561a",
+    "30274": "0x64445f0aecc51e94ad52d8ac56b7190e764e561a",
+    "30280": "0x64445f0aecc51e94ad52d8ac56b7190e764e561a",
+    "30332": "0x64445f0aecc51e94ad52d8ac56b7190e764e561a",
+    "30339": "0x64445f0aecc51e94ad52d8ac56b7190e764e561a"
+   },
+   "routes": [
+    {
+     "eid": 30102,
+     "status": "LIVE",
+     "verifiers": 2,
+     "operators": [
+      "horizen-labs",
+      "layerzero-labs"
+     ],
+     "unmapped": [],
+     "library": "0xc02Ab410f0734EFa3F14628780e6e695156024C2",
+     "libraryIsDefault": false,
+     "confirmations": "20"
+    },
+    {
+     "eid": 30106,
+     "status": "LIVE",
+     "verifiers": 2,
+     "operators": [
+      "horizen-labs",
+      "layerzero-labs"
+     ],
+     "unmapped": [],
+     "library": "0xc02Ab410f0734EFa3F14628780e6e695156024C2",
+     "libraryIsDefault": false,
+     "confirmations": "12"
+    },
+    {
+     "eid": 30109,
+     "status": "LIVE",
+     "verifiers": 2,
+     "operators": [
+      "horizen-labs",
+      "layerzero-labs"
+     ],
+     "unmapped": [],
+     "library": "0xc02Ab410f0734EFa3F14628780e6e695156024C2",
+     "libraryIsDefault": false,
+     "confirmations": "120"
+    },
+    {
+     "eid": 30110,
+     "status": "LIVE",
+     "verifiers": 2,
+     "operators": [
+      "horizen-labs",
+      "layerzero-labs"
+     ],
+     "unmapped": [],
+     "library": "0xc02Ab410f0734EFa3F14628780e6e695156024C2",
+     "libraryIsDefault": false,
+     "confirmations": "20"
+    },
+    {
+     "eid": 30111,
+     "status": "LIVE",
+     "verifiers": 2,
+     "operators": [
+      "horizen-labs",
+      "layerzero-labs"
+     ],
+     "unmapped": [],
+     "library": "0xc02Ab410f0734EFa3F14628780e6e695156024C2",
+     "libraryIsDefault": false,
+     "confirmations": "20"
+    },
+    {
+     "eid": 30158,
+     "status": "LIVE",
+     "verifiers": 2,
+     "operators": [
+      "horizen-labs",
+      "layerzero-labs"
+     ],
+     "unmapped": [],
+     "library": "0xc02Ab410f0734EFa3F14628780e6e695156024C2",
+     "libraryIsDefault": false,
+     "confirmations": "22498"
+    },
+    {
+     "eid": 30168,
+     "status": "LIVE",
+     "verifiers": 2,
+     "operators": [
+      "horizen-labs",
+      "layerzero-labs"
+     ],
+     "unmapped": [],
+     "library": "0xc02Ab410f0734EFa3F14628780e6e695156024C2",
+     "libraryIsDefault": false,
+     "confirmations": "32"
+    },
+    {
+     "eid": 30184,
+     "status": "LIVE",
+     "verifiers": 2,
+     "operators": [
+      "horizen-labs",
+      "layerzero-labs"
+     ],
+     "unmapped": [],
+     "library": "0xc02Ab410f0734EFa3F14628780e6e695156024C2",
+     "libraryIsDefault": false,
+     "confirmations": "10"
+    },
+    {
+     "eid": 30243,
+     "status": "LIVE",
+     "verifiers": 2,
+     "operators": [
+      "horizen-labs",
+      "layerzero-labs"
+     ],
+     "unmapped": [],
+     "library": "0xc02Ab410f0734EFa3F14628780e6e695156024C2",
+     "libraryIsDefault": false,
+     "confirmations": "5"
+    },
+    {
+     "eid": 30255,
+     "status": "LIVE",
+     "verifiers": 2,
+     "operators": [
+      "horizen-labs",
+      "layerzero-labs"
+     ],
+     "unmapped": [],
+     "library": "0xc02Ab410f0734EFa3F14628780e6e695156024C2",
+     "libraryIsDefault": false,
+     "confirmations": "5"
+    },
+    {
+     "eid": 30260,
+     "status": "LIVE",
+     "verifiers": 2,
+     "operators": [
+      "horizen-labs",
+      "layerzero-labs"
+     ],
+     "unmapped": [],
+     "library": "0xc02Ab410f0734EFa3F14628780e6e695156024C2",
+     "libraryIsDefault": false,
+     "confirmations": "5"
+    },
+    {
+     "eid": 30274,
+     "status": "LIVE",
+     "verifiers": 2,
+     "operators": [
+      "horizen-labs",
+      "layerzero-labs"
+     ],
+     "unmapped": [],
+     "library": "0xc02Ab410f0734EFa3F14628780e6e695156024C2",
+     "libraryIsDefault": false,
+     "confirmations": "225000"
+    },
+    {
+     "eid": 30280,
+     "status": "LIVE",
+     "verifiers": 2,
+     "operators": [
+      "horizen-labs",
+      "layerzero-labs"
+     ],
+     "unmapped": [],
+     "library": "0xc02Ab410f0734EFa3F14628780e6e695156024C2",
+     "libraryIsDefault": false,
+     "confirmations": "5"
+    },
+    {
+     "eid": 30332,
+     "status": "LIVE",
+     "verifiers": 2,
+     "operators": [
+      "horizen-labs",
+      "layerzero-labs"
+     ],
+     "unmapped": [],
+     "library": "0xc02Ab410f0734EFa3F14628780e6e695156024C2",
+     "libraryIsDefault": false,
+     "confirmations": "20"
+    },
+    {
+     "eid": 30339,
+     "status": "LIVE",
+     "verifiers": 2,
+     "operators": [
+      "horizen-labs",
+      "layerzero-labs"
+     ],
+     "unmapped": [],
+     "library": "0xc02Ab410f0734EFa3F14628780e6e695156024C2",
+     "libraryIsDefault": false,
+     "confirmations": "20"
+    }
+   ],
+   "closedEids": [],
    "outcome": "UNKNOWN",
    "routeCounts": {
     "UNKNOWN": 15
@@ -131,7 +434,7 @@
     {
      "name": "inbound-limit",
      "eid": 30102,
-     "forkBlock": 26513073,
+     "forkBlock": 26514045,
      "escrowSD": "0",
      "outcome": "UNKNOWN",
      "revert": "Error(FXS::_moveVotes: vote amount underflows)",
@@ -141,7 +444,7 @@
     {
      "name": "inbound-limit",
      "eid": 30106,
-     "forkBlock": 26513073,
+     "forkBlock": 26514045,
      "escrowSD": "0",
      "outcome": "UNKNOWN",
      "revert": "Error(FXS::_moveVotes: vote amount underflows)",
@@ -151,7 +454,7 @@
     {
      "name": "inbound-limit",
      "eid": 30109,
-     "forkBlock": 26513073,
+     "forkBlock": 26514045,
      "escrowSD": "0",
      "outcome": "UNKNOWN",
      "revert": "Error(FXS::_moveVotes: vote amount underflows)",
@@ -161,7 +464,7 @@
     {
      "name": "inbound-limit",
      "eid": 30110,
-     "forkBlock": 26513073,
+     "forkBlock": 26514045,
      "escrowSD": "0",
      "outcome": "UNKNOWN",
      "revert": "Error(FXS::_moveVotes: vote amount underflows)",
@@ -171,7 +474,7 @@
     {
      "name": "inbound-limit",
      "eid": 30111,
-     "forkBlock": 26513073,
+     "forkBlock": 26514045,
      "escrowSD": "0",
      "outcome": "UNKNOWN",
      "revert": "Error(FXS::_moveVotes: vote amount underflows)",
@@ -181,7 +484,7 @@
     {
      "name": "inbound-limit",
      "eid": 30158,
-     "forkBlock": 26513073,
+     "forkBlock": 26514045,
      "escrowSD": "0",
      "outcome": "UNKNOWN",
      "revert": "Error(FXS::_moveVotes: vote amount underflows)",
@@ -191,7 +494,7 @@
     {
      "name": "inbound-limit",
      "eid": 30168,
-     "forkBlock": 26513073,
+     "forkBlock": 26514045,
      "escrowSD": "0",
      "outcome": "UNKNOWN",
      "revert": "Error(FXS::_moveVotes: vote amount underflows)",
@@ -201,7 +504,7 @@
     {
      "name": "inbound-limit",
      "eid": 30184,
-     "forkBlock": 26513073,
+     "forkBlock": 26514045,
      "escrowSD": "0",
      "outcome": "UNKNOWN",
      "revert": "Error(FXS::_moveVotes: vote amount underflows)",
@@ -211,7 +514,7 @@
     {
      "name": "inbound-limit",
      "eid": 30243,
-     "forkBlock": 26513073,
+     "forkBlock": 26514045,
      "escrowSD": "0",
      "outcome": "UNKNOWN",
      "revert": "Error(FXS::_moveVotes: vote amount underflows)",
@@ -221,7 +524,7 @@
     {
      "name": "inbound-limit",
      "eid": 30255,
-     "forkBlock": 26513073,
+     "forkBlock": 26514045,
      "escrowSD": "0",
      "outcome": "UNKNOWN",
      "revert": "Error(FXS::_moveVotes: vote amount underflows)",
@@ -231,7 +534,7 @@
     {
      "name": "inbound-limit",
      "eid": 30260,
-     "forkBlock": 26513073,
+     "forkBlock": 26514045,
      "escrowSD": "0",
      "outcome": "UNKNOWN",
      "revert": "Error(FXS::_moveVotes: vote amount underflows)",
@@ -241,7 +544,7 @@
     {
      "name": "inbound-limit",
      "eid": 30274,
-     "forkBlock": 26513073,
+     "forkBlock": 26514045,
      "escrowSD": "0",
      "outcome": "UNKNOWN",
      "revert": "Error(FXS::_moveVotes: vote amount underflows)",
@@ -251,7 +554,7 @@
     {
      "name": "inbound-limit",
      "eid": 30280,
-     "forkBlock": 26513073,
+     "forkBlock": 26514045,
      "escrowSD": "0",
      "outcome": "UNKNOWN",
      "revert": "Error(FXS::_moveVotes: vote amount underflows)",
@@ -261,7 +564,7 @@
     {
      "name": "inbound-limit",
      "eid": 30332,
-     "forkBlock": 26513073,
+     "forkBlock": 26514045,
      "escrowSD": "0",
      "outcome": "UNKNOWN",
      "revert": "Error(FXS::_moveVotes: vote amount underflows)",
@@ -271,7 +574,7 @@
     {
      "name": "inbound-limit",
      "eid": 30339,
-     "forkBlock": 26513073,
+     "forkBlock": 26514045,
      "escrowSD": "0",
      "outcome": "UNKNOWN",
      "revert": "Error(FXS::_moveVotes: vote amount underflows)",
@@ -279,7 +582,8 @@
      "proof": "escrow is empty: nothing to bound (1-unit credit reverts: Error(FXS::_moveVotes: vote amount underflows))"
     }
    ],
-   "crossCheck": "agree"
+   "crossCheck": "unavailable",
+   "weakestUnboundedVerifiers": null
   },
   {
    "oapp": "0x23432452b720c80553458496d4d9d7c5003280d0",
@@ -287,7 +591,75 @@
    "underlying": "0x3432b6a60d23ca0dfca7761b7ab56459d9c964d0",
    "type": "OFT_ADAPTER",
    "lzVersion": "v2",
-   "error": "RPC Request failed."
+   "kind": "adapter",
+   "sharedDecimals": 6,
+   "tokenDecimals": 18,
+   "escrowTokens": 14220.839929,
+   "eids": [
+    30168,
+    30184
+   ],
+   "peers": {
+    "30168": "0x402e86d1cfd2cde4fac63aa8d9892eca6d3c0e08e8335622124332a95df6c10c",
+    "30184": "0x23432452b720c80553458496d4d9d7c5003280d0"
+   },
+   "routes": [
+    {
+     "eid": 30168,
+     "status": "LIVE",
+     "verifiers": 2,
+     "operators": [
+      "horizen-labs",
+      "layerzero-labs"
+     ],
+     "unmapped": [],
+     "library": "0xc02Ab410f0734EFa3F14628780e6e695156024C2",
+     "libraryIsDefault": true,
+     "confirmations": "32"
+    },
+    {
+     "eid": 30184,
+     "status": "LIVE",
+     "verifiers": 2,
+     "operators": [
+      "horizen-labs",
+      "layerzero-labs"
+     ],
+     "unmapped": [],
+     "library": "0xc02Ab410f0734EFa3F14628780e6e695156024C2",
+     "libraryIsDefault": false,
+     "confirmations": "10"
+    }
+   ],
+   "closedEids": [],
+   "outcome": "NO_INBOUND_LIMIT",
+   "routeCounts": {
+    "NO_INBOUND_LIMIT": 2
+   },
+   "results": [
+    {
+     "name": "inbound-limit",
+     "eid": 30168,
+     "forkBlock": 26514045,
+     "escrowSD": "14220839929",
+     "outcome": "NO_INBOUND_LIMIT",
+     "revert": null,
+     "maxAcceptedSD": "14220839929",
+     "proof": "full escrow released in one inbound message · full+1 reverts (Error(FXS::_moveVotes: vote amount underflows)) → REVIEW: full+1 revert is not a known balance error"
+    },
+    {
+     "name": "inbound-limit",
+     "eid": 30184,
+     "forkBlock": 26514045,
+     "escrowSD": "14220839929",
+     "outcome": "NO_INBOUND_LIMIT",
+     "revert": null,
+     "maxAcceptedSD": "14220839929",
+     "proof": "full escrow released in one inbound message · full+1 reverts (Error(FXS::_moveVotes: vote amount underflows)) → REVIEW: full+1 revert is not a known balance error"
+    }
+   ],
+   "crossCheck": "agree",
+   "weakestUnboundedVerifiers": 2
   },
   {
    "oapp": "0x3a7647c1323144a16e7d0d71a581e3fe5bd95299",
@@ -355,7 +727,51 @@
    "underlying": "0xcbb7c0000ab88b473b1f5afd9ef808440eed33bf",
    "type": "OFT_ADAPTER",
    "lzVersion": "v2",
-   "error": "RPC Request failed."
+   "kind": "adapter",
+   "sharedDecimals": 8,
+   "tokenDecimals": 8,
+   "escrowTokens": 4.87253601,
+   "eids": [
+    30377
+   ],
+   "peers": {
+    "30377": "0x7048c9e4abd0cf0219e95a17a8c6908dfc4f0ee4"
+   },
+   "routes": [
+    {
+     "eid": 30377,
+     "status": "LIVE",
+     "verifiers": 3,
+     "operators": [
+      "p2p",
+      "deutsche-telekom",
+      "luganodes"
+     ],
+     "unmapped": [],
+     "library": "0xc02Ab410f0734EFa3F14628780e6e695156024C2",
+     "libraryIsDefault": false,
+     "confirmations": "1"
+    }
+   ],
+   "closedEids": [],
+   "outcome": "NO_INBOUND_LIMIT",
+   "routeCounts": {
+    "NO_INBOUND_LIMIT": 1
+   },
+   "results": [
+    {
+     "name": "inbound-limit",
+     "eid": 30377,
+     "forkBlock": 26514045,
+     "escrowSD": "487253601",
+     "outcome": "NO_INBOUND_LIMIT",
+     "revert": null,
+     "maxAcceptedSD": "487253601",
+     "proof": "full escrow released in one inbound message · full+1 reverts (Error(ERC20: transfer amount exceeds balance)) → escrow is the only ceiling"
+    }
+   ],
+   "crossCheck": "agree",
+   "weakestUnboundedVerifiers": 3
   },
   {
    "oapp": "0xaa798bf5ec09b6e3bc059ea4d36d4ca53e063ef7",
@@ -373,7 +789,51 @@
    "underlying": "0x7f39c581f595b53c5cb19bd0b3f8da6c935e2ca0",
    "type": "OFT_ADAPTER",
    "lzVersion": "v2",
-   "error": "RPC Request failed."
+   "kind": "adapter",
+   "sharedDecimals": 6,
+   "tokenDecimals": 18,
+   "escrowTokens": 1.994564,
+   "eids": [
+    30280
+   ],
+   "peers": {
+    "30280": "0xbe574b6219c6d985d08712e90c21a88fd55f1ae8"
+   },
+   "routes": [
+    {
+     "eid": 30280,
+     "status": "LIVE",
+     "verifiers": 3,
+     "operators": [
+      "canary",
+      "nethermind",
+      "bcw"
+     ],
+     "unmapped": [],
+     "library": "0xc02Ab410f0734EFa3F14628780e6e695156024C2",
+     "libraryIsDefault": false,
+     "confirmations": "20"
+    }
+   ],
+   "closedEids": [],
+   "outcome": "NO_INBOUND_LIMIT",
+   "routeCounts": {
+    "NO_INBOUND_LIMIT": 1
+   },
+   "results": [
+    {
+     "name": "inbound-limit",
+     "eid": 30280,
+     "forkBlock": 26514045,
+     "escrowSD": "1994564",
+     "outcome": "NO_INBOUND_LIMIT",
+     "revert": null,
+     "maxAcceptedSD": "1994564",
+     "proof": "full escrow released in one inbound message · full+1 reverts (Error(ERC20: transfer amount exceeds balance)) → escrow is the only ceiling"
+    }
+   ],
+   "crossCheck": "agree",
+   "weakestUnboundedVerifiers": 3
   },
   {
    "oapp": "0x6cea302b297bb8c49e56d04cc080480822795848",
@@ -381,12 +841,57 @@
    "underlying": "0x7f39c581f595b53c5cb19bd0b3f8da6c935e2ca0",
    "type": "OFT_ADAPTER",
    "lzVersion": "v2",
-   "error": "RPC Request failed."
+   "kind": "adapter",
+   "sharedDecimals": 6,
+   "tokenDecimals": 18,
+   "escrowTokens": 0.382748,
+   "eids": [
+    30377
+   ],
+   "peers": {
+    "30377": "0xaf368c91793cb22739386dfcbbb2f1a9e4bcbebf"
+   },
+   "routes": [
+    {
+     "eid": 30377,
+     "status": "LIVE",
+     "verifiers": 3,
+     "operators": [
+      "p2p",
+      "luganodes",
+      "layerzero-labs"
+     ],
+     "unmapped": [],
+     "library": "0xc02Ab410f0734EFa3F14628780e6e695156024C2",
+     "libraryIsDefault": false,
+     "confirmations": "1"
+    }
+   ],
+   "closedEids": [],
+   "outcome": "NO_INBOUND_LIMIT",
+   "routeCounts": {
+    "NO_INBOUND_LIMIT": 1
+   },
+   "results": [
+    {
+     "name": "inbound-limit",
+     "eid": 30377,
+     "forkBlock": 26514045,
+     "escrowSD": "382748",
+     "outcome": "NO_INBOUND_LIMIT",
+     "revert": null,
+     "maxAcceptedSD": "382748",
+     "proof": "full escrow released in one inbound message · full+1 reverts (Error(ERC20: transfer amount exceeds balance)) → escrow is the only ceiling"
+    }
+   ],
+   "crossCheck": "agree",
+   "weakestUnboundedVerifiers": 3
   }
  ],
  "tally": {
   "NO_PEERS": 12,
   "TEST_ERROR": 1,
+  "NO_INBOUND_LIMIT": 5,
   "UNKNOWN": 1
  },
  "selfCheck": {

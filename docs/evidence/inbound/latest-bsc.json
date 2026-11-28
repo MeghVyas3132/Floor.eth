@@ -1,5 +1,5 @@
 {
- "block": 136213184,
+ "block": 136239223,
  "rpcs": [
   "bsc-dataseed.bnbchain.org",
   "bsc-rpc.publicnode.com"
@@ -19,6 +19,28 @@
    "eids": [
     30361
    ],
+   "peers": {
+    "30361": "0xfe41e7e5cb3460c483ab2a38eb605cda9e2d248e"
+   },
+   "routes": [
+    {
+     "eid": 30361,
+     "status": "LIVE",
+     "verifiers": 2,
+     "operators": [
+      "unmapped:0x1bc581eaa9e95d398af6666fee49918f53faa0f6",
+      "unmapped:0x8f116f5fbe6cc13038658ab39b1fcf5a0c941a63"
+     ],
+     "unmapped": [
+      "0x1bc581eaa9e95d398af6666fee49918f53faa0f6",
+      "0x8f116f5fbe6cc13038658ab39b1fcf5a0c941a63"
+     ],
+     "library": "0xB217266c3A98C8B2709Ee26836C98cf12f6cCEC1",
+     "libraryIsDefault": false,
+     "confirmations": "20"
+    }
+   ],
+   "closedEids": [],
    "outcome": "NO_INBOUND_LIMIT",
    "routeCounts": {
     "NO_INBOUND_LIMIT": 1
@@ -27,7 +49,7 @@
     {
      "name": "inbound-limit",
      "eid": 30361,
-     "forkBlock": 136213184,
+     "forkBlock": 136239223,
      "escrowSD": "1801274",
      "outcome": "NO_INBOUND_LIMIT",
      "revert": null,
@@ -35,7 +57,8 @@
      "proof": "full escrow released in one inbound message · full+1 reverts (Error(BEP20: transfer amount exceeds balance)) → escrow is the only ceiling"
     }
    ],
-   "crossCheck": "agree"
+   "crossCheck": "agree",
+   "weakestUnboundedVerifiers": 2
   },
   {
    "oapp": "0xb274202daba6ae180c665b4fbe59857b7c3a8091",

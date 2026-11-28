@@ -1,5 +1,5 @@
 {
- "block": 98103785,
+ "block": 98111679,
  "rpcs": [
   "polygon-bor-rpc.publicnode.com",
   "polygon-rpc.com"
@@ -12,10 +12,576 @@
    "underlying": "0xc2132d05d31c914a87c6611c10748aeb04b58e8f",
    "type": "OFT_ADAPTER",
    "lzVersion": "v2",
-   "error": "HTTP request failed."
+   "kind": "adapter",
+   "sharedDecimals": 6,
+   "tokenDecimals": 6,
+   "escrowTokens": 0,
+   "eids": [
+    30101,
+    30110,
+    30111,
+    30181,
+    30212,
+    30274,
+    30280,
+    30295,
+    30316,
+    30320,
+    30322,
+    30333,
+    30339,
+    30362,
+    30367,
+    30383,
+    30390,
+    30396,
+    30398,
+    30410,
+    30600
+   ],
+   "peers": {
+    "30101": "0x6c96de32cea08842dcc4058c14d3aaad7fa41dee",
+    "30110": "0x14e4a1b13bf7f943c8ff7c51fb60fa964a298d92",
+    "30111": "0xf03b4d9ac1d5d1e7c4cef54c2a313b9fe051a0ad",
+    "30181": "0xcb768e263fb1c62214e7cab4aa8d036d76dc59cc",
+    "30212": "0xc57efa1c7113d98bda6f9f249471704ece5dd84a",
+    "30274": "0x94bcca6bdfd6a61817ab0e960bfede4984505554",
+    "30280": "0x56fe74a2e3b484b921c447357203431a3485cc60",
+    "30295": "0x567287d2a9829215a37e3b88843d32f9221e7588",
+    "30316": "0xe3119e23fc2371d1e6b01775ba312035425a53d6",
+    "30320": "0xc07be8994d035631c36fb4a89c918cefb2f03ec3",
+    "30322": "0xcb768e263fb1c62214e7cab4aa8d036d76dc59cc",
+    "30333": "0x1a594d5d5d1c426281c1064b07f23f57b2716b61",
+    "30339": "0x1cb6de532588fca4a21b7209de7c456af8434a65",
+    "30362": "0x3dc96399109df5ceb2c226664a086140bd0379cb",
+    "30367": "0x904861a24f30ec96ea7cfc3be9ea4b476d237e98",
+    "30383": "0x02ca37966753bdddf11216b73b16c1de756a7cf9",
+    "30390": "0x9151434b16b9763660705744891fa906f660ecc5",
+    "30396": "0xedaba024be4d87974d5ab11c6dd586963cccb027",
+    "30398": "0x9151434b16b9763660705744891fa906f660ecc5",
+    "30410": "0xaf37e8b6c9ed7f6318979f56fc287d76c30847ff",
+    "30600": "0x5d672cb21b3afcdda54546c7f5b9fd346920e41f8fe8f39e838e5d7bd7435546"
+   },
+   "routes": [
+    {
+     "eid": 30101,
+     "status": "LIVE",
+     "verifiers": 3,
+     "operators": [
+      "layerzero-labs",
+      "usdt0",
+      "canary"
+     ],
+     "unmapped": [],
+     "library": "0x1322871e4ab09Bc7f5717189434f97bBD9546e95",
+     "libraryIsDefault": false,
+     "confirmations": "65"
+    },
+    {
+     "eid": 30110,
+     "status": "LIVE",
+     "verifiers": 3,
+     "operators": [
+      "layerzero-labs",
+      "usdt0",
+      "canary"
+     ],
+     "unmapped": [],
+     "library": "0x1322871e4ab09Bc7f5717189434f97bBD9546e95",
+     "libraryIsDefault": false,
+     "confirmations": "60"
+    },
+    {
+     "eid": 30111,
+     "status": "LIVE",
+     "verifiers": 3,
+     "operators": [
+      "layerzero-labs",
+      "usdt0",
+      "canary"
+     ],
+     "unmapped": [],
+     "library": "0x1322871e4ab09Bc7f5717189434f97bBD9546e95",
+     "libraryIsDefault": false,
+     "confirmations": "1000"
+    },
+    {
+     "eid": 30181,
+     "status": "LIVE",
+     "verifiers": 3,
+     "operators": [
+      "layerzero-labs",
+      "usdt0",
+      "canary"
+     ],
+     "unmapped": [],
+     "library": "0x1322871e4ab09Bc7f5717189434f97bBD9546e95",
+     "libraryIsDefault": false,
+     "confirmations": "2000"
+    },
+    {
+     "eid": 30212,
+     "status": "LIVE",
+     "verifiers": 3,
+     "operators": [
+      "layerzero-labs",
+      "usdt0",
+      "canary"
+     ],
+     "unmapped": [],
+     "library": "0x1322871e4ab09Bc7f5717189434f97bBD9546e95",
+     "libraryIsDefault": false,
+     "confirmations": "2800"
+    },
+    {
+     "eid": 30274,
+     "status": "LIVE",
+     "verifiers": 3,
+     "operators": [
+      "layerzero-labs",
+      "usdt0",
+      "canary"
+     ],
+     "unmapped": [],
+     "library": "0x1322871e4ab09Bc7f5717189434f97bBD9546e95",
+     "libraryIsDefault": false,
+     "confirmations": "9000"
+    },
+    {
+     "eid": 30280,
+     "status": "LIVE",
+     "verifiers": 3,
+     "operators": [
+      "layerzero-labs",
+      "usdt0",
+      "canary"
+     ],
+     "unmapped": [],
+     "library": "0x1322871e4ab09Bc7f5717189434f97bBD9546e95",
+     "libraryIsDefault": false,
+     "confirmations": "2000"
+    },
+    {
+     "eid": 30295,
+     "status": "LIVE",
+     "verifiers": 3,
+     "operators": [
+      "layerzero-labs",
+      "usdt0",
+      "canary"
+     ],
+     "unmapped": [],
+     "library": "0x1322871e4ab09Bc7f5717189434f97bBD9546e95",
+     "libraryIsDefault": false,
+     "confirmations": "500"
+    },
+    {
+     "eid": 30316,
+     "status": "LIVE",
+     "verifiers": 3,
+     "operators": [
+      "layerzero-labs",
+      "usdt0",
+      "canary"
+     ],
+     "unmapped": [],
+     "library": "0x1322871e4ab09Bc7f5717189434f97bBD9546e95",
+     "libraryIsDefault": false,
+     "confirmations": "60"
+    },
+    {
+     "eid": 30320,
+     "status": "LIVE",
+     "verifiers": 3,
+     "operators": [
+      "layerzero-labs",
+      "usdt0",
+      "canary"
+     ],
+     "unmapped": [],
+     "library": "0x1322871e4ab09Bc7f5717189434f97bBD9546e95",
+     "libraryIsDefault": false,
+     "confirmations": "1600"
+    },
+    {
+     "eid": 30322,
+     "status": "LIVE",
+     "verifiers": 3,
+     "operators": [
+      "layerzero-labs",
+      "usdt0",
+      "canary"
+     ],
+     "unmapped": [],
+     "library": "0x1322871e4ab09Bc7f5717189434f97bBD9546e95",
+     "libraryIsDefault": false,
+     "confirmations": "1000"
+    },
+    {
+     "eid": 30333,
+     "status": "LIVE",
+     "verifiers": 3,
+     "operators": [
+      "layerzero-labs",
+      "usdt0",
+      "canary"
+     ],
+     "unmapped": [],
+     "library": "0x1322871e4ab09Bc7f5717189434f97bBD9546e95",
+     "libraryIsDefault": false,
+     "confirmations": "120"
+    },
+    {
+     "eid": 30339,
+     "status": "LIVE",
+     "verifiers": 3,
+     "operators": [
+      "layerzero-labs",
+      "usdt0",
+      "canary"
+     ],
+     "unmapped": [],
+     "library": "0x1322871e4ab09Bc7f5717189434f97bBD9546e95",
+     "libraryIsDefault": false,
+     "confirmations": "3000"
+    },
+    {
+     "eid": 30362,
+     "status": "LIVE",
+     "verifiers": 3,
+     "operators": [
+      "layerzero-labs",
+      "usdt0",
+      "canary"
+     ],
+     "unmapped": [],
+     "library": "0x1322871e4ab09Bc7f5717189434f97bBD9546e95",
+     "libraryIsDefault": false,
+     "confirmations": "60"
+    },
+    {
+     "eid": 30367,
+     "status": "LIVE",
+     "verifiers": 3,
+     "operators": [
+      "layerzero-labs",
+      "usdt0",
+      "canary"
+     ],
+     "unmapped": [],
+     "library": "0x1322871e4ab09Bc7f5717189434f97bBD9546e95",
+     "libraryIsDefault": false,
+     "confirmations": "43200"
+    },
+    {
+     "eid": 30383,
+     "status": "LIVE",
+     "verifiers": 3,
+     "operators": [
+      "layerzero-labs",
+      "usdt0",
+      "canary"
+     ],
+     "unmapped": [],
+     "library": "0x1322871e4ab09Bc7f5717189434f97bBD9546e95",
+     "libraryIsDefault": false,
+     "confirmations": "1800"
+    },
+    {
+     "eid": 30390,
+     "status": "LIVE",
+     "verifiers": 3,
+     "operators": [
+      "layerzero-labs",
+      "usdt0",
+      "canary"
+     ],
+     "unmapped": [],
+     "library": "0x1322871e4ab09Bc7f5717189434f97bBD9546e95",
+     "libraryIsDefault": false,
+     "confirmations": "3600"
+    },
+    {
+     "eid": 30396,
+     "status": "LIVE",
+     "verifiers": 3,
+     "operators": [
+      "layerzero-labs",
+      "usdt0",
+      "canary"
+     ],
+     "unmapped": [],
+     "library": "0x1322871e4ab09Bc7f5717189434f97bBD9546e95",
+     "libraryIsDefault": false,
+     "confirmations": "3600"
+    },
+    {
+     "eid": 30398,
+     "status": "LIVE",
+     "verifiers": 3,
+     "operators": [
+      "layerzero-labs",
+      "usdt0",
+      "canary"
+     ],
+     "unmapped": [],
+     "library": "0x1322871e4ab09Bc7f5717189434f97bBD9546e95",
+     "libraryIsDefault": false,
+     "confirmations": "5400"
+    },
+    {
+     "eid": 30410,
+     "status": "LIVE",
+     "verifiers": 3,
+     "operators": [
+      "layerzero-labs",
+      "usdt0",
+      "canary"
+     ],
+     "unmapped": [],
+     "library": "0x1322871e4ab09Bc7f5717189434f97bBD9546e95",
+     "libraryIsDefault": false,
+     "confirmations": "3000"
+    },
+    {
+     "eid": 30600,
+     "status": "LIVE",
+     "verifiers": 3,
+     "operators": [
+      "layerzero-labs",
+      "usdt0",
+      "canary"
+     ],
+     "unmapped": [],
+     "library": "0x1322871e4ab09Bc7f5717189434f97bBD9546e95",
+     "libraryIsDefault": false,
+     "confirmations": "320"
+    }
+   ],
+   "closedEids": [],
+   "outcome": "NO_INBOUND_LIMIT",
+   "routeCounts": {
+    "NO_INBOUND_LIMIT": 21
+   },
+   "results": [
+    {
+     "name": "inbound-limit",
+     "eid": 30101,
+     "forkBlock": 98111679,
+     "escrowSD": "0",
+     "outcome": "NO_INBOUND_LIMIT",
+     "revert": null,
+     "maxAcceptedSD": "18446744073709551615",
+     "proof": "credits by minting (a credit succeeded with an empty escrow) · uint64-max credit accepted in one inbound message"
+    },
+    {
+     "name": "inbound-limit",
+     "eid": 30110,
+     "forkBlock": 98111679,
+     "escrowSD": "0",
+     "outcome": "NO_INBOUND_LIMIT",
+     "revert": null,
+     "maxAcceptedSD": "18446744073709551615",
+     "proof": "credits by minting (a credit succeeded with an empty escrow) · uint64-max credit accepted in one inbound message"
+    },
+    {
+     "name": "inbound-limit",
+     "eid": 30111,
+     "forkBlock": 98111679,
+     "escrowSD": "0",
+     "outcome": "NO_INBOUND_LIMIT",
+     "revert": null,
+     "maxAcceptedSD": "18446744073709551615",
+     "proof": "credits by minting (a credit succeeded with an empty escrow) · uint64-max credit accepted in one inbound message"
+    },
+    {
+     "name": "inbound-limit",
+     "eid": 30181,
+     "forkBlock": 98111679,
+     "escrowSD": "0",
+     "outcome": "NO_INBOUND_LIMIT",
+     "revert": null,
+     "maxAcceptedSD": "18446744073709551615",
+     "proof": "credits by minting (a credit succeeded with an empty escrow) · uint64-max credit accepted in one inbound message"
+    },
+    {
+     "name": "inbound-limit",
+     "eid": 30212,
+     "forkBlock": 98111679,
+     "escrowSD": "0",
+     "outcome": "NO_INBOUND_LIMIT",
+     "revert": null,
+     "maxAcceptedSD": "18446744073709551615",
+     "proof": "credits by minting (a credit succeeded with an empty escrow) · uint64-max credit accepted in one inbound message"
+    },
+    {
+     "name": "inbound-limit",
+     "eid": 30274,
+     "forkBlock": 98111679,
+     "escrowSD": "0",
+     "outcome": "NO_INBOUND_LIMIT",
+     "revert": null,
+     "maxAcceptedSD": "18446744073709551615",
+     "proof": "credits by minting (a credit succeeded with an empty escrow) · uint64-max credit accepted in one inbound message"
+    },
+    {
+     "name": "inbound-limit",
+     "eid": 30280,
+     "forkBlock": 98111679,
+     "escrowSD": "0",
+     "outcome": "NO_INBOUND_LIMIT",
+     "revert": null,
+     "maxAcceptedSD": "18446744073709551615",
+     "proof": "credits by minting (a credit succeeded with an empty escrow) · uint64-max credit accepted in one inbound message"
+    },
+    {
+     "name": "inbound-limit",
+     "eid": 30295,
+     "forkBlock": 98111679,
+     "escrowSD": "0",
+     "outcome": "NO_INBOUND_LIMIT",
+     "revert": null,
+     "maxAcceptedSD": "18446744073709551615",
+     "proof": "credits by minting (a credit succeeded with an empty escrow) · uint64-max credit accepted in one inbound message"
+    },
+    {
+     "name": "inbound-limit",
+     "eid": 30316,
+     "forkBlock": 98111679,
+     "escrowSD": "0",
+     "outcome": "NO_INBOUND_LIMIT",
+     "revert": null,
+     "maxAcceptedSD": "18446744073709551615",
+     "proof": "credits by minting (a credit succeeded with an empty escrow) · uint64-max credit accepted in one inbound message"
+    },
+    {
+     "name": "inbound-limit",
+     "eid": 30320,
+     "forkBlock": 98111679,
+     "escrowSD": "0",
+     "outcome": "NO_INBOUND_LIMIT",
+     "revert": null,
+     "maxAcceptedSD": "18446744073709551615",
+     "proof": "credits by minting (a credit succeeded with an empty escrow) · uint64-max credit accepted in one inbound message"
+    },
+    {
+     "name": "inbound-limit",
+     "eid": 30322,
+     "forkBlock": 98111679,
+     "escrowSD": "0",
+     "outcome": "NO_INBOUND_LIMIT",
+     "revert": null,
+     "maxAcceptedSD": "18446744073709551615",
+     "proof": "credits by minting (a credit succeeded with an empty escrow) · uint64-max credit accepted in one inbound message"
+    },
+    {
+     "name": "inbound-limit",
+     "eid": 30333,
+     "forkBlock": 98111679,
+     "escrowSD": "0",
+     "outcome": "NO_INBOUND_LIMIT",
+     "revert": null,
+     "maxAcceptedSD": "18446744073709551615",
+     "proof": "credits by minting (a credit succeeded with an empty escrow) · uint64-max credit accepted in one inbound message"
+    },
+    {
+     "name": "inbound-limit",
+     "eid": 30339,
+     "forkBlock": 98111679,
+     "escrowSD": "0",
+     "outcome": "NO_INBOUND_LIMIT",
+     "revert": null,
+     "maxAcceptedSD": "18446744073709551615",
+     "proof": "credits by minting (a credit succeeded with an empty escrow) · uint64-max credit accepted in one inbound message"
+    },
+    {
+     "name": "inbound-limit",
+     "eid": 30362,
+     "forkBlock": 98111679,
+     "escrowSD": "0",
+     "outcome": "NO_INBOUND_LIMIT",
+     "revert": null,
+     "maxAcceptedSD": "18446744073709551615",
+     "proof": "credits by minting (a credit succeeded with an empty escrow) · uint64-max credit accepted in one inbound message"
+    },
+    {
+     "name": "inbound-limit",
+     "eid": 30367,
+     "forkBlock": 98111679,
+     "escrowSD": "0",
+     "outcome": "NO_INBOUND_LIMIT",
+     "revert": null,
+     "maxAcceptedSD": "18446744073709551615",
+     "proof": "credits by minting (a credit succeeded with an empty escrow) · uint64-max credit accepted in one inbound message"
+    },
+    {
+     "name": "inbound-limit",
+     "eid": 30383,
+     "forkBlock": 98111679,
+     "escrowSD": "0",
+     "outcome": "NO_INBOUND_LIMIT",
+     "revert": null,
+     "maxAcceptedSD": "18446744073709551615",
+     "proof": "credits by minting (a credit succeeded with an empty escrow) · uint64-max credit accepted in one inbound message"
+    },
+    {
+     "name": "inbound-limit",
+     "eid": 30390,
+     "forkBlock": 98111679,
+     "escrowSD": "0",
+     "outcome": "NO_INBOUND_LIMIT",
+     "revert": null,
+     "maxAcceptedSD": "18446744073709551615",
+     "proof": "credits by minting (a credit succeeded with an empty escrow) · uint64-max credit accepted in one inbound message"
+    },
+    {
+     "name": "inbound-limit",
+     "eid": 30396,
+     "forkBlock": 98111679,
+     "escrowSD": "0",
+     "outcome": "NO_INBOUND_LIMIT",
+     "revert": null,
+     "maxAcceptedSD": "18446744073709551615",
+     "proof": "credits by minting (a credit succeeded with an empty escrow) · uint64-max credit accepted in one inbound message"
+    },
+    {
+     "name": "inbound-limit",
+     "eid": 30398,
+     "forkBlock": 98111679,
+     "escrowSD": "0",
+     "outcome": "NO_INBOUND_LIMIT",
+     "revert": null,
+     "maxAcceptedSD": "18446744073709551615",
+     "proof": "credits by minting (a credit succeeded with an empty escrow) · uint64-max credit accepted in one inbound message"
+    },
+    {
+     "name": "inbound-limit",
+     "eid": 30410,
+     "forkBlock": 98111679,
+     "escrowSD": "0",
+     "outcome": "NO_INBOUND_LIMIT",
+     "revert": null,
+     "maxAcceptedSD": "18446744073709551615",
+     "proof": "credits by minting (a credit succeeded with an empty escrow) · uint64-max credit accepted in one inbound message"
+    },
+    {
+     "name": "inbound-limit",
+     "eid": 30600,
+     "forkBlock": 98111679,
+     "escrowSD": "0",
+     "outcome": "NO_INBOUND_LIMIT",
+     "revert": null,
+     "maxAcceptedSD": "18446744073709551615",
+     "proof": "credits by minting (a credit succeeded with an empty escrow) · uint64-max credit accepted in one inbound message"
+    }
+   ],
+   "crossCheck": "unavailable",
+   "weakestUnboundedVerifiers": 3
   }
  ],
- "tally": {},
+ "tally": {
+  "NO_INBOUND_LIMIT": 1
+ },
  "selfCheck": {
   "ok": true,
   "detail": "non-endpoint → OnlyEndpoint(0x000000000000000000000000000000000000bEEF); wrong peer → OnlyPeer(30101,0xabababababababababababababababababababababababababababababababab)"

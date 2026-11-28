@@ -70,10 +70,39 @@ describe("evaluate", () => {
     expect(v.routes[0]!.results[0]!.outcome).toBe("UNKNOWN");
   });
   it("EOA controller is BREACHED; 3-of-6 Safe without timelock is DEGRADED", () => {
-    const eoa = evaluate(state([], [{ role: "delegate", address: A(60), kind: "eoa", evidence: [] }]), map);
+    // one healthy route, so the controller alone decides the grade
+    const ok = () => [route(30110, cfg([LZ, NETH, GOOG]))];
+    const eoa = evaluate(state(ok(), [{ role: "delegate", address: A(60), kind: "eoa", evidence: [] }]), map);
     expect(eoa.grade).toBe("BREACHED");
-    expect(evaluate(state([], [safe(3)]), map).grade).toBe("DEGRADED");
-    expect(evaluate(state([], [safe(1)]), map).grade).toBe("BREACHED");
+    expect(evaluate(state(ok(), [safe(3)]), map).grade).toBe("DEGRADED");
+    expect(evaluate(state(ok(), [safe(1)]), map).grade).toBe("BREACHED");
+  });
+  it("no resolved route is UNKNOWN, never OK (nothing was graded)", () => {
+    const v = evaluate(state([]), map);
+    expect(v.grade).toBe("UNKNOWN");
+    expect(v.coverage![0]!.rule).toBe("SCAN-COVERAGE");
+  });
+  it("a peer route that could not be resolved makes the asset UNKNOWN, not OK", () => {
+    const s = { ...state([route(30110, cfg([LZ, NETH, GOOG]))]), unresolved: ["receive:30184"] };
+    expect(evaluate(s, map).grade).toBe("UNKNOWN");
+  });
+  it("routes closed by the blocked library are not findings and add no coverage gap", () => {
+    const s = { ...state([route(30110, cfg([LZ, NETH, GOOG]))]), closed: ["receive:30184", "receive:30243"] };
+    const v = evaluate(s, map);
+    expect(v.grade).toBe("OK");
+    expect(v.coverage).toBeUndefined();
+    // an asset whose every route is closed is graded on what is left (controllers), not UNKNOWN for "no routes"
+    expect(evaluate({ ...state([]), closed: ["receive:30184"] }, map).coverage).toBeUndefined();
+  });
+  it("unpinned library on a route the default disables (dead DVN) is DEGRADED, not BREACHED", () => {
+    const v = evaluate(state([route(30320, cfg([DEAD]), true)]), map);
+    expect(v.routes[0]!.results.find((x) => x.rule === "AAVE-RF-2.4")!.outcome).toBe("DEGRADED");
+    expect(v.grade).toBe("DEGRADED");
+  });
+  it("no inbound limit caps the exposure tier (DEGRADED); it is not a hard block by itself", () => {
+    const s = state([route(30110, cfg([LZ, NETH, GOOG]))]);
+    s.forkTests.push({ name: "inbound-limit", eid: 30110, forkBlock: 100, outcome: "NO_INBOUND_LIMIT", revert: null });
+    expect(evaluate(s, map).grade).toBe("DEGRADED");
   });
   it("SKIPPED results never improve or worsen a grade", () => {
     const v = evaluate(state([route(1, cfg([LZ, NETH, GOOG]))]), map);

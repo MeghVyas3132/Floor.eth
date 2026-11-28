@@ -20,7 +20,7 @@ export const FloorAdapter = defineSchema("floor.adapter", {
   eid: u64().indexed(),
   token: str().indexed(),
   adapter: addr().indexed(),
-  /** NO_INBOUND_LIMIT | INBOUND_LIMIT | TEST_ERROR | UNKNOWN | NO_PEERS | LZ_V1 */
+  /** NO_INBOUND_LIMIT | INBOUND_LIMIT | TEST_ERROR | UNKNOWN | NO_PEERS | NO_LIVE_ROUTES (every peer route closed) | LZ_V1 */
   outcome: str().indexed(),
   routes: u64().indexed(),
   unboundedRoutes: u64().indexed(),

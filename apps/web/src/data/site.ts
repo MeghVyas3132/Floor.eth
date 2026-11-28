@@ -130,7 +130,7 @@ export const figures: Figure[] = [
   { value: "12.5mo", label: "the attacked route ran on one verifier, unnoticed", source: "docs/03 · onchain timeline" },
   { value: "$0", label: "borrowed on Aave in the fork replay, with Floor live", source: "contracts/test/fork/KelpReplay.t.sol" },
   { value: "624/624", label: "onchain reads re-verified in the browser, no trust in us", source: "packages/verifier" },
-  { value: "20/34", label: "Ethereum adapters release their whole escrow on one message", source: "docs/09 · block 26,351,514" },
+  { value: "20/34", label: "Ethereum adapters with no inbound limit (app layer; the verifier set still has to approve a message)", source: "docs/09 · block 26,351,514" },
 ];
 
 /* ---------- what Floor is ---------- */

@@ -1,5 +1,5 @@
 {
- "block": 26513037,
+ "block": 26513938,
  "rpcs": [
   "eth-mainnet.public.blastapi.io",
   "api.zan.top",
@@ -13,7 +13,51 @@
    "underlying": "0x514910771af9ca656af840dff83e8264ecf986ca",
    "issuer": "anubis-bridge",
    "type": "ProxyOFT",
-   "error": "RPC Request failed."
+   "kind": "adapter",
+   "sharedDecimals": 6,
+   "tokenDecimals": 18,
+   "escrowTokens": 0.080668,
+   "eids": [
+    30465
+   ],
+   "peers": {
+    "30465": "0x5c79e306fbee477f0f727138080d0eab0f7556a4"
+   },
+   "routes": [
+    {
+     "eid": 30465,
+     "status": "LIVE",
+     "verifiers": 3,
+     "operators": [
+      "horizen-labs",
+      "layerzero-labs",
+      "nansen"
+     ],
+     "unmapped": [],
+     "library": "0xc02Ab410f0734EFa3F14628780e6e695156024C2",
+     "libraryIsDefault": false,
+     "confirmations": "5"
+    }
+   ],
+   "closedEids": [],
+   "outcome": "NO_INBOUND_LIMIT",
+   "routeCounts": {
+    "NO_INBOUND_LIMIT": 1
+   },
+   "results": [
+    {
+     "name": "inbound-limit",
+     "eid": 30465,
+     "forkBlock": 26513938,
+     "escrowSD": "80668",
+     "outcome": "NO_INBOUND_LIMIT",
+     "revert": null,
+     "maxAcceptedSD": "80668",
+     "proof": "full escrow released in one inbound message · full+1 reverts (revert (no data)) → escrow is the only ceiling"
+    }
+   ],
+   "crossCheck": "agree",
+   "weakestUnboundedVerifiers": 3
   },
   {
    "oapp": "0x8b3157e78f4ea5ad124e16f8c9df5fa27a7b0b33",
@@ -21,7 +65,50 @@
    "underlying": "0x514910771af9ca656af840dff83e8264ecf986ca",
    "issuer": "hybridge",
    "type": "ProxyOFT",
-   "error": "RPC Request failed."
+   "kind": "adapter",
+   "sharedDecimals": 6,
+   "tokenDecimals": 18,
+   "escrowTokens": 27773.788219,
+   "eids": [
+    30367
+   ],
+   "peers": {
+    "30367": "0x9a12cb8869498d8826567437abea27be1c2ba9ab"
+   },
+   "routes": [
+    {
+     "eid": 30367,
+     "status": "LIVE",
+     "verifiers": 2,
+     "operators": [
+      "horizen-labs",
+      "layerzero-labs"
+     ],
+     "unmapped": [],
+     "library": "0xc02Ab410f0734EFa3F14628780e6e695156024C2",
+     "libraryIsDefault": false,
+     "confirmations": "15"
+    }
+   ],
+   "closedEids": [],
+   "outcome": "NO_INBOUND_LIMIT",
+   "routeCounts": {
+    "NO_INBOUND_LIMIT": 1
+   },
+   "results": [
+    {
+     "name": "inbound-limit",
+     "eid": 30367,
+     "forkBlock": 26513938,
+     "escrowSD": "27773788219",
+     "outcome": "NO_INBOUND_LIMIT",
+     "revert": null,
+     "maxAcceptedSD": "27773788219",
+     "proof": "full escrow released in one inbound message · full+1 reverts (revert (no data)) → escrow is the only ceiling"
+    }
+   ],
+   "crossCheck": "agree",
+   "weakestUnboundedVerifiers": 2
   },
   {
    "oapp": "0xee381e476b4335b8584a2026f3e845edac2c69de",
@@ -39,7 +126,50 @@
    "underlying": "0x6c3ea9036406852006290770bedfcaba0e23a0e8",
    "issuer": "glue",
    "type": "ProxyOFT",
-   "error": "RPC Request failed."
+   "kind": "adapter",
+   "sharedDecimals": 6,
+   "tokenDecimals": 6,
+   "escrowTokens": 1.124131,
+   "eids": [
+    30342
+   ],
+   "peers": {
+    "30342": "0x1c7c36b193224d0f72454f2a178e3b98aaefe8a5"
+   },
+   "routes": [
+    {
+     "eid": 30342,
+     "status": "LIVE",
+     "verifiers": 2,
+     "operators": [
+      "layerzero-labs",
+      "nethermind"
+     ],
+     "unmapped": [],
+     "library": "0xc02Ab410f0734EFa3F14628780e6e695156024C2",
+     "libraryIsDefault": true,
+     "confirmations": "12"
+    }
+   ],
+   "closedEids": [],
+   "outcome": "NO_INBOUND_LIMIT",
+   "routeCounts": {
+    "NO_INBOUND_LIMIT": 1
+   },
+   "results": [
+    {
+     "name": "inbound-limit",
+     "eid": 30342,
+     "forkBlock": 26513938,
+     "escrowSD": "1124131",
+     "outcome": "NO_INBOUND_LIMIT",
+     "revert": null,
+     "maxAcceptedSD": "1124131",
+     "proof": "full escrow released in one inbound message · full+1 reverts (InsufficientFunds()) → escrow is the only ceiling"
+    }
+   ],
+   "crossCheck": "agree",
+   "weakestUnboundedVerifiers": 2
   },
   {
    "oapp": "0x688e72142674041f8f6af4c808a4045ca1d6ac82",
@@ -47,7 +177,52 @@
    "underlying": "0x6c3ea9036406852006290770bedfcaba0e23a0e8",
    "issuer": "byusd",
    "type": "ProxyOFT",
-   "error": "RPC Request failed."
+   "kind": "adapter",
+   "sharedDecimals": 6,
+   "tokenDecimals": 6,
+   "escrowTokens": 122380.897155,
+   "eids": [
+    30362
+   ],
+   "peers": {
+    "30362": "0x688e72142674041f8f6af4c808a4045ca1d6ac82"
+   },
+   "routes": [
+    {
+     "eid": 30362,
+     "status": "LIVE",
+     "verifiers": 4,
+     "operators": [
+      "p2p",
+      "deutsche-telekom",
+      "luganodes",
+      "canary"
+     ],
+     "unmapped": [],
+     "library": "0xc02Ab410f0734EFa3F14628780e6e695156024C2",
+     "libraryIsDefault": false,
+     "confirmations": "20"
+    }
+   ],
+   "closedEids": [],
+   "outcome": "NO_INBOUND_LIMIT",
+   "routeCounts": {
+    "NO_INBOUND_LIMIT": 1
+   },
+   "results": [
+    {
+     "name": "inbound-limit",
+     "eid": 30362,
+     "forkBlock": 26513938,
+     "escrowSD": "122380897155",
+     "outcome": "NO_INBOUND_LIMIT",
+     "revert": null,
+     "maxAcceptedSD": "122380897155",
+     "proof": "full escrow released in one inbound message · full+1 reverts (InsufficientFunds()) → escrow is the only ceiling"
+    }
+   ],
+   "crossCheck": "agree",
+   "weakestUnboundedVerifiers": 4
   },
   {
    "oapp": "0xa2c323fe5a74adffad2bf3e007e36bb029606444",
@@ -55,7 +230,207 @@
    "underlying": "0x6c3ea9036406852006290770bedfcaba0e23a0e8",
    "issuer": "paypal",
    "type": "ProxyOFT",
-   "error": "RPC Request failed."
+   "kind": "adapter",
+   "sharedDecimals": 6,
+   "tokenDecimals": 6,
+   "escrowTokens": 0,
+   "eids": [
+    30109,
+    30110,
+    30168,
+    30274,
+    30339,
+    30396,
+    30600
+   ],
+   "peers": {
+    "30109": "0x2292e82e7a53b1d055a64e4bdec4e9f91318d377",
+    "30110": "0xfab5891ed867a1195303251912013b92c4fc3a1d",
+    "30168": "0x932b9c090c43c0b5b1c2f23a681db44a0dd86290a18d285c1969a08bb1164dca",
+    "30274": "0x3d032b9558044879621c043afd9ccab3f79fd09b",
+    "30339": "0x2201c64071ebb4da0eac122d8877c7af24bf8d7e",
+    "30396": "0x2eb79387fa1a6ef6dc8e25401c8fdc291cc542c7",
+    "30600": "0x5645b3eef4f45f5492c758bad15085798d82e4b3bdaf6411f4281c4c8ed6a272"
+   },
+   "routes": [
+    {
+     "eid": 30109,
+     "status": "LIVE",
+     "verifiers": 3,
+     "operators": [
+      "layerzero-labs",
+      "canary",
+      "paxos"
+     ],
+     "unmapped": [],
+     "library": "0xc02Ab410f0734EFa3F14628780e6e695156024C2",
+     "libraryIsDefault": false,
+     "confirmations": "256"
+    },
+    {
+     "eid": 30110,
+     "status": "LIVE",
+     "verifiers": 3,
+     "operators": [
+      "layerzero-labs",
+      "canary",
+      "paxos"
+     ],
+     "unmapped": [],
+     "library": "0xc02Ab410f0734EFa3F14628780e6e695156024C2",
+     "libraryIsDefault": false,
+     "confirmations": "40"
+    },
+    {
+     "eid": 30168,
+     "status": "LIVE",
+     "verifiers": 3,
+     "operators": [
+      "layerzero-labs",
+      "canary",
+      "paxos"
+     ],
+     "unmapped": [],
+     "library": "0xc02Ab410f0734EFa3F14628780e6e695156024C2",
+     "libraryIsDefault": false,
+     "confirmations": "32"
+    },
+    {
+     "eid": 30274,
+     "status": "LIVE",
+     "verifiers": 3,
+     "operators": [
+      "layerzero-labs",
+      "canary",
+      "paxos"
+     ],
+     "unmapped": [],
+     "library": "0xc02Ab410f0734EFa3F14628780e6e695156024C2",
+     "libraryIsDefault": false,
+     "confirmations": "9000"
+    },
+    {
+     "eid": 30339,
+     "status": "LIVE",
+     "verifiers": 3,
+     "operators": [
+      "layerzero-labs",
+      "canary",
+      "paxos"
+     ],
+     "unmapped": [],
+     "library": "0xc02Ab410f0734EFa3F14628780e6e695156024C2",
+     "libraryIsDefault": false,
+     "confirmations": "3000"
+    },
+    {
+     "eid": 30396,
+     "status": "LIVE",
+     "verifiers": 3,
+     "operators": [
+      "layerzero-labs",
+      "canary",
+      "paxos"
+     ],
+     "unmapped": [],
+     "library": "0xc02Ab410f0734EFa3F14628780e6e695156024C2",
+     "libraryIsDefault": false,
+     "confirmations": "1"
+    },
+    {
+     "eid": 30600,
+     "status": "LIVE",
+     "verifiers": 3,
+     "operators": [
+      "layerzero-labs",
+      "canary",
+      "paxos"
+     ],
+     "unmapped": [],
+     "library": "0xc02Ab410f0734EFa3F14628780e6e695156024C2",
+     "libraryIsDefault": false,
+     "confirmations": "1"
+    }
+   ],
+   "closedEids": [],
+   "outcome": "INBOUND_LIMIT",
+   "routeCounts": {
+    "INBOUND_LIMIT": 7
+   },
+   "results": [
+    {
+     "name": "inbound-limit",
+     "eid": 30109,
+     "forkBlock": 26513938,
+     "escrowSD": "0",
+     "outcome": "INBOUND_LIMIT",
+     "revert": "RateLimitExceeded()",
+     "maxAcceptedSD": "760000000000000",
+     "proof": "credits by minting (a credit succeeded with an empty escrow) · uint64-max reverts (RateLimitExceeded()) · max accepted 760000000000000 SD · app-layer cap"
+    },
+    {
+     "name": "inbound-limit",
+     "eid": 30110,
+     "forkBlock": 26513938,
+     "escrowSD": "0",
+     "outcome": "INBOUND_LIMIT",
+     "revert": "RateLimitExceeded()",
+     "maxAcceptedSD": "760000000000000",
+     "proof": "credits by minting (a credit succeeded with an empty escrow) · uint64-max reverts (RateLimitExceeded()) · max accepted 760000000000000 SD · app-layer cap"
+    },
+    {
+     "name": "inbound-limit",
+     "eid": 30168,
+     "forkBlock": 26513938,
+     "escrowSD": "0",
+     "outcome": "INBOUND_LIMIT",
+     "revert": "RateLimitExceeded()",
+     "maxAcceptedSD": "760000000000000",
+     "proof": "credits by minting (a credit succeeded with an empty escrow) · uint64-max reverts (RateLimitExceeded()) · max accepted 760000000000000 SD · app-layer cap"
+    },
+    {
+     "name": "inbound-limit",
+     "eid": 30274,
+     "forkBlock": 26513938,
+     "escrowSD": "0",
+     "outcome": "INBOUND_LIMIT",
+     "revert": "RateLimitExceeded()",
+     "maxAcceptedSD": "760000000000000",
+     "proof": "credits by minting (a credit succeeded with an empty escrow) · uint64-max reverts (RateLimitExceeded()) · max accepted 760000000000000 SD · app-layer cap"
+    },
+    {
+     "name": "inbound-limit",
+     "eid": 30339,
+     "forkBlock": 26513938,
+     "escrowSD": "0",
+     "outcome": "INBOUND_LIMIT",
+     "revert": "RateLimitExceeded()",
+     "maxAcceptedSD": "760000000000000",
+     "proof": "credits by minting (a credit succeeded with an empty escrow) · uint64-max reverts (RateLimitExceeded()) · max accepted 760000000000000 SD · app-layer cap"
+    },
+    {
+     "name": "inbound-limit",
+     "eid": 30396,
+     "forkBlock": 26513938,
+     "escrowSD": "0",
+     "outcome": "INBOUND_LIMIT",
+     "revert": "RateLimitExceeded()",
+     "maxAcceptedSD": "760000000000000",
+     "proof": "credits by minting (a credit succeeded with an empty escrow) · uint64-max reverts (RateLimitExceeded()) · max accepted 760000000000000 SD · app-layer cap"
+    },
+    {
+     "name": "inbound-limit",
+     "eid": 30600,
+     "forkBlock": 26513938,
+     "escrowSD": "0",
+     "outcome": "INBOUND_LIMIT",
+     "revert": "RateLimitExceeded()",
+     "maxAcceptedSD": "760000000000000",
+     "proof": "credits by minting (a credit succeeded with an empty escrow) · uint64-max reverts (RateLimitExceeded()) · max accepted 760000000000000 SD · app-layer cap"
+    }
+   ],
+   "crossCheck": "agree",
+   "weakestUnboundedVerifiers": null
   },
   {
    "oapp": "0xe9e8330a71912f03e54e7d93795acd9a56f070aa",
@@ -63,7 +438,50 @@
    "underlying": "0x6c3ea9036406852006290770bedfcaba0e23a0e8",
    "issuer": "plume",
    "type": "ProxyOFT",
-   "error": "RPC Request failed."
+   "kind": "adapter",
+   "sharedDecimals": 6,
+   "tokenDecimals": 6,
+   "escrowTokens": 26.832025,
+   "eids": [
+    30370
+   ],
+   "peers": {
+    "30370": "0xe9e8330a71912f03e54e7d93795acd9a56f070aa"
+   },
+   "routes": [
+    {
+     "eid": 30370,
+     "status": "LIVE",
+     "verifiers": 2,
+     "operators": [
+      "layerzero-labs",
+      "nethermind"
+     ],
+     "unmapped": [],
+     "library": "0xc02Ab410f0734EFa3F14628780e6e695156024C2",
+     "libraryIsDefault": false,
+     "confirmations": "1"
+    }
+   ],
+   "closedEids": [],
+   "outcome": "NO_INBOUND_LIMIT",
+   "routeCounts": {
+    "NO_INBOUND_LIMIT": 1
+   },
+   "results": [
+    {
+     "name": "inbound-limit",
+     "eid": 30370,
+     "forkBlock": 26513938,
+     "escrowSD": "26832025",
+     "outcome": "NO_INBOUND_LIMIT",
+     "revert": null,
+     "maxAcceptedSD": "26832025",
+     "proof": "full escrow released in one inbound message · full+1 reverts (InsufficientFunds()) → escrow is the only ceiling"
+    }
+   ],
+   "crossCheck": "agree",
+   "weakestUnboundedVerifiers": 2
   },
   {
    "oapp": "0xfa0e06b54986ad96de87a8c56fea76fbd8d493f8",
@@ -71,7 +489,52 @@
    "underlying": "0x6c3ea9036406852006290770bedfcaba0e23a0e8",
    "issuer": "flow",
    "type": "ProxyOFT",
-   "error": "RPC Request failed."
+   "kind": "adapter",
+   "sharedDecimals": 6,
+   "tokenDecimals": 6,
+   "escrowTokens": 1277111.880153,
+   "eids": [
+    30336
+   ],
+   "peers": {
+    "30336": "0x2aabea2058b5ac2d339b163c6ab6f2b6d53aabed"
+   },
+   "routes": [
+    {
+     "eid": 30336,
+     "status": "LIVE",
+     "verifiers": 4,
+     "operators": [
+      "horizen-labs",
+      "layerzero-labs",
+      "canary",
+      "nethermind"
+     ],
+     "unmapped": [],
+     "library": "0xc02Ab410f0734EFa3F14628780e6e695156024C2",
+     "libraryIsDefault": false,
+     "confirmations": "20"
+    }
+   ],
+   "closedEids": [],
+   "outcome": "NO_INBOUND_LIMIT",
+   "routeCounts": {
+    "NO_INBOUND_LIMIT": 1
+   },
+   "results": [
+    {
+     "name": "inbound-limit",
+     "eid": 30336,
+     "forkBlock": 26513938,
+     "escrowSD": "1277111880153",
+     "outcome": "NO_INBOUND_LIMIT",
+     "revert": null,
+     "maxAcceptedSD": "1277111880153",
+     "proof": "full escrow released in one inbound message · full+1 reverts (InsufficientFunds()) → escrow is the only ceiling"
+    }
+   ],
+   "crossCheck": "agree",
+   "weakestUnboundedVerifiers": 4
   },
   {
    "oapp": "0x147bde4f997f0d4c7544ed0c55eacf1e5e6bf9c4",
@@ -79,7 +542,181 @@
    "underlying": "0xe343167631d89b6ffc58b88d6b7fb0228795491d",
    "issuer": "paxos",
    "type": "ProxyOFT",
-   "error": "RPC Request failed."
+   "kind": "adapter",
+   "sharedDecimals": 6,
+   "tokenDecimals": 6,
+   "escrowTokens": 0,
+   "eids": [
+    30110,
+    30168,
+    30181,
+    30274,
+    30339,
+    30416
+   ],
+   "peers": {
+    "30110": "0xc3274ec3f772d8534575eaad5231cf250a48b6b6",
+    "30168": "0x5a65eac46fc8467523fc7f74da3af67efdda34a30f6814d86108a3541691f961",
+    "30181": "0x397dfb068f773022e25a28bb934cf4c8cf78dc45",
+    "30274": "0x9a7164112029b81c07636ab7b59fa813e0883bbf",
+    "30339": "0x9e12c058a20c5b0eebaa00e44a712ec54b838971",
+    "30416": "0x0d54755f5106bfdb43f7a35f5d49a23f940628d1"
+   },
+   "routes": [
+    {
+     "eid": 30110,
+     "status": "LIVE",
+     "verifiers": 3,
+     "operators": [
+      "layerzero-labs",
+      "canary",
+      "paxos"
+     ],
+     "unmapped": [],
+     "library": "0xc02Ab410f0734EFa3F14628780e6e695156024C2",
+     "libraryIsDefault": false,
+     "confirmations": "40"
+    },
+    {
+     "eid": 30168,
+     "status": "LIVE",
+     "verifiers": 3,
+     "operators": [
+      "layerzero-labs",
+      "canary",
+      "paxos"
+     ],
+     "unmapped": [],
+     "library": "0xc02Ab410f0734EFa3F14628780e6e695156024C2",
+     "libraryIsDefault": false,
+     "confirmations": "32"
+    },
+    {
+     "eid": 30181,
+     "status": "LIVE",
+     "verifiers": 3,
+     "operators": [
+      "layerzero-labs",
+      "canary",
+      "paxos"
+     ],
+     "unmapped": [],
+     "library": "0xc02Ab410f0734EFa3F14628780e6e695156024C2",
+     "libraryIsDefault": false,
+     "confirmations": "90"
+    },
+    {
+     "eid": 30274,
+     "status": "LIVE",
+     "verifiers": 3,
+     "operators": [
+      "layerzero-labs",
+      "canary",
+      "paxos"
+     ],
+     "unmapped": [],
+     "library": "0xc02Ab410f0734EFa3F14628780e6e695156024C2",
+     "libraryIsDefault": false,
+     "confirmations": "168"
+    },
+    {
+     "eid": 30339,
+     "status": "LIVE",
+     "verifiers": 3,
+     "operators": [
+      "layerzero-labs",
+      "canary",
+      "paxos"
+     ],
+     "unmapped": [],
+     "library": "0xc02Ab410f0734EFa3F14628780e6e695156024C2",
+     "libraryIsDefault": false,
+     "confirmations": "168"
+    },
+    {
+     "eid": 30416,
+     "status": "LIVE",
+     "verifiers": 3,
+     "operators": [
+      "layerzero-labs",
+      "canary",
+      "paxos"
+     ],
+     "unmapped": [],
+     "library": "0xc02Ab410f0734EFa3F14628780e6e695156024C2",
+     "libraryIsDefault": false,
+     "confirmations": "40"
+    }
+   ],
+   "closedEids": [],
+   "outcome": "INBOUND_LIMIT",
+   "routeCounts": {
+    "INBOUND_LIMIT": 6
+   },
+   "results": [
+    {
+     "name": "inbound-limit",
+     "eid": 30110,
+     "forkBlock": 26513938,
+     "escrowSD": "0",
+     "outcome": "INBOUND_LIMIT",
+     "revert": "RateLimitExceeded()",
+     "maxAcceptedSD": "225000000000000",
+     "proof": "credits by minting (a credit succeeded with an empty escrow) · uint64-max reverts (RateLimitExceeded()) · max accepted 225000000000000 SD · app-layer cap"
+    },
+    {
+     "name": "inbound-limit",
+     "eid": 30168,
+     "forkBlock": 26513938,
+     "escrowSD": "0",
+     "outcome": "INBOUND_LIMIT",
+     "revert": "RateLimitExceeded()",
+     "maxAcceptedSD": "225000000000000",
+     "proof": "credits by minting (a credit succeeded with an empty escrow) · uint64-max reverts (RateLimitExceeded()) · max accepted 225000000000000 SD · app-layer cap"
+    },
+    {
+     "name": "inbound-limit",
+     "eid": 30181,
+     "forkBlock": 26513938,
+     "escrowSD": "0",
+     "outcome": "INBOUND_LIMIT",
+     "revert": "RateLimitExceeded()",
+     "maxAcceptedSD": "225000000000000",
+     "proof": "credits by minting (a credit succeeded with an empty escrow) · uint64-max reverts (RateLimitExceeded()) · max accepted 225000000000000 SD · app-layer cap"
+    },
+    {
+     "name": "inbound-limit",
+     "eid": 30274,
+     "forkBlock": 26513938,
+     "escrowSD": "0",
+     "outcome": "INBOUND_LIMIT",
+     "revert": "RateLimitExceeded()",
+     "maxAcceptedSD": "225000000000000",
+     "proof": "credits by minting (a credit succeeded with an empty escrow) · uint64-max reverts (RateLimitExceeded()) · max accepted 225000000000000 SD · app-layer cap"
+    },
+    {
+     "name": "inbound-limit",
+     "eid": 30339,
+     "forkBlock": 26513938,
+     "escrowSD": "0",
+     "outcome": "INBOUND_LIMIT",
+     "revert": "RateLimitExceeded()",
+     "maxAcceptedSD": "225000000000000",
+     "proof": "credits by minting (a credit succeeded with an empty escrow) · uint64-max reverts (RateLimitExceeded()) · max accepted 225000000000000 SD · app-layer cap"
+    },
+    {
+     "name": "inbound-limit",
+     "eid": 30416,
+     "forkBlock": 26513938,
+     "escrowSD": "0",
+     "outcome": "INBOUND_LIMIT",
+     "revert": "RateLimitExceeded()",
+     "maxAcceptedSD": "225000000000000",
+     "proof": "credits by minting (a credit succeeded with an empty escrow) · uint64-max reverts (RateLimitExceeded()) · max accepted 225000000000000 SD · app-layer cap"
+    }
+   ],
+   "crossCheck": "agree",
+   "weakestUnboundedVerifiers": null
   },
   {
    "oapp": "0xa755782a71bb7ae05ce9b74646ddb52206b96a65",
@@ -87,7 +724,77 @@
    "underlying": "0xe343167631d89b6ffc58b88d6b7fb0228795491d",
    "issuer": "paxos",
    "type": "ProxyOFT",
-   "error": "RPC Request failed."
+   "kind": "adapter",
+   "sharedDecimals": 6,
+   "tokenDecimals": 6,
+   "escrowTokens": 841903.639662,
+   "eids": [
+    30108,
+    30367
+   ],
+   "peers": {
+    "30108": "0x2d9e754196563f8604b768581f3218842272d2c2aa80455bdd9138d29d3e0d31",
+    "30367": "0xa755782a71bb7ae05ce9b74646ddb52206b96a65"
+   },
+   "routes": [
+    {
+     "eid": 30108,
+     "status": "LIVE",
+     "verifiers": 3,
+     "operators": [
+      "deutsche-telekom",
+      "layerzero-labs",
+      "nethermind"
+     ],
+     "unmapped": [],
+     "library": "0xc02Ab410f0734EFa3F14628780e6e695156024C2",
+     "libraryIsDefault": false,
+     "confirmations": "260"
+    },
+    {
+     "eid": 30367,
+     "status": "LIVE",
+     "verifiers": 3,
+     "operators": [
+      "deutsche-telekom",
+      "layerzero-labs",
+      "nethermind"
+     ],
+     "unmapped": [],
+     "library": "0xc02Ab410f0734EFa3F14628780e6e695156024C2",
+     "libraryIsDefault": false,
+     "confirmations": "1"
+    }
+   ],
+   "closedEids": [],
+   "outcome": "NO_INBOUND_LIMIT",
+   "routeCounts": {
+    "NO_INBOUND_LIMIT": 2
+   },
+   "results": [
+    {
+     "name": "inbound-limit",
+     "eid": 30108,
+     "forkBlock": 26513938,
+     "escrowSD": "841903639662",
+     "outcome": "NO_INBOUND_LIMIT",
+     "revert": null,
+     "maxAcceptedSD": "841903639662",
+     "proof": "full escrow released in one inbound message · full+1 reverts (InsufficientFunds()) → escrow is the only ceiling"
+    },
+    {
+     "name": "inbound-limit",
+     "eid": 30367,
+     "forkBlock": 26513938,
+     "escrowSD": "841903639662",
+     "outcome": "NO_INBOUND_LIMIT",
+     "revert": null,
+     "maxAcceptedSD": "841903639662",
+     "proof": "full escrow released in one inbound message · full+1 reverts (InsufficientFunds()) → escrow is the only ceiling"
+    }
+   ],
+   "crossCheck": "agree",
+   "weakestUnboundedVerifiers": 3
   },
   {
    "oapp": "0x1f748c76de468e9d11bd340fa9d5cbadf315dfb0",
@@ -98,7 +805,7 @@
    "kind": "adapter",
    "sharedDecimals": 6,
    "tokenDecimals": 6,
-   "escrowTokens": 25631116.201209,
+   "escrowTokens": 26869637.01405,
    "eids": [
     30110,
     30125,
@@ -106,6 +813,81 @@
     30343,
     30420
    ],
+   "peers": {
+    "30110": "0x77652d5aba086137b595875263fc200182919b92",
+    "30125": "0xf10e161027410128e63e75d0200fb6d34b2db243",
+    "30168": "0xfc35c7d850a775913767c2f2e08e606f11635473ee9100dda1c4e81aa35d89a9",
+    "30343": "0x1ddf580052174ed1dd0d66c35bfdc1a5fcc69af4f4ae36154b13dcfc6c14a35f",
+    "30420": "0x3a08f76772e200653bb55c2a92998daca62e0e97"
+   },
+   "routes": [
+    {
+     "eid": 30110,
+     "status": "LIVE",
+     "verifiers": 2,
+     "operators": [
+      "usdt0",
+      "layerzero-labs"
+     ],
+     "unmapped": [],
+     "library": "0xc02Ab410f0734EFa3F14628780e6e695156024C2",
+     "libraryIsDefault": false,
+     "confirmations": "20"
+    },
+    {
+     "eid": 30125,
+     "status": "LIVE",
+     "verifiers": 2,
+     "operators": [
+      "usdt0",
+      "layerzero-labs"
+     ],
+     "unmapped": [],
+     "library": "0xc02Ab410f0734EFa3F14628780e6e695156024C2",
+     "libraryIsDefault": false,
+     "confirmations": "5"
+    },
+    {
+     "eid": 30168,
+     "status": "LIVE",
+     "verifiers": 2,
+     "operators": [
+      "usdt0",
+      "layerzero-labs"
+     ],
+     "unmapped": [],
+     "library": "0xc02Ab410f0734EFa3F14628780e6e695156024C2",
+     "libraryIsDefault": false,
+     "confirmations": "128"
+    },
+    {
+     "eid": 30343,
+     "status": "LIVE",
+     "verifiers": 2,
+     "operators": [
+      "usdt0",
+      "layerzero-labs"
+     ],
+     "unmapped": [],
+     "library": "0xc02Ab410f0734EFa3F14628780e6e695156024C2",
+     "libraryIsDefault": false,
+     "confirmations": "210000"
+    },
+    {
+     "eid": 30420,
+     "status": "LIVE",
+     "verifiers": 2,
+     "operators": [
+      "usdt0",
+      "layerzero-labs"
+     ],
+     "unmapped": [],
+     "library": "0xc02Ab410f0734EFa3F14628780e6e695156024C2",
+     "libraryIsDefault": false,
+     "confirmations": "5"
+    }
+   ],
+   "closedEids": [],
    "outcome": "TEST_ERROR",
    "routeCounts": {
     "TEST_ERROR": 5
@@ -114,8 +896,8 @@
     {
      "name": "inbound-limit",
      "eid": 30110,
-     "forkBlock": 26513037,
-     "escrowSD": "25631116201209",
+     "forkBlock": 26513938,
+     "escrowSD": "26869637014050",
      "outcome": "TEST_ERROR",
      "revert": "InvalidMsgType(0)",
      "maxAcceptedSD": null,
@@ -124,8 +906,8 @@
     {
      "name": "inbound-limit",
      "eid": 30125,
-     "forkBlock": 26513037,
-     "escrowSD": "25631116201209",
+     "forkBlock": 26513938,
+     "escrowSD": "26869637014050",
      "outcome": "TEST_ERROR",
      "revert": "InvalidMsgType(0)",
      "maxAcceptedSD": null,
@@ -134,8 +916,8 @@
     {
      "name": "inbound-limit",
      "eid": 30168,
-     "forkBlock": 26513037,
-     "escrowSD": "25631116201209",
+     "forkBlock": 26513938,
+     "escrowSD": "26869637014050",
      "outcome": "TEST_ERROR",
      "revert": "InvalidMsgType(0)",
      "maxAcceptedSD": null,
@@ -144,8 +926,8 @@
     {
      "name": "inbound-limit",
      "eid": 30343,
-     "forkBlock": 26513037,
-     "escrowSD": "25631116201209",
+     "forkBlock": 26513938,
+     "escrowSD": "26869637014050",
      "outcome": "TEST_ERROR",
      "revert": "InvalidMsgType(0)",
      "maxAcceptedSD": null,
@@ -154,15 +936,16 @@
     {
      "name": "inbound-limit",
      "eid": 30420,
-     "forkBlock": 26513037,
-     "escrowSD": "25631116201209",
+     "forkBlock": 26513938,
+     "escrowSD": "26869637014050",
      "outcome": "TEST_ERROR",
      "revert": "InvalidMsgType(0)",
      "maxAcceptedSD": null,
      "proof": "custom message codec (InvalidMsgType(0)): standard OFT payload rejected, needs an adapter-specific probe"
     }
    ],
-   "crossCheck": "agree"
+   "crossCheck": "unavailable",
+   "weakestUnboundedVerifiers": null
   },
   {
    "oapp": "0x2d342de4c58a871b3525740c58a1c112d5835865",
@@ -170,7 +953,50 @@
    "underlying": "0xdac17f958d2ee523a2206206994597c13d831ec7",
    "issuer": "Zircuit Finance usdt OApp",
    "type": "ProxyOFT",
-   "error": "RPC Request failed."
+   "kind": "adapter",
+   "sharedDecimals": 6,
+   "tokenDecimals": 6,
+   "escrowTokens": 1000,
+   "eids": [
+    30184
+   ],
+   "peers": {
+    "30184": "0x264d6474802ef8bc1bc05f89f7d640d1e93c5330"
+   },
+   "routes": [
+    {
+     "eid": 30184,
+     "status": "LIVE",
+     "verifiers": 2,
+     "operators": [
+      "layerzero-labs",
+      "canary"
+     ],
+     "unmapped": [],
+     "library": "0xc02Ab410f0734EFa3F14628780e6e695156024C2",
+     "libraryIsDefault": false,
+     "confirmations": "7800"
+    }
+   ],
+   "closedEids": [],
+   "outcome": "NO_INBOUND_LIMIT",
+   "routeCounts": {
+    "NO_INBOUND_LIMIT": 1
+   },
+   "results": [
+    {
+     "name": "inbound-limit",
+     "eid": 30184,
+     "forkBlock": 26513938,
+     "escrowSD": "1000000000",
+     "outcome": "NO_INBOUND_LIMIT",
+     "revert": null,
+     "maxAcceptedSD": "1000000000",
+     "proof": "full escrow released in one inbound message · full+1 reverts (revert (no data)) → escrow is the only ceiling"
+    }
+   ],
+   "crossCheck": "agree",
+   "weakestUnboundedVerifiers": 2
   },
   {
    "oapp": "0x6925ccd29e3993c82a574ced4372d8737c6dbba6",
@@ -178,7 +1004,53 @@
    "underlying": "0xdac17f958d2ee523a2206206994597c13d831ec7",
    "issuer": "citrea",
    "type": "ProxyOFT",
-   "error": "RPC Request failed."
+   "kind": "adapter",
+   "sharedDecimals": 6,
+   "tokenDecimals": 6,
+   "escrowTokens": 3339.506279,
+   "eids": [
+    30403
+   ],
+   "peers": {
+    "30403": "0xf8b5983bfa11dc763184c96065d508ae1502c030"
+   },
+   "routes": [
+    {
+     "eid": 30403,
+     "status": "LIVE",
+     "verifiers": 5,
+     "operators": [
+      "citrea",
+      "layerzero-labs",
+      "canary",
+      "p2p",
+      "horizen-labs"
+     ],
+     "unmapped": [],
+     "library": "0xc02Ab410f0734EFa3F14628780e6e695156024C2",
+     "libraryIsDefault": false,
+     "confirmations": "15"
+    }
+   ],
+   "closedEids": [],
+   "outcome": "NO_INBOUND_LIMIT",
+   "routeCounts": {
+    "NO_INBOUND_LIMIT": 1
+   },
+   "results": [
+    {
+     "name": "inbound-limit",
+     "eid": 30403,
+     "forkBlock": 26513938,
+     "escrowSD": "3339506279",
+     "outcome": "NO_INBOUND_LIMIT",
+     "revert": null,
+     "maxAcceptedSD": "3339506279",
+     "proof": "full escrow released in one inbound message · full+1 reverts (revert (no data)) → escrow is the only ceiling"
+    }
+   ],
+   "crossCheck": "agree",
+   "weakestUnboundedVerifiers": 5
   },
   {
    "oapp": "0x6c96de32cea08842dcc4058c14d3aaad7fa41dee",
@@ -186,7 +1058,571 @@
    "underlying": "0xdac17f958d2ee523a2206206994597c13d831ec7",
    "issuer": "usdt0",
    "type": "ProxyOFT",
-   "error": "RPC Request failed."
+   "kind": "adapter",
+   "sharedDecimals": 6,
+   "tokenDecimals": 6,
+   "escrowTokens": 3515418195.173568,
+   "eids": [
+    30109,
+    30110,
+    30111,
+    30181,
+    30212,
+    30274,
+    30280,
+    30295,
+    30316,
+    30320,
+    30322,
+    30333,
+    30339,
+    30362,
+    30367,
+    30383,
+    30390,
+    30396,
+    30398,
+    30410,
+    30600
+   ],
+   "peers": {
+    "30109": "0x6ba10300f0dc58b7a1e4c0e41f5dabb7d7829e13",
+    "30110": "0x14e4a1b13bf7f943c8ff7c51fb60fa964a298d92",
+    "30111": "0xf03b4d9ac1d5d1e7c4cef54c2a313b9fe051a0ad",
+    "30181": "0xcb768e263fb1c62214e7cab4aa8d036d76dc59cc",
+    "30212": "0xc57efa1c7113d98bda6f9f249471704ece5dd84a",
+    "30274": "0x94bcca6bdfd6a61817ab0e960bfede4984505554",
+    "30280": "0x56fe74a2e3b484b921c447357203431a3485cc60",
+    "30295": "0x567287d2a9829215a37e3b88843d32f9221e7588",
+    "30316": "0xe3119e23fc2371d1e6b01775ba312035425a53d6",
+    "30320": "0xc07be8994d035631c36fb4a89c918cefb2f03ec3",
+    "30322": "0xcb768e263fb1c62214e7cab4aa8d036d76dc59cc",
+    "30333": "0x1a594d5d5d1c426281c1064b07f23f57b2716b61",
+    "30339": "0x1cb6de532588fca4a21b7209de7c456af8434a65",
+    "30362": "0x3dc96399109df5ceb2c226664a086140bd0379cb",
+    "30367": "0x904861a24f30ec96ea7cfc3be9ea4b476d237e98",
+    "30383": "0x02ca37966753bdddf11216b73b16c1de756a7cf9",
+    "30390": "0x9151434b16b9763660705744891fa906f660ecc5",
+    "30396": "0xedaba024be4d87974d5ab11c6dd586963cccb027",
+    "30398": "0x9151434b16b9763660705744891fa906f660ecc5",
+    "30410": "0xaf37e8b6c9ed7f6318979f56fc287d76c30847ff",
+    "30600": "0x5d672cb21b3afcdda54546c7f5b9fd346920e41f8fe8f39e838e5d7bd7435546"
+   },
+   "routes": [
+    {
+     "eid": 30109,
+     "status": "LIVE",
+     "verifiers": 3,
+     "operators": [
+      "usdt0",
+      "layerzero-labs",
+      "canary"
+     ],
+     "unmapped": [],
+     "library": "0xc02Ab410f0734EFa3F14628780e6e695156024C2",
+     "libraryIsDefault": false,
+     "confirmations": "32"
+    },
+    {
+     "eid": 30110,
+     "status": "LIVE",
+     "verifiers": 3,
+     "operators": [
+      "usdt0",
+      "layerzero-labs",
+      "canary"
+     ],
+     "unmapped": [],
+     "library": "0xc02Ab410f0734EFa3F14628780e6e695156024C2",
+     "libraryIsDefault": false,
+     "confirmations": "60"
+    },
+    {
+     "eid": 30111,
+     "status": "LIVE",
+     "verifiers": 3,
+     "operators": [
+      "usdt0",
+      "layerzero-labs",
+      "canary"
+     ],
+     "unmapped": [],
+     "library": "0xc02Ab410f0734EFa3F14628780e6e695156024C2",
+     "libraryIsDefault": false,
+     "confirmations": "1000"
+    },
+    {
+     "eid": 30181,
+     "status": "LIVE",
+     "verifiers": 3,
+     "operators": [
+      "usdt0",
+      "layerzero-labs",
+      "canary"
+     ],
+     "unmapped": [],
+     "library": "0xc02Ab410f0734EFa3F14628780e6e695156024C2",
+     "libraryIsDefault": false,
+     "confirmations": "2000"
+    },
+    {
+     "eid": 30212,
+     "status": "LIVE",
+     "verifiers": 3,
+     "operators": [
+      "usdt0",
+      "layerzero-labs",
+      "canary"
+     ],
+     "unmapped": [],
+     "library": "0xc02Ab410f0734EFa3F14628780e6e695156024C2",
+     "libraryIsDefault": false,
+     "confirmations": "2800"
+    },
+    {
+     "eid": 30274,
+     "status": "LIVE",
+     "verifiers": 3,
+     "operators": [
+      "usdt0",
+      "layerzero-labs",
+      "canary"
+     ],
+     "unmapped": [],
+     "library": "0xc02Ab410f0734EFa3F14628780e6e695156024C2",
+     "libraryIsDefault": false,
+     "confirmations": "9000"
+    },
+    {
+     "eid": 30280,
+     "status": "LIVE",
+     "verifiers": 3,
+     "operators": [
+      "usdt0",
+      "layerzero-labs",
+      "canary"
+     ],
+     "unmapped": [],
+     "library": "0xc02Ab410f0734EFa3F14628780e6e695156024C2",
+     "libraryIsDefault": false,
+     "confirmations": "2000"
+    },
+    {
+     "eid": 30295,
+     "status": "LIVE",
+     "verifiers": 3,
+     "operators": [
+      "usdt0",
+      "layerzero-labs",
+      "canary"
+     ],
+     "unmapped": [],
+     "library": "0xc02Ab410f0734EFa3F14628780e6e695156024C2",
+     "libraryIsDefault": false,
+     "confirmations": "500"
+    },
+    {
+     "eid": 30316,
+     "status": "LIVE",
+     "verifiers": 3,
+     "operators": [
+      "usdt0",
+      "layerzero-labs",
+      "canary"
+     ],
+     "unmapped": [],
+     "library": "0xc02Ab410f0734EFa3F14628780e6e695156024C2",
+     "libraryIsDefault": false,
+     "confirmations": "60"
+    },
+    {
+     "eid": 30320,
+     "status": "LIVE",
+     "verifiers": 3,
+     "operators": [
+      "usdt0",
+      "layerzero-labs",
+      "canary"
+     ],
+     "unmapped": [],
+     "library": "0xc02Ab410f0734EFa3F14628780e6e695156024C2",
+     "libraryIsDefault": false,
+     "confirmations": "1600"
+    },
+    {
+     "eid": 30322,
+     "status": "LIVE",
+     "verifiers": 3,
+     "operators": [
+      "usdt0",
+      "layerzero-labs",
+      "canary"
+     ],
+     "unmapped": [],
+     "library": "0xc02Ab410f0734EFa3F14628780e6e695156024C2",
+     "libraryIsDefault": false,
+     "confirmations": "1000"
+    },
+    {
+     "eid": 30333,
+     "status": "LIVE",
+     "verifiers": 3,
+     "operators": [
+      "usdt0",
+      "layerzero-labs",
+      "canary"
+     ],
+     "unmapped": [],
+     "library": "0xc02Ab410f0734EFa3F14628780e6e695156024C2",
+     "libraryIsDefault": false,
+     "confirmations": "120"
+    },
+    {
+     "eid": 30339,
+     "status": "LIVE",
+     "verifiers": 3,
+     "operators": [
+      "usdt0",
+      "layerzero-labs",
+      "canary"
+     ],
+     "unmapped": [],
+     "library": "0xc02Ab410f0734EFa3F14628780e6e695156024C2",
+     "libraryIsDefault": false,
+     "confirmations": "3000"
+    },
+    {
+     "eid": 30362,
+     "status": "LIVE",
+     "verifiers": 3,
+     "operators": [
+      "usdt0",
+      "layerzero-labs",
+      "canary"
+     ],
+     "unmapped": [],
+     "library": "0xc02Ab410f0734EFa3F14628780e6e695156024C2",
+     "libraryIsDefault": false,
+     "confirmations": "60"
+    },
+    {
+     "eid": 30367,
+     "status": "LIVE",
+     "verifiers": 3,
+     "operators": [
+      "usdt0",
+      "layerzero-labs",
+      "canary"
+     ],
+     "unmapped": [],
+     "library": "0xc02Ab410f0734EFa3F14628780e6e695156024C2",
+     "libraryIsDefault": false,
+     "confirmations": "43200"
+    },
+    {
+     "eid": 30383,
+     "status": "LIVE",
+     "verifiers": 3,
+     "operators": [
+      "usdt0",
+      "layerzero-labs",
+      "canary"
+     ],
+     "unmapped": [],
+     "library": "0xc02Ab410f0734EFa3F14628780e6e695156024C2",
+     "libraryIsDefault": false,
+     "confirmations": "1800"
+    },
+    {
+     "eid": 30390,
+     "status": "LIVE",
+     "verifiers": 3,
+     "operators": [
+      "usdt0",
+      "layerzero-labs",
+      "canary"
+     ],
+     "unmapped": [],
+     "library": "0xc02Ab410f0734EFa3F14628780e6e695156024C2",
+     "libraryIsDefault": false,
+     "confirmations": "3600"
+    },
+    {
+     "eid": 30396,
+     "status": "LIVE",
+     "verifiers": 3,
+     "operators": [
+      "usdt0",
+      "layerzero-labs",
+      "canary"
+     ],
+     "unmapped": [],
+     "library": "0xc02Ab410f0734EFa3F14628780e6e695156024C2",
+     "libraryIsDefault": false,
+     "confirmations": "3600"
+    },
+    {
+     "eid": 30398,
+     "status": "LIVE",
+     "verifiers": 3,
+     "operators": [
+      "usdt0",
+      "layerzero-labs",
+      "canary"
+     ],
+     "unmapped": [],
+     "library": "0xc02Ab410f0734EFa3F14628780e6e695156024C2",
+     "libraryIsDefault": false,
+     "confirmations": "5400"
+    },
+    {
+     "eid": 30410,
+     "status": "LIVE",
+     "verifiers": 3,
+     "operators": [
+      "usdt0",
+      "layerzero-labs",
+      "canary"
+     ],
+     "unmapped": [],
+     "library": "0xc02Ab410f0734EFa3F14628780e6e695156024C2",
+     "libraryIsDefault": false,
+     "confirmations": "3000"
+    },
+    {
+     "eid": 30600,
+     "status": "LIVE",
+     "verifiers": 3,
+     "operators": [
+      "usdt0",
+      "layerzero-labs",
+      "canary"
+     ],
+     "unmapped": [],
+     "library": "0xc02Ab410f0734EFa3F14628780e6e695156024C2",
+     "libraryIsDefault": false,
+     "confirmations": "320"
+    }
+   ],
+   "closedEids": [],
+   "outcome": "NO_INBOUND_LIMIT",
+   "routeCounts": {
+    "NO_INBOUND_LIMIT": 21
+   },
+   "results": [
+    {
+     "name": "inbound-limit",
+     "eid": 30109,
+     "forkBlock": 26513938,
+     "escrowSD": "3515418195173568",
+     "outcome": "NO_INBOUND_LIMIT",
+     "revert": null,
+     "maxAcceptedSD": "3515418195173568",
+     "proof": "full escrow released in one inbound message · full+1 reverts (revert (no data)) → escrow is the only ceiling"
+    },
+    {
+     "name": "inbound-limit",
+     "eid": 30110,
+     "forkBlock": 26513938,
+     "escrowSD": "3515418195173568",
+     "outcome": "NO_INBOUND_LIMIT",
+     "revert": null,
+     "maxAcceptedSD": "3515418195173568",
+     "proof": "full escrow released in one inbound message · full+1 reverts (revert (no data)) → escrow is the only ceiling"
+    },
+    {
+     "name": "inbound-limit",
+     "eid": 30111,
+     "forkBlock": 26513938,
+     "escrowSD": "3515418195173568",
+     "outcome": "NO_INBOUND_LIMIT",
+     "revert": null,
+     "maxAcceptedSD": "3515418195173568",
+     "proof": "full escrow released in one inbound message · full+1 reverts (revert (no data)) → escrow is the only ceiling"
+    },
+    {
+     "name": "inbound-limit",
+     "eid": 30181,
+     "forkBlock": 26513938,
+     "escrowSD": "3515418195173568",
+     "outcome": "NO_INBOUND_LIMIT",
+     "revert": null,
+     "maxAcceptedSD": "3515418195173568",
+     "proof": "full escrow released in one inbound message · full+1 reverts (revert (no data)) → escrow is the only ceiling"
+    },
+    {
+     "name": "inbound-limit",
+     "eid": 30212,
+     "forkBlock": 26513938,
+     "escrowSD": "3515418195173568",
+     "outcome": "NO_INBOUND_LIMIT",
+     "revert": null,
+     "maxAcceptedSD": "3515418195173568",
+     "proof": "full escrow released in one inbound message · full+1 reverts (revert (no data)) → escrow is the only ceiling"
+    },
+    {
+     "name": "inbound-limit",
+     "eid": 30274,
+     "forkBlock": 26513938,
+     "escrowSD": "3515418195173568",
+     "outcome": "NO_INBOUND_LIMIT",
+     "revert": null,
+     "maxAcceptedSD": "3515418195173568",
+     "proof": "full escrow released in one inbound message · full+1 reverts (revert (no data)) → escrow is the only ceiling"
+    },
+    {
+     "name": "inbound-limit",
+     "eid": 30280,
+     "forkBlock": 26513938,
+     "escrowSD": "3515418195173568",
+     "outcome": "NO_INBOUND_LIMIT",
+     "revert": null,
+     "maxAcceptedSD": "3515418195173568",
+     "proof": "full escrow released in one inbound message · full+1 reverts (revert (no data)) → escrow is the only ceiling"
+    },
+    {
+     "name": "inbound-limit",
+     "eid": 30295,
+     "forkBlock": 26513938,
+     "escrowSD": "3515418195173568",
+     "outcome": "NO_INBOUND_LIMIT",
+     "revert": null,
+     "maxAcceptedSD": "3515418195173568",
+     "proof": "full escrow released in one inbound message · full+1 reverts (revert (no data)) → escrow is the only ceiling"
+    },
+    {
+     "name": "inbound-limit",
+     "eid": 30316,
+     "forkBlock": 26513938,
+     "escrowSD": "3515418195173568",
+     "outcome": "NO_INBOUND_LIMIT",
+     "revert": null,
+     "maxAcceptedSD": "3515418195173568",
+     "proof": "full escrow released in one inbound message · full+1 reverts (revert (no data)) → escrow is the only ceiling"
+    },
+    {
+     "name": "inbound-limit",
+     "eid": 30320,
+     "forkBlock": 26513938,
+     "escrowSD": "3515418195173568",
+     "outcome": "NO_INBOUND_LIMIT",
+     "revert": null,
+     "maxAcceptedSD": "3515418195173568",
+     "proof": "full escrow released in one inbound message · full+1 reverts (revert (no data)) → escrow is the only ceiling"
+    },
+    {
+     "name": "inbound-limit",
+     "eid": 30322,
+     "forkBlock": 26513938,
+     "escrowSD": "3515418195173568",
+     "outcome": "NO_INBOUND_LIMIT",
+     "revert": null,
+     "maxAcceptedSD": "3515418195173568",
+     "proof": "full escrow released in one inbound message · full+1 reverts (revert (no data)) → escrow is the only ceiling"
+    },
+    {
+     "name": "inbound-limit",
+     "eid": 30333,
+     "forkBlock": 26513938,
+     "escrowSD": "3515418195173568",
+     "outcome": "NO_INBOUND_LIMIT",
+     "revert": null,
+     "maxAcceptedSD": "3515418195173568",
+     "proof": "full escrow released in one inbound message · full+1 reverts (revert (no data)) → escrow is the only ceiling"
+    },
+    {
+     "name": "inbound-limit",
+     "eid": 30339,
+     "forkBlock": 26513938,
+     "escrowSD": "3515418195173568",
+     "outcome": "NO_INBOUND_LIMIT",
+     "revert": null,
+     "maxAcceptedSD": "3515418195173568",
+     "proof": "full escrow released in one inbound message · full+1 reverts (revert (no data)) → escrow is the only ceiling"
+    },
+    {
+     "name": "inbound-limit",
+     "eid": 30362,
+     "forkBlock": 26513938,
+     "escrowSD": "3515418195173568",
+     "outcome": "NO_INBOUND_LIMIT",
+     "revert": null,
+     "maxAcceptedSD": "3515418195173568",
+     "proof": "full escrow released in one inbound message · full+1 reverts (revert (no data)) → escrow is the only ceiling"
+    },
+    {
+     "name": "inbound-limit",
+     "eid": 30367,
+     "forkBlock": 26513938,
+     "escrowSD": "3515418195173568",
+     "outcome": "NO_INBOUND_LIMIT",
+     "revert": null,
+     "maxAcceptedSD": "3515418195173568",
+     "proof": "full escrow released in one inbound message · full+1 reverts (revert (no data)) → escrow is the only ceiling"
+    },
+    {
+     "name": "inbound-limit",
+     "eid": 30383,
+     "forkBlock": 26513938,
+     "escrowSD": "3515418195173568",
+     "outcome": "NO_INBOUND_LIMIT",
+     "revert": null,
+     "maxAcceptedSD": "3515418195173568",
+     "proof": "full escrow released in one inbound message · full+1 reverts (revert (no data)) → escrow is the only ceiling"
+    },
+    {
+     "name": "inbound-limit",
+     "eid": 30390,
+     "forkBlock": 26513938,
+     "escrowSD": "3515418195173568",
+     "outcome": "NO_INBOUND_LIMIT",
+     "revert": null,
+     "maxAcceptedSD": "3515418195173568",
+     "proof": "full escrow released in one inbound message · full+1 reverts (revert (no data)) → escrow is the only ceiling"
+    },
+    {
+     "name": "inbound-limit",
+     "eid": 30396,
+     "forkBlock": 26513938,
+     "escrowSD": "3515418195173568",
+     "outcome": "NO_INBOUND_LIMIT",
+     "revert": null,
+     "maxAcceptedSD": "3515418195173568",
+     "proof": "full escrow released in one inbound message · full+1 reverts (revert (no data)) → escrow is the only ceiling"
+    },
+    {
+     "name": "inbound-limit",
+     "eid": 30398,
+     "forkBlock": 26513938,
+     "escrowSD": "3515418195173568",
+     "outcome": "NO_INBOUND_LIMIT",
+     "revert": null,
+     "maxAcceptedSD": "3515418195173568",
+     "proof": "full escrow released in one inbound message · full+1 reverts (revert (no data)) → escrow is the only ceiling"
+    },
+    {
+     "name": "inbound-limit",
+     "eid": 30410,
+     "forkBlock": 26513938,
+     "escrowSD": "3515418195173568",
+     "outcome": "NO_INBOUND_LIMIT",
+     "revert": null,
+     "maxAcceptedSD": "3515418195173568",
+     "proof": "full escrow released in one inbound message · full+1 reverts (revert (no data)) → escrow is the only ceiling"
+    },
+    {
+     "name": "inbound-limit",
+     "eid": 30600,
+     "forkBlock": 26513938,
+     "escrowSD": "3515418195173568",
+     "outcome": "NO_INBOUND_LIMIT",
+     "revert": null,
+     "maxAcceptedSD": "3515418195173568",
+     "proof": "full escrow released in one inbound message · full+1 reverts (revert (no data)) → escrow is the only ceiling"
+    }
+   ],
+   "crossCheck": "agree",
+   "weakestUnboundedVerifiers": 3
   },
   {
    "oapp": "0x811ed79db9d34e83bdb73df6c3e07961cfb0d5c0",
@@ -204,6 +1640,67 @@
     30343,
     30420
    ],
+   "peers": {
+    "30110": "0x238a52455a1ef6c987cac94b28b4081afe50ba06",
+    "30125": "0x811ed79db9d34e83bdb73df6c3e07961cfb0d5c0",
+    "30343": "0x170725394aa56136fbd27d0ce31d8a98e0f8ae72a4d2379b5dde83e211a2d5fa",
+    "30420": "0x8925c1dd3e5d8011946a3430d91be742ba8ee930"
+   },
+   "routes": [
+    {
+     "eid": 30110,
+     "status": "LIVE",
+     "verifiers": 2,
+     "operators": [
+      "usdt0",
+      "layerzero-labs"
+     ],
+     "unmapped": [],
+     "library": "0xc02Ab410f0734EFa3F14628780e6e695156024C2",
+     "libraryIsDefault": true,
+     "confirmations": "20"
+    },
+    {
+     "eid": 30125,
+     "status": "LIVE",
+     "verifiers": 2,
+     "operators": [
+      "usdt0",
+      "layerzero-labs"
+     ],
+     "unmapped": [],
+     "library": "0xc02Ab410f0734EFa3F14628780e6e695156024C2",
+     "libraryIsDefault": true,
+     "confirmations": "5"
+    },
+    {
+     "eid": 30343,
+     "status": "LIVE",
+     "verifiers": 2,
+     "operators": [
+      "usdt0",
+      "layerzero-labs"
+     ],
+     "unmapped": [],
+     "library": "0xc02Ab410f0734EFa3F14628780e6e695156024C2",
+     "libraryIsDefault": true,
+     "confirmations": "2"
+    },
+    {
+     "eid": 30420,
+     "status": "LIVE",
+     "verifiers": 2,
+     "operators": [
+      "usdt0",
+      "layerzero-labs"
+     ],
+     "unmapped": [],
+     "library": "0xc02Ab410f0734EFa3F14628780e6e695156024C2",
+     "libraryIsDefault": true,
+     "confirmations": "5"
+    }
+   ],
+   "closedEids": [],
    "outcome": "TEST_ERROR",
    "routeCounts": {
     "TEST_ERROR": 4
@@ -212,7 +1709,7 @@
     {
      "name": "inbound-limit",
      "eid": 30110,
-     "forkBlock": 26513037,
+     "forkBlock": 26513938,
      "escrowSD": "10900",
      "outcome": "TEST_ERROR",
      "revert": "InvalidMsgType(0)",
@@ -222,7 +1719,7 @@
     {
      "name": "inbound-limit",
      "eid": 30125,
-     "forkBlock": 26513037,
+     "forkBlock": 26513938,
      "escrowSD": "10900",
      "outcome": "TEST_ERROR",
      "revert": "InvalidMsgType(0)",
@@ -232,7 +1729,7 @@
     {
      "name": "inbound-limit",
      "eid": 30343,
-     "forkBlock": 26513037,
+     "forkBlock": 26513938,
      "escrowSD": "10900",
      "outcome": "TEST_ERROR",
      "revert": "InvalidMsgType(0)",
@@ -242,7 +1739,7 @@
     {
      "name": "inbound-limit",
      "eid": 30420,
-     "forkBlock": 26513037,
+     "forkBlock": 26513938,
      "escrowSD": "10900",
      "outcome": "TEST_ERROR",
      "revert": "InvalidMsgType(0)",
@@ -250,7 +1747,8 @@
      "proof": "custom message codec (InvalidMsgType(0)): standard OFT payload rejected, needs an adapter-specific probe"
     }
    ],
-   "crossCheck": "agree"
+   "crossCheck": "unavailable",
+   "weakestUnboundedVerifiers": null
   },
   {
    "oapp": "0x933597a323eb81cae705c5bc29985172fd5a3973",
@@ -268,7 +1766,51 @@
    "underlying": "0xdac17f958d2ee523a2206206994597c13d831ec7",
    "issuer": "anubis-bridge",
    "type": "ProxyOFT",
-   "error": "RPC Request failed."
+   "kind": "adapter",
+   "sharedDecimals": 6,
+   "tokenDecimals": 6,
+   "escrowTokens": 2423807.756598,
+   "eids": [
+    30465
+   ],
+   "peers": {
+    "30465": "0xa0bd8b3d33718f623c5c1f1551b5b069f6a4f127"
+   },
+   "routes": [
+    {
+     "eid": 30465,
+     "status": "LIVE",
+     "verifiers": 3,
+     "operators": [
+      "horizen-labs",
+      "layerzero-labs",
+      "nansen"
+     ],
+     "unmapped": [],
+     "library": "0xc02Ab410f0734EFa3F14628780e6e695156024C2",
+     "libraryIsDefault": false,
+     "confirmations": "5"
+    }
+   ],
+   "closedEids": [],
+   "outcome": "NO_INBOUND_LIMIT",
+   "routeCounts": {
+    "NO_INBOUND_LIMIT": 1
+   },
+   "results": [
+    {
+     "name": "inbound-limit",
+     "eid": 30465,
+     "forkBlock": 26513938,
+     "escrowSD": "2423807756598",
+     "outcome": "NO_INBOUND_LIMIT",
+     "revert": null,
+     "maxAcceptedSD": "2423807756598",
+     "proof": "full escrow released in one inbound message · full+1 reverts (revert (no data)) → escrow is the only ceiling"
+    }
+   ],
+   "crossCheck": "agree",
+   "weakestUnboundedVerifiers": 3
   },
   {
    "oapp": "0xcc1b99ddac1a33c201a742a1851662e87bc7f22c",
@@ -296,7 +1838,619 @@
    "underlying": "0x4c9edd5852cd905f086c759e8383e09bff1e68b3",
    "issuer": "ethena",
    "type": "ProxyOFT",
-   "error": "RPC Request failed."
+   "kind": "adapter",
+   "sharedDecimals": 6,
+   "tokenDecimals": 18,
+   "escrowTokens": 1665207192.317535,
+   "eids": [
+    30102,
+    30106,
+    30108,
+    30110,
+    30111,
+    30168,
+    30181,
+    30184,
+    30255,
+    30274,
+    30322,
+    30339,
+    30343,
+    30362,
+    30367,
+    30383,
+    30390,
+    30398,
+    30410,
+    30416,
+    30420,
+    30600
+   ],
+   "peers": {
+    "30102": "0x5d3a1ff2b6bab83b63cd9ad0787074081a52ef34",
+    "30106": "0x5d3a1ff2b6bab83b63cd9ad0787074081a52ef34",
+    "30108": "0x9674429dcc02d2ed0d50fa24cb25262d349a5722b1a02502cff92e3cc85924b3",
+    "30110": "0x5d3a1ff2b6bab83b63cd9ad0787074081a52ef34",
+    "30111": "0x5d3a1ff2b6bab83b63cd9ad0787074081a52ef34",
+    "30168": "0x3aad2be6167477f2fc6864f5623e3791aa2f25cbcb5207a202ff3c383bdc379f",
+    "30181": "0x5d3a1ff2b6bab83b63cd9ad0787074081a52ef34",
+    "30184": "0x5d3a1ff2b6bab83b63cd9ad0787074081a52ef34",
+    "30255": "0x5d3a1ff2b6bab83b63cd9ad0787074081a52ef34",
+    "30274": "0x5d3a1ff2b6bab83b63cd9ad0787074081a52ef34",
+    "30322": "0x5d3a1ff2b6bab83b63cd9ad0787074081a52ef34",
+    "30339": "0x5d3a1ff2b6bab83b63cd9ad0787074081a52ef34",
+    "30343": "0x23a676145f8dee3632f722aac50392f22cf0b4be8f624e038279a6f5005fb669",
+    "30362": "0x5d3a1ff2b6bab83b63cd9ad0787074081a52ef34",
+    "30367": "0x5d3a1ff2b6bab83b63cd9ad0787074081a52ef34",
+    "30383": "0x5d3a1ff2b6bab83b63cd9ad0787074081a52ef34",
+    "30390": "0x5d3a1ff2b6bab83b63cd9ad0787074081a52ef34",
+    "30398": "0x5d3a1ff2b6bab83b63cd9ad0787074081a52ef34",
+    "30410": "0xf8b6aa0cee4e1ad87ee259dab5e556eb62297d7f",
+    "30416": "0x5d3a1ff2b6bab83b63cd9ad0787074081a52ef34",
+    "30420": "0xd472876d3fecd73b8759c46c918ff0134d0bf593",
+    "30600": "0x1603ddbe4d4cc5db11c804aca19ece44ec8f125ea2af67da6d24e7f102c58081"
+   },
+   "routes": [
+    {
+     "eid": 30102,
+     "status": "LIVE",
+     "verifiers": 4,
+     "operators": [
+      "layerzero-labs",
+      "canary",
+      "horizen-labs",
+      "stablecoinx"
+     ],
+     "unmapped": [],
+     "library": "0xc02Ab410f0734EFa3F14628780e6e695156024C2",
+     "libraryIsDefault": false,
+     "confirmations": "20"
+    },
+    {
+     "eid": 30106,
+     "status": "LIVE",
+     "verifiers": 4,
+     "operators": [
+      "layerzero-labs",
+      "canary",
+      "horizen-labs",
+      "stablecoinx"
+     ],
+     "unmapped": [],
+     "library": "0xc02Ab410f0734EFa3F14628780e6e695156024C2",
+     "libraryIsDefault": false,
+     "confirmations": "12"
+    },
+    {
+     "eid": 30108,
+     "status": "LIVE",
+     "verifiers": 4,
+     "operators": [
+      "horizen-labs",
+      "layerzero-labs",
+      "deutsche-telekom",
+      "stablecoinx"
+     ],
+     "unmapped": [],
+     "library": "0xc02Ab410f0734EFa3F14628780e6e695156024C2",
+     "libraryIsDefault": false,
+     "confirmations": "260"
+    },
+    {
+     "eid": 30110,
+     "status": "LIVE",
+     "verifiers": 4,
+     "operators": [
+      "layerzero-labs",
+      "canary",
+      "horizen-labs",
+      "stablecoinx"
+     ],
+     "unmapped": [],
+     "library": "0xc02Ab410f0734EFa3F14628780e6e695156024C2",
+     "libraryIsDefault": false,
+     "confirmations": "20"
+    },
+    {
+     "eid": 30111,
+     "status": "LIVE",
+     "verifiers": 4,
+     "operators": [
+      "layerzero-labs",
+      "canary",
+      "horizen-labs",
+      "stablecoinx"
+     ],
+     "unmapped": [],
+     "library": "0xc02Ab410f0734EFa3F14628780e6e695156024C2",
+     "libraryIsDefault": false,
+     "confirmations": "20"
+    },
+    {
+     "eid": 30168,
+     "status": "LIVE",
+     "verifiers": 4,
+     "operators": [
+      "layerzero-labs",
+      "canary",
+      "horizen-labs",
+      "stablecoinx"
+     ],
+     "unmapped": [],
+     "library": "0xc02Ab410f0734EFa3F14628780e6e695156024C2",
+     "libraryIsDefault": false,
+     "confirmations": "32"
+    },
+    {
+     "eid": 30181,
+     "status": "LIVE",
+     "verifiers": 4,
+     "operators": [
+      "layerzero-labs",
+      "canary",
+      "horizen-labs",
+      "stablecoinx"
+     ],
+     "unmapped": [],
+     "library": "0xc02Ab410f0734EFa3F14628780e6e695156024C2",
+     "libraryIsDefault": false,
+     "confirmations": "2"
+    },
+    {
+     "eid": 30184,
+     "status": "LIVE",
+     "verifiers": 4,
+     "operators": [
+      "layerzero-labs",
+      "canary",
+      "horizen-labs",
+      "stablecoinx"
+     ],
+     "unmapped": [],
+     "library": "0xc02Ab410f0734EFa3F14628780e6e695156024C2",
+     "libraryIsDefault": false,
+     "confirmations": "10"
+    },
+    {
+     "eid": 30255,
+     "status": "LIVE",
+     "verifiers": 4,
+     "operators": [
+      "layerzero-labs",
+      "canary",
+      "horizen-labs",
+      "stablecoinx"
+     ],
+     "unmapped": [],
+     "library": "0xc02Ab410f0734EFa3F14628780e6e695156024C2",
+     "libraryIsDefault": false,
+     "confirmations": "5"
+    },
+    {
+     "eid": 30274,
+     "status": "LIVE",
+     "verifiers": 4,
+     "operators": [
+      "layerzero-labs",
+      "canary",
+      "horizen-labs",
+      "stablecoinx"
+     ],
+     "unmapped": [],
+     "library": "0xc02Ab410f0734EFa3F14628780e6e695156024C2",
+     "libraryIsDefault": false,
+     "confirmations": "6000"
+    },
+    {
+     "eid": 30322,
+     "status": "LIVE",
+     "verifiers": 4,
+     "operators": [
+      "layerzero-labs",
+      "canary",
+      "horizen-labs",
+      "stablecoinx"
+     ],
+     "unmapped": [],
+     "library": "0xc02Ab410f0734EFa3F14628780e6e695156024C2",
+     "libraryIsDefault": false,
+     "confirmations": "20"
+    },
+    {
+     "eid": 30339,
+     "status": "LIVE",
+     "verifiers": 4,
+     "operators": [
+      "layerzero-labs",
+      "canary",
+      "horizen-labs",
+      "stablecoinx"
+     ],
+     "unmapped": [],
+     "library": "0xc02Ab410f0734EFa3F14628780e6e695156024C2",
+     "libraryIsDefault": false,
+     "confirmations": "20"
+    },
+    {
+     "eid": 30343,
+     "status": "LIVE",
+     "verifiers": 4,
+     "operators": [
+      "layerzero-labs",
+      "canary",
+      "horizen-labs",
+      "stablecoinx"
+     ],
+     "unmapped": [],
+     "library": "0xc02Ab410f0734EFa3F14628780e6e695156024C2",
+     "libraryIsDefault": false,
+     "confirmations": "210000"
+    },
+    {
+     "eid": 30362,
+     "status": "LIVE",
+     "verifiers": 4,
+     "operators": [
+      "layerzero-labs",
+      "canary",
+      "horizen-labs",
+      "stablecoinx"
+     ],
+     "unmapped": [],
+     "library": "0xc02Ab410f0734EFa3F14628780e6e695156024C2",
+     "libraryIsDefault": false,
+     "confirmations": "20"
+    },
+    {
+     "eid": 30367,
+     "status": "LIVE",
+     "verifiers": 4,
+     "operators": [
+      "layerzero-labs",
+      "canary",
+      "horizen-labs",
+      "stablecoinx"
+     ],
+     "unmapped": [],
+     "library": "0xc02Ab410f0734EFa3F14628780e6e695156024C2",
+     "libraryIsDefault": false,
+     "confirmations": "1"
+    },
+    {
+     "eid": 30383,
+     "status": "LIVE",
+     "verifiers": 4,
+     "operators": [
+      "layerzero-labs",
+      "canary",
+      "horizen-labs",
+      "stablecoinx"
+     ],
+     "unmapped": [],
+     "library": "0xc02Ab410f0734EFa3F14628780e6e695156024C2",
+     "libraryIsDefault": false,
+     "confirmations": "5"
+    },
+    {
+     "eid": 30390,
+     "status": "LIVE",
+     "verifiers": 4,
+     "operators": [
+      "layerzero-labs",
+      "canary",
+      "horizen-labs",
+      "stablecoinx"
+     ],
+     "unmapped": [],
+     "library": "0xc02Ab410f0734EFa3F14628780e6e695156024C2",
+     "libraryIsDefault": false,
+     "confirmations": "8"
+    },
+    {
+     "eid": 30398,
+     "status": "LIVE",
+     "verifiers": 4,
+     "operators": [
+      "layerzero-labs",
+      "canary",
+      "horizen-labs",
+      "stablecoinx"
+     ],
+     "unmapped": [],
+     "library": "0xc02Ab410f0734EFa3F14628780e6e695156024C2",
+     "libraryIsDefault": false,
+     "confirmations": "300"
+    },
+    {
+     "eid": 30410,
+     "status": "LIVE",
+     "verifiers": 4,
+     "operators": [
+      "layerzero-labs",
+      "canary",
+      "horizen-labs",
+      "stablecoinx"
+     ],
+     "unmapped": [],
+     "library": "0xc02Ab410f0734EFa3F14628780e6e695156024C2",
+     "libraryIsDefault": false,
+     "confirmations": "20"
+    },
+    {
+     "eid": 30416,
+     "status": "LIVE",
+     "verifiers": 4,
+     "operators": [
+      "layerzero-labs",
+      "canary",
+      "horizen-labs",
+      "stablecoinx"
+     ],
+     "unmapped": [],
+     "library": "0xc02Ab410f0734EFa3F14628780e6e695156024C2",
+     "libraryIsDefault": false,
+     "confirmations": "20"
+    },
+    {
+     "eid": 30420,
+     "status": "LIVE",
+     "verifiers": 4,
+     "operators": [
+      "layerzero-labs",
+      "canary",
+      "horizen-labs",
+      "stablecoinx"
+     ],
+     "unmapped": [],
+     "library": "0xc02Ab410f0734EFa3F14628780e6e695156024C2",
+     "libraryIsDefault": false,
+     "confirmations": "5"
+    },
+    {
+     "eid": 30600,
+     "status": "LIVE",
+     "verifiers": 4,
+     "operators": [
+      "layerzero-labs",
+      "canary",
+      "horizen-labs",
+      "stablecoinx"
+     ],
+     "unmapped": [],
+     "library": "0xc02Ab410f0734EFa3F14628780e6e695156024C2",
+     "libraryIsDefault": false,
+     "confirmations": "10"
+    }
+   ],
+   "closedEids": [],
+   "outcome": "NO_INBOUND_LIMIT",
+   "routeCounts": {
+    "NO_INBOUND_LIMIT": 22
+   },
+   "results": [
+    {
+     "name": "inbound-limit",
+     "eid": 30102,
+     "forkBlock": 26513938,
+     "escrowSD": "1665207192317535",
+     "outcome": "NO_INBOUND_LIMIT",
+     "revert": null,
+     "maxAcceptedSD": "1665207192317535",
+     "proof": "full escrow released in one inbound message · full+1 reverts (Error(ERC20: transfer amount exceeds balance)) → escrow is the only ceiling"
+    },
+    {
+     "name": "inbound-limit",
+     "eid": 30106,
+     "forkBlock": 26513938,
+     "escrowSD": "1665207192317535",
+     "outcome": "NO_INBOUND_LIMIT",
+     "revert": null,
+     "maxAcceptedSD": "1665207192317535",
+     "proof": "full escrow released in one inbound message · full+1 reverts (Error(ERC20: transfer amount exceeds balance)) → escrow is the only ceiling"
+    },
+    {
+     "name": "inbound-limit",
+     "eid": 30108,
+     "forkBlock": 26513938,
+     "escrowSD": "1665207192317535",
+     "outcome": "NO_INBOUND_LIMIT",
+     "revert": null,
+     "maxAcceptedSD": "1665207192317535",
+     "proof": "full escrow released in one inbound message · full+1 reverts (Error(ERC20: transfer amount exceeds balance)) → escrow is the only ceiling"
+    },
+    {
+     "name": "inbound-limit",
+     "eid": 30110,
+     "forkBlock": 26513938,
+     "escrowSD": "1665207192317535",
+     "outcome": "NO_INBOUND_LIMIT",
+     "revert": null,
+     "maxAcceptedSD": "1665207192317535",
+     "proof": "full escrow released in one inbound message · full+1 reverts (Error(ERC20: transfer amount exceeds balance)) → escrow is the only ceiling"
+    },
+    {
+     "name": "inbound-limit",
+     "eid": 30111,
+     "forkBlock": 26513938,
+     "escrowSD": "1665207192317535",
+     "outcome": "NO_INBOUND_LIMIT",
+     "revert": null,
+     "maxAcceptedSD": "1665207192317535",
+     "proof": "full escrow released in one inbound message · full+1 reverts (Error(ERC20: transfer amount exceeds balance)) → escrow is the only ceiling"
+    },
+    {
+     "name": "inbound-limit",
+     "eid": 30168,
+     "forkBlock": 26513938,
+     "escrowSD": "1665207192317535",
+     "outcome": "NO_INBOUND_LIMIT",
+     "revert": null,
+     "maxAcceptedSD": "1665207192317535",
+     "proof": "full escrow released in one inbound message · full+1 reverts (Error(ERC20: transfer amount exceeds balance)) → escrow is the only ceiling"
+    },
+    {
+     "name": "inbound-limit",
+     "eid": 30181,
+     "forkBlock": 26513938,
+     "escrowSD": "1665207192317535",
+     "outcome": "NO_INBOUND_LIMIT",
+     "revert": null,
+     "maxAcceptedSD": "1665207192317535",
+     "proof": "full escrow released in one inbound message · full+1 reverts (Error(ERC20: transfer amount exceeds balance)) → escrow is the only ceiling"
+    },
+    {
+     "name": "inbound-limit",
+     "eid": 30184,
+     "forkBlock": 26513938,
+     "escrowSD": "1665207192317535",
+     "outcome": "NO_INBOUND_LIMIT",
+     "revert": null,
+     "maxAcceptedSD": "1665207192317535",
+     "proof": "full escrow released in one inbound message · full+1 reverts (Error(ERC20: transfer amount exceeds balance)) → escrow is the only ceiling"
+    },
+    {
+     "name": "inbound-limit",
+     "eid": 30255,
+     "forkBlock": 26513938,
+     "escrowSD": "1665207192317535",
+     "outcome": "NO_INBOUND_LIMIT",
+     "revert": null,
+     "maxAcceptedSD": "1665207192317535",
+     "proof": "full escrow released in one inbound message · full+1 reverts (Error(ERC20: transfer amount exceeds balance)) → escrow is the only ceiling"
+    },
+    {
+     "name": "inbound-limit",
+     "eid": 30274,
+     "forkBlock": 26513938,
+     "escrowSD": "1665207192317535",
+     "outcome": "NO_INBOUND_LIMIT",
+     "revert": null,
+     "maxAcceptedSD": "1665207192317535",
+     "proof": "full escrow released in one inbound message · full+1 reverts (Error(ERC20: transfer amount exceeds balance)) → escrow is the only ceiling"
+    },
+    {
+     "name": "inbound-limit",
+     "eid": 30322,
+     "forkBlock": 26513938,
+     "escrowSD": "1665207192317535",
+     "outcome": "NO_INBOUND_LIMIT",
+     "revert": null,
+     "maxAcceptedSD": "1665207192317535",
+     "proof": "full escrow released in one inbound message · full+1 reverts (Error(ERC20: transfer amount exceeds balance)) → escrow is the only ceiling"
+    },
+    {
+     "name": "inbound-limit",
+     "eid": 30339,
+     "forkBlock": 26513938,
+     "escrowSD": "1665207192317535",
+     "outcome": "NO_INBOUND_LIMIT",
+     "revert": null,
+     "maxAcceptedSD": "1665207192317535",
+     "proof": "full escrow released in one inbound message · full+1 reverts (Error(ERC20: transfer amount exceeds balance)) → escrow is the only ceiling"
+    },
+    {
+     "name": "inbound-limit",
+     "eid": 30343,
+     "forkBlock": 26513938,
+     "escrowSD": "1665207192317535",
+     "outcome": "NO_INBOUND_LIMIT",
+     "revert": null,
+     "maxAcceptedSD": "1665207192317535",
+     "proof": "full escrow released in one inbound message · full+1 reverts (Error(ERC20: transfer amount exceeds balance)) → escrow is the only ceiling"
+    },
+    {
+     "name": "inbound-limit",
+     "eid": 30362,
+     "forkBlock": 26513938,
+     "escrowSD": "1665207192317535",
+     "outcome": "NO_INBOUND_LIMIT",
+     "revert": null,
+     "maxAcceptedSD": "1665207192317535",
+     "proof": "full escrow released in one inbound message · full+1 reverts (Error(ERC20: transfer amount exceeds balance)) → escrow is the only ceiling"
+    },
+    {
+     "name": "inbound-limit",
+     "eid": 30367,
+     "forkBlock": 26513938,
+     "escrowSD": "1665207192317535",
+     "outcome": "NO_INBOUND_LIMIT",
+     "revert": null,
+     "maxAcceptedSD": "1665207192317535",
+     "proof": "full escrow released in one inbound message · full+1 reverts (Error(ERC20: transfer amount exceeds balance)) → escrow is the only ceiling"
+    },
+    {
+     "name": "inbound-limit",
+     "eid": 30383,
+     "forkBlock": 26513938,
+     "escrowSD": "1665207192317535",
+     "outcome": "NO_INBOUND_LIMIT",
+     "revert": null,
+     "maxAcceptedSD": "1665207192317535",
+     "proof": "full escrow released in one inbound message · full+1 reverts (Error(ERC20: transfer amount exceeds balance)) → escrow is the only ceiling"
+    },
+    {
+     "name": "inbound-limit",
+     "eid": 30390,
+     "forkBlock": 26513938,
+     "escrowSD": "1665207192317535",
+     "outcome": "NO_INBOUND_LIMIT",
+     "revert": null,
+     "maxAcceptedSD": "1665207192317535",
+     "proof": "full escrow released in one inbound message · full+1 reverts (Error(ERC20: transfer amount exceeds balance)) → escrow is the only ceiling"
+    },
+    {
+     "name": "inbound-limit",
+     "eid": 30398,
+     "forkBlock": 26513938,
+     "escrowSD": "1665207192317535",
+     "outcome": "NO_INBOUND_LIMIT",
+     "revert": null,
+     "maxAcceptedSD": "1665207192317535",
+     "proof": "full escrow released in one inbound message · full+1 reverts (Error(ERC20: transfer amount exceeds balance)) → escrow is the only ceiling"
+    },
+    {
+     "name": "inbound-limit",
+     "eid": 30410,
+     "forkBlock": 26513938,
+     "escrowSD": "1665207192317535",
+     "outcome": "NO_INBOUND_LIMIT",
+     "revert": null,
+     "maxAcceptedSD": "1665207192317535",
+     "proof": "full escrow released in one inbound message · full+1 reverts (Error(ERC20: transfer amount exceeds balance)) → escrow is the only ceiling"
+    },
+    {
+     "name": "inbound-limit",
+     "eid": 30416,
+     "forkBlock": 26513938,
+     "escrowSD": "1665207192317535",
+     "outcome": "NO_INBOUND_LIMIT",
+     "revert": null,
+     "maxAcceptedSD": "1665207192317535",
+     "proof": "full escrow released in one inbound message · full+1 reverts (Error(ERC20: transfer amount exceeds balance)) → escrow is the only ceiling"
+    },
+    {
+     "name": "inbound-limit",
+     "eid": 30420,
+     "forkBlock": 26513938,
+     "escrowSD": "1665207192317535",
+     "outcome": "NO_INBOUND_LIMIT",
+     "revert": null,
+     "maxAcceptedSD": "1665207192317535",
+     "proof": "full escrow released in one inbound message · full+1 reverts (Error(ERC20: transfer amount exceeds balance)) → escrow is the only ceiling"
+    },
+    {
+     "name": "inbound-limit",
+     "eid": 30600,
+     "forkBlock": 26513938,
+     "escrowSD": "1665207192317535",
+     "outcome": "NO_INBOUND_LIMIT",
+     "revert": null,
+     "maxAcceptedSD": "1665207192317535",
+     "proof": "full escrow released in one inbound message · full+1 reverts (Error(ERC20: transfer amount exceeds balance)) → escrow is the only ceiling"
+    }
+   ],
+   "crossCheck": "agree",
+   "weakestUnboundedVerifiers": 4
   },
   {
    "oapp": "0xb93e47a4901adccceae4cf7ac4cc74613abb4cf3",
@@ -311,6 +2465,26 @@
    "eids": [
     30465
    ],
+   "peers": {
+    "30465": "0x6f0ca9a07690905cfbfc6c75ac8f69fcea4ebd38"
+   },
+   "routes": [
+    {
+     "eid": 30465,
+     "status": "LIVE",
+     "verifiers": 3,
+     "operators": [
+      "horizen-labs",
+      "layerzero-labs",
+      "nansen"
+     ],
+     "unmapped": [],
+     "library": "0xc02Ab410f0734EFa3F14628780e6e695156024C2",
+     "libraryIsDefault": false,
+     "confirmations": "5"
+    }
+   ],
+   "closedEids": [],
    "outcome": "UNKNOWN",
    "routeCounts": {
     "UNKNOWN": 1
@@ -319,7 +2493,7 @@
     {
      "name": "inbound-limit",
      "eid": 30465,
-     "forkBlock": 26513037,
+     "forkBlock": 26513938,
      "escrowSD": "0",
      "outcome": "UNKNOWN",
      "revert": "Error(ERC20: transfer amount exceeds balance)",
@@ -327,7 +2501,8 @@
      "proof": "escrow is empty: nothing to bound (1-unit credit reverts: Error(ERC20: transfer amount exceeds balance))"
     }
    ],
-   "crossCheck": "agree"
+   "crossCheck": "unavailable",
+   "weakestUnboundedVerifiers": null
   },
   {
    "oapp": "0xc708b6887db46005da033501f8aebee72d191a5d",
@@ -335,7 +2510,79 @@
    "underlying": "0xc139190f447e929f090edeb554d95abb8b18ac1c",
    "issuer": "ethena",
    "type": "ProxyOFT",
-   "error": "RPC Request failed."
+   "kind": "adapter",
+   "sharedDecimals": 6,
+   "tokenDecimals": 18,
+   "escrowTokens": 230.929415,
+   "eids": [
+    30110,
+    30184
+   ],
+   "peers": {
+    "30110": "0xc708b6887db46005da033501f8aebee72d191a5d",
+    "30184": "0xc708b6887db46005da033501f8aebee72d191a5d"
+   },
+   "routes": [
+    {
+     "eid": 30110,
+     "status": "LIVE",
+     "verifiers": 4,
+     "operators": [
+      "horizen-labs",
+      "layerzero-labs",
+      "canary",
+      "nethermind"
+     ],
+     "unmapped": [],
+     "library": "0xc02Ab410f0734EFa3F14628780e6e695156024C2",
+     "libraryIsDefault": false,
+     "confirmations": "20"
+    },
+    {
+     "eid": 30184,
+     "status": "LIVE",
+     "verifiers": 4,
+     "operators": [
+      "horizen-labs",
+      "layerzero-labs",
+      "canary",
+      "nethermind"
+     ],
+     "unmapped": [],
+     "library": "0xc02Ab410f0734EFa3F14628780e6e695156024C2",
+     "libraryIsDefault": false,
+     "confirmations": "10"
+    }
+   ],
+   "closedEids": [],
+   "outcome": "NO_INBOUND_LIMIT",
+   "routeCounts": {
+    "NO_INBOUND_LIMIT": 2
+   },
+   "results": [
+    {
+     "name": "inbound-limit",
+     "eid": 30110,
+     "forkBlock": 26513938,
+     "escrowSD": "230929415",
+     "outcome": "NO_INBOUND_LIMIT",
+     "revert": null,
+     "maxAcceptedSD": "230929415",
+     "proof": "full escrow released in one inbound message · full+1 reverts (Error(ERC20: transfer amount exceeds balance)) → escrow is the only ceiling"
+    },
+    {
+     "name": "inbound-limit",
+     "eid": 30184,
+     "forkBlock": 26513938,
+     "escrowSD": "230929415",
+     "outcome": "NO_INBOUND_LIMIT",
+     "revert": null,
+     "maxAcceptedSD": "230929415",
+     "proof": "full escrow released in one inbound message · full+1 reverts (Error(ERC20: transfer amount exceeds balance)) → escrow is the only ceiling"
+    }
+   ],
+   "crossCheck": "agree",
+   "weakestUnboundedVerifiers": 4
   },
   {
    "oapp": "0x0555e30da8f98308edb960aa94c0db47230d2b9c",
@@ -343,7 +2590,571 @@
    "underlying": "0x2260fac5e5542a773aa44fbcfedf7c193bc2c599",
    "issuer": "wbtc",
    "type": "ProxyOFT",
-   "error": "RPC Request failed."
+   "kind": "adapter",
+   "sharedDecimals": 8,
+   "tokenDecimals": 8,
+   "escrowTokens": 763.14450585,
+   "eids": [
+    30102,
+    30106,
+    30108,
+    30111,
+    30184,
+    30199,
+    30279,
+    30280,
+    30316,
+    30320,
+    30332,
+    30335,
+    30336,
+    30340,
+    30362,
+    30367,
+    30378,
+    30380,
+    30388,
+    30390,
+    30500
+   ],
+   "peers": {
+    "30102": "0x0555e30da8f98308edb960aa94c0db47230d2b9c",
+    "30106": "0x0555e30da8f98308edb960aa94c0db47230d2b9c",
+    "30108": "0xef3a1c7d6aa1a531336433e48d7b1d9b46c5bedc69f3db291df4e39bef4708e2",
+    "30111": "0xc3f854b2970f8727d28527ece33176fac67fef48",
+    "30184": "0x0555e30da8f98308edb960aa94c0db47230d2b9c",
+    "30199": "0x0555e30da8f98308edb960aa94c0db47230d2b9c",
+    "30279": "0x0555e30da8f98308edb960aa94c0db47230d2b9c",
+    "30280": "0x0555e30da8f98308edb960aa94c0db47230d2b9c",
+    "30316": "0xd7d4d91d64a6061fa00a94e2b3a2d2a5fb677849",
+    "30320": "0x0555e30da8f98308edb960aa94c0db47230d2b9c",
+    "30332": "0x0555e30da8f98308edb960aa94c0db47230d2b9c",
+    "30335": "0x0555e30da8f98308edb960aa94c0db47230d2b9c",
+    "30336": "0x717dae2baf7656be9a9b01dee31d571a9d4c9579",
+    "30340": "0x0555e30da8f98308edb960aa94c0db47230d2b9c",
+    "30362": "0x0555e30da8f98308edb960aa94c0db47230d2b9c",
+    "30367": "0x0555e30da8f98308edb960aa94c0db47230d2b9c",
+    "30378": "0xf028303ea0d8dc2ac3ec17c696ca04f097d0c9af01e8a6607dc28242bd393a8c",
+    "30380": "0xc5098b3ca516784323872f17235fa074e167d3d2",
+    "30388": "0x0555e30da8f98308edb960aa94c0db47230d2b9c",
+    "30390": "0x0555e30da8f98308edb960aa94c0db47230d2b9c",
+    "30500": "0x069ac468d7ad7324c2807d9422630c650729a46121f023b11a647edf173562f9"
+   },
+   "routes": [
+    {
+     "eid": 30102,
+     "status": "LIVE",
+     "verifiers": 3,
+     "operators": [
+      "layerzero-labs",
+      "nethermind",
+      "bitgo"
+     ],
+     "unmapped": [],
+     "library": "0xc02Ab410f0734EFa3F14628780e6e695156024C2",
+     "libraryIsDefault": false,
+     "confirmations": "20"
+    },
+    {
+     "eid": 30106,
+     "status": "LIVE",
+     "verifiers": 3,
+     "operators": [
+      "layerzero-labs",
+      "nethermind",
+      "bitgo"
+     ],
+     "unmapped": [],
+     "library": "0xc02Ab410f0734EFa3F14628780e6e695156024C2",
+     "libraryIsDefault": false,
+     "confirmations": "12"
+    },
+    {
+     "eid": 30108,
+     "status": "LIVE",
+     "verifiers": 3,
+     "operators": [
+      "layerzero-labs",
+      "nethermind",
+      "bitgo"
+     ],
+     "unmapped": [],
+     "library": "0xc02Ab410f0734EFa3F14628780e6e695156024C2",
+     "libraryIsDefault": false,
+     "confirmations": "260"
+    },
+    {
+     "eid": 30111,
+     "status": "LIVE",
+     "verifiers": 3,
+     "operators": [
+      "layerzero-labs",
+      "nethermind",
+      "bitgo"
+     ],
+     "unmapped": [],
+     "library": "0xc02Ab410f0734EFa3F14628780e6e695156024C2",
+     "libraryIsDefault": false,
+     "confirmations": "20"
+    },
+    {
+     "eid": 30184,
+     "status": "LIVE",
+     "verifiers": 3,
+     "operators": [
+      "layerzero-labs",
+      "nethermind",
+      "bitgo"
+     ],
+     "unmapped": [],
+     "library": "0xc02Ab410f0734EFa3F14628780e6e695156024C2",
+     "libraryIsDefault": false,
+     "confirmations": "10"
+    },
+    {
+     "eid": 30199,
+     "status": "LIVE",
+     "verifiers": 3,
+     "operators": [
+      "layerzero-labs",
+      "nethermind",
+      "bitgo"
+     ],
+     "unmapped": [],
+     "library": "0xc02Ab410f0734EFa3F14628780e6e695156024C2",
+     "libraryIsDefault": false,
+     "confirmations": "5"
+    },
+    {
+     "eid": 30279,
+     "status": "LIVE",
+     "verifiers": 3,
+     "operators": [
+      "layerzero-labs",
+      "nethermind",
+      "bitgo"
+     ],
+     "unmapped": [],
+     "library": "0xc02Ab410f0734EFa3F14628780e6e695156024C2",
+     "libraryIsDefault": false,
+     "confirmations": "5"
+    },
+    {
+     "eid": 30280,
+     "status": "LIVE",
+     "verifiers": 3,
+     "operators": [
+      "layerzero-labs",
+      "nethermind",
+      "bitgo"
+     ],
+     "unmapped": [],
+     "library": "0xc02Ab410f0734EFa3F14628780e6e695156024C2",
+     "libraryIsDefault": false,
+     "confirmations": "5"
+    },
+    {
+     "eid": 30316,
+     "status": "LIVE",
+     "verifiers": 3,
+     "operators": [
+      "layerzero-labs",
+      "nethermind",
+      "bitgo"
+     ],
+     "unmapped": [],
+     "library": "0xc02Ab410f0734EFa3F14628780e6e695156024C2",
+     "libraryIsDefault": false,
+     "confirmations": "20"
+    },
+    {
+     "eid": 30320,
+     "status": "LIVE",
+     "verifiers": 3,
+     "operators": [
+      "layerzero-labs",
+      "nethermind",
+      "bitgo"
+     ],
+     "unmapped": [],
+     "library": "0xc02Ab410f0734EFa3F14628780e6e695156024C2",
+     "libraryIsDefault": false,
+     "confirmations": "20"
+    },
+    {
+     "eid": 30332,
+     "status": "LIVE",
+     "verifiers": 3,
+     "operators": [
+      "layerzero-labs",
+      "nethermind",
+      "bitgo"
+     ],
+     "unmapped": [],
+     "library": "0xc02Ab410f0734EFa3F14628780e6e695156024C2",
+     "libraryIsDefault": false,
+     "confirmations": "20"
+    },
+    {
+     "eid": 30335,
+     "status": "LIVE",
+     "verifiers": 3,
+     "operators": [
+      "layerzero-labs",
+      "nethermind",
+      "bitgo"
+     ],
+     "unmapped": [],
+     "library": "0xc02Ab410f0734EFa3F14628780e6e695156024C2",
+     "libraryIsDefault": false,
+     "confirmations": "20"
+    },
+    {
+     "eid": 30336,
+     "status": "LIVE",
+     "verifiers": 3,
+     "operators": [
+      "layerzero-labs",
+      "nethermind",
+      "bitgo"
+     ],
+     "unmapped": [],
+     "library": "0xc02Ab410f0734EFa3F14628780e6e695156024C2",
+     "libraryIsDefault": false,
+     "confirmations": "20"
+    },
+    {
+     "eid": 30340,
+     "status": "LIVE",
+     "verifiers": 3,
+     "operators": [
+      "layerzero-labs",
+      "nethermind",
+      "bitgo"
+     ],
+     "unmapped": [],
+     "library": "0xc02Ab410f0734EFa3F14628780e6e695156024C2",
+     "libraryIsDefault": false,
+     "confirmations": "20"
+    },
+    {
+     "eid": 30362,
+     "status": "LIVE",
+     "verifiers": 3,
+     "operators": [
+      "layerzero-labs",
+      "nethermind",
+      "bitgo"
+     ],
+     "unmapped": [],
+     "library": "0xc02Ab410f0734EFa3F14628780e6e695156024C2",
+     "libraryIsDefault": false,
+     "confirmations": "20"
+    },
+    {
+     "eid": 30367,
+     "status": "LIVE",
+     "verifiers": 3,
+     "operators": [
+      "layerzero-labs",
+      "nethermind",
+      "bitgo"
+     ],
+     "unmapped": [],
+     "library": "0xc02Ab410f0734EFa3F14628780e6e695156024C2",
+     "libraryIsDefault": false,
+     "confirmations": "1"
+    },
+    {
+     "eid": 30378,
+     "status": "LIVE",
+     "verifiers": 3,
+     "operators": [
+      "layerzero-labs",
+      "nethermind",
+      "bitgo"
+     ],
+     "unmapped": [],
+     "library": "0xc02Ab410f0734EFa3F14628780e6e695156024C2",
+     "libraryIsDefault": false,
+     "confirmations": "5"
+    },
+    {
+     "eid": 30380,
+     "status": "LIVE",
+     "verifiers": 3,
+     "operators": [
+      "layerzero-labs",
+      "nethermind",
+      "bitgo"
+     ],
+     "unmapped": [],
+     "library": "0xc02Ab410f0734EFa3F14628780e6e695156024C2",
+     "libraryIsDefault": false,
+     "confirmations": "200"
+    },
+    {
+     "eid": 30388,
+     "status": "LIVE",
+     "verifiers": 3,
+     "operators": [
+      "layerzero-labs",
+      "nethermind",
+      "bitgo"
+     ],
+     "unmapped": [],
+     "library": "0xc02Ab410f0734EFa3F14628780e6e695156024C2",
+     "libraryIsDefault": false,
+     "confirmations": "2"
+    },
+    {
+     "eid": 30390,
+     "status": "LIVE",
+     "verifiers": 3,
+     "operators": [
+      "layerzero-labs",
+      "nethermind",
+      "bitgo"
+     ],
+     "unmapped": [],
+     "library": "0xc02Ab410f0734EFa3F14628780e6e695156024C2",
+     "libraryIsDefault": false,
+     "confirmations": "4"
+    },
+    {
+     "eid": 30500,
+     "status": "LIVE",
+     "verifiers": 3,
+     "operators": [
+      "layerzero-labs",
+      "nethermind",
+      "bitgo"
+     ],
+     "unmapped": [],
+     "library": "0xc02Ab410f0734EFa3F14628780e6e695156024C2",
+     "libraryIsDefault": false,
+     "confirmations": "5"
+    }
+   ],
+   "closedEids": [],
+   "outcome": "NO_INBOUND_LIMIT",
+   "routeCounts": {
+    "NO_INBOUND_LIMIT": 21
+   },
+   "results": [
+    {
+     "name": "inbound-limit",
+     "eid": 30102,
+     "forkBlock": 26513938,
+     "escrowSD": "76314450585",
+     "outcome": "NO_INBOUND_LIMIT",
+     "revert": null,
+     "maxAcceptedSD": "76314450585",
+     "proof": "full escrow released in one inbound message · full+1 reverts (FailedInnerCall()) → escrow is the only ceiling"
+    },
+    {
+     "name": "inbound-limit",
+     "eid": 30106,
+     "forkBlock": 26513938,
+     "escrowSD": "76314450585",
+     "outcome": "NO_INBOUND_LIMIT",
+     "revert": null,
+     "maxAcceptedSD": "76314450585",
+     "proof": "full escrow released in one inbound message · full+1 reverts (FailedInnerCall()) → escrow is the only ceiling"
+    },
+    {
+     "name": "inbound-limit",
+     "eid": 30108,
+     "forkBlock": 26513938,
+     "escrowSD": "76314450585",
+     "outcome": "NO_INBOUND_LIMIT",
+     "revert": null,
+     "maxAcceptedSD": "76314450585",
+     "proof": "full escrow released in one inbound message · full+1 reverts (FailedInnerCall()) → escrow is the only ceiling"
+    },
+    {
+     "name": "inbound-limit",
+     "eid": 30111,
+     "forkBlock": 26513938,
+     "escrowSD": "76314450585",
+     "outcome": "NO_INBOUND_LIMIT",
+     "revert": null,
+     "maxAcceptedSD": "76314450585",
+     "proof": "full escrow released in one inbound message · full+1 reverts (FailedInnerCall()) → escrow is the only ceiling"
+    },
+    {
+     "name": "inbound-limit",
+     "eid": 30184,
+     "forkBlock": 26513938,
+     "escrowSD": "76314450585",
+     "outcome": "NO_INBOUND_LIMIT",
+     "revert": null,
+     "maxAcceptedSD": "76314450585",
+     "proof": "full escrow released in one inbound message · full+1 reverts (FailedInnerCall()) → escrow is the only ceiling"
+    },
+    {
+     "name": "inbound-limit",
+     "eid": 30199,
+     "forkBlock": 26513938,
+     "escrowSD": "76314450585",
+     "outcome": "NO_INBOUND_LIMIT",
+     "revert": null,
+     "maxAcceptedSD": "76314450585",
+     "proof": "full escrow released in one inbound message · full+1 reverts (FailedInnerCall()) → escrow is the only ceiling"
+    },
+    {
+     "name": "inbound-limit",
+     "eid": 30279,
+     "forkBlock": 26513938,
+     "escrowSD": "76314450585",
+     "outcome": "NO_INBOUND_LIMIT",
+     "revert": null,
+     "maxAcceptedSD": "76314450585",
+     "proof": "full escrow released in one inbound message · full+1 reverts (FailedInnerCall()) → escrow is the only ceiling"
+    },
+    {
+     "name": "inbound-limit",
+     "eid": 30280,
+     "forkBlock": 26513938,
+     "escrowSD": "76314450585",
+     "outcome": "NO_INBOUND_LIMIT",
+     "revert": null,
+     "maxAcceptedSD": "76314450585",
+     "proof": "full escrow released in one inbound message · full+1 reverts (FailedInnerCall()) → escrow is the only ceiling"
+    },
+    {
+     "name": "inbound-limit",
+     "eid": 30316,
+     "forkBlock": 26513938,
+     "escrowSD": "76314450585",
+     "outcome": "NO_INBOUND_LIMIT",
+     "revert": null,
+     "maxAcceptedSD": "76314450585",
+     "proof": "full escrow released in one inbound message · full+1 reverts (FailedInnerCall()) → escrow is the only ceiling"
+    },
+    {
+     "name": "inbound-limit",
+     "eid": 30320,
+     "forkBlock": 26513938,
+     "escrowSD": "76314450585",
+     "outcome": "NO_INBOUND_LIMIT",
+     "revert": null,
+     "maxAcceptedSD": "76314450585",
+     "proof": "full escrow released in one inbound message · full+1 reverts (FailedInnerCall()) → escrow is the only ceiling"
+    },
+    {
+     "name": "inbound-limit",
+     "eid": 30332,
+     "forkBlock": 26513938,
+     "escrowSD": "76314450585",
+     "outcome": "NO_INBOUND_LIMIT",
+     "revert": null,
+     "maxAcceptedSD": "76314450585",
+     "proof": "full escrow released in one inbound message · full+1 reverts (FailedInnerCall()) → escrow is the only ceiling"
+    },
+    {
+     "name": "inbound-limit",
+     "eid": 30335,
+     "forkBlock": 26513938,
+     "escrowSD": "76314450585",
+     "outcome": "NO_INBOUND_LIMIT",
+     "revert": null,
+     "maxAcceptedSD": "76314450585",
+     "proof": "full escrow released in one inbound message · full+1 reverts (FailedInnerCall()) → escrow is the only ceiling"
+    },
+    {
+     "name": "inbound-limit",
+     "eid": 30336,
+     "forkBlock": 26513938,
+     "escrowSD": "76314450585",
+     "outcome": "NO_INBOUND_LIMIT",
+     "revert": null,
+     "maxAcceptedSD": "76314450585",
+     "proof": "full escrow released in one inbound message · full+1 reverts (FailedInnerCall()) → escrow is the only ceiling"
+    },
+    {
+     "name": "inbound-limit",
+     "eid": 30340,
+     "forkBlock": 26513938,
+     "escrowSD": "76314450585",
+     "outcome": "NO_INBOUND_LIMIT",
+     "revert": null,
+     "maxAcceptedSD": "76314450585",
+     "proof": "full escrow released in one inbound message · full+1 reverts (FailedInnerCall()) → escrow is the only ceiling"
+    },
+    {
+     "name": "inbound-limit",
+     "eid": 30362,
+     "forkBlock": 26513938,
+     "escrowSD": "76314450585",
+     "outcome": "NO_INBOUND_LIMIT",
+     "revert": null,
+     "maxAcceptedSD": "76314450585",
+     "proof": "full escrow released in one inbound message · full+1 reverts (FailedInnerCall()) → escrow is the only ceiling"
+    },
+    {
+     "name": "inbound-limit",
+     "eid": 30367,
+     "forkBlock": 26513938,
+     "escrowSD": "76314450585",
+     "outcome": "NO_INBOUND_LIMIT",
+     "revert": null,
+     "maxAcceptedSD": "76314450585",
+     "proof": "full escrow released in one inbound message · full+1 reverts (FailedInnerCall()) → escrow is the only ceiling"
+    },
+    {
+     "name": "inbound-limit",
+     "eid": 30378,
+     "forkBlock": 26513938,
+     "escrowSD": "76314450585",
+     "outcome": "NO_INBOUND_LIMIT",
+     "revert": null,
+     "maxAcceptedSD": "76314450585",
+     "proof": "full escrow released in one inbound message · full+1 reverts (FailedInnerCall()) → escrow is the only ceiling"
+    },
+    {
+     "name": "inbound-limit",
+     "eid": 30380,
+     "forkBlock": 26513938,
+     "escrowSD": "76314450585",
+     "outcome": "NO_INBOUND_LIMIT",
+     "revert": null,
+     "maxAcceptedSD": "76314450585",
+     "proof": "full escrow released in one inbound message · full+1 reverts (FailedInnerCall()) → escrow is the only ceiling"
+    },
+    {
+     "name": "inbound-limit",
+     "eid": 30388,
+     "forkBlock": 26513938,
+     "escrowSD": "76314450585",
+     "outcome": "NO_INBOUND_LIMIT",
+     "revert": null,
+     "maxAcceptedSD": "76314450585",
+     "proof": "full escrow released in one inbound message · full+1 reverts (FailedInnerCall()) → escrow is the only ceiling"
+    },
+    {
+     "name": "inbound-limit",
+     "eid": 30390,
+     "forkBlock": 26513938,
+     "escrowSD": "76314450585",
+     "outcome": "NO_INBOUND_LIMIT",
+     "revert": null,
+     "maxAcceptedSD": "76314450585",
+     "proof": "full escrow released in one inbound message · full+1 reverts (FailedInnerCall()) → escrow is the only ceiling"
+    },
+    {
+     "name": "inbound-limit",
+     "eid": 30500,
+     "forkBlock": 26513938,
+     "escrowSD": "76314450585",
+     "outcome": "NO_INBOUND_LIMIT",
+     "revert": null,
+     "maxAcceptedSD": "76314450585",
+     "proof": "full escrow released in one inbound message · full+1 reverts (FailedInnerCall()) → escrow is the only ceiling"
+    }
+   ],
+   "crossCheck": "agree",
+   "weakestUnboundedVerifiers": 3
   },
   {
    "oapp": "0x2c01390e10e44c968b73a7bcff7e4b4f50ba76ed",
@@ -351,7 +3162,53 @@
    "underlying": "0x2260fac5e5542a773aa44fbcfedf7c193bc2c599",
    "issuer": "citrea",
    "type": "ProxyOFT",
-   "error": "RPC Request failed."
+   "kind": "adapter",
+   "sharedDecimals": 8,
+   "tokenDecimals": 8,
+   "escrowTokens": 0.84181711,
+   "eids": [
+    30403
+   ],
+   "peers": {
+    "30403": "0xdf240dc08b0fdad1d93b74d5048871232f6bea3d"
+   },
+   "routes": [
+    {
+     "eid": 30403,
+     "status": "LIVE",
+     "verifiers": 5,
+     "operators": [
+      "citrea",
+      "layerzero-labs",
+      "canary",
+      "p2p",
+      "horizen-labs"
+     ],
+     "unmapped": [],
+     "library": "0xc02Ab410f0734EFa3F14628780e6e695156024C2",
+     "libraryIsDefault": false,
+     "confirmations": "15"
+    }
+   ],
+   "closedEids": [],
+   "outcome": "NO_INBOUND_LIMIT",
+   "routeCounts": {
+    "NO_INBOUND_LIMIT": 1
+   },
+   "results": [
+    {
+     "name": "inbound-limit",
+     "eid": 30403,
+     "forkBlock": 26513938,
+     "escrowSD": "84181711",
+     "outcome": "NO_INBOUND_LIMIT",
+     "revert": null,
+     "maxAcceptedSD": "84181711",
+     "proof": "full escrow released in one inbound message · full+1 reverts (revert (no data)) → escrow is the only ceiling"
+    }
+   ],
+   "crossCheck": "agree",
+   "weakestUnboundedVerifiers": 5
   },
   {
    "oapp": "0x713441e6e7865ad91c3a89620dff1cdad49900a6",
@@ -359,7 +3216,51 @@
    "underlying": "0x2260fac5e5542a773aa44fbcfedf7c193bc2c599",
    "issuer": "anubis-bridge",
    "type": "ProxyOFT",
-   "error": "RPC Request failed."
+   "kind": "adapter",
+   "sharedDecimals": 8,
+   "tokenDecimals": 8,
+   "escrowTokens": 14.58895109,
+   "eids": [
+    30465
+   ],
+   "peers": {
+    "30465": "0x287a0e98fec5c41fbaf53b63882a602a24d21640"
+   },
+   "routes": [
+    {
+     "eid": 30465,
+     "status": "LIVE",
+     "verifiers": 3,
+     "operators": [
+      "horizen-labs",
+      "layerzero-labs",
+      "nansen"
+     ],
+     "unmapped": [],
+     "library": "0xc02Ab410f0734EFa3F14628780e6e695156024C2",
+     "libraryIsDefault": false,
+     "confirmations": "5"
+    }
+   ],
+   "closedEids": [],
+   "outcome": "NO_INBOUND_LIMIT",
+   "routeCounts": {
+    "NO_INBOUND_LIMIT": 1
+   },
+   "results": [
+    {
+     "name": "inbound-limit",
+     "eid": 30465,
+     "forkBlock": 26513938,
+     "escrowSD": "1458895109",
+     "outcome": "NO_INBOUND_LIMIT",
+     "revert": null,
+     "maxAcceptedSD": "1458895109",
+     "proof": "full escrow released in one inbound message · full+1 reverts (revert (no data)) → escrow is the only ceiling"
+    }
+   ],
+   "crossCheck": "agree",
+   "weakestUnboundedVerifiers": 3
   },
   {
    "oapp": "0xab6ebe9472e2e4b6fe720dad16701f32ab905cc6",
@@ -394,6 +3295,26 @@
    "eids": [
     30465
    ],
+   "peers": {
+    "30465": "0xddfeaa69b9351156be245915c3f1ce45ac7c0544"
+   },
+   "routes": [
+    {
+     "eid": 30465,
+     "status": "LIVE",
+     "verifiers": 3,
+     "operators": [
+      "horizen-labs",
+      "layerzero-labs",
+      "nansen"
+     ],
+     "unmapped": [],
+     "library": "0xc02Ab410f0734EFa3F14628780e6e695156024C2",
+     "libraryIsDefault": false,
+     "confirmations": "5"
+    }
+   ],
+   "closedEids": [],
    "outcome": "UNKNOWN",
    "routeCounts": {
     "UNKNOWN": 1
@@ -402,7 +3323,7 @@
     {
      "name": "inbound-limit",
      "eid": 30465,
-     "forkBlock": 26513037,
+     "forkBlock": 26513938,
      "escrowSD": "0",
      "outcome": "UNKNOWN",
      "revert": "Error(ERC20: transfer amount exceeds balance)",
@@ -410,7 +3331,8 @@
      "proof": "escrow is empty: nothing to bound (1-unit credit reverts: Error(ERC20: transfer amount exceeds balance))"
     }
    ],
-   "crossCheck": "agree"
+   "crossCheck": "unavailable",
+   "weakestUnboundedVerifiers": null
   },
   {
    "oapp": "0xb9c2321bb7d0db468f570d10a424d1cc8efd696c",
@@ -418,7 +3340,362 @@
    "underlying": "0x68749665ff8d2d112fa859aa293f07a622782f38",
    "issuer": "usdt0",
    "type": "ProxyOFT",
-   "error": "RPC Request failed."
+   "kind": "adapter",
+   "sharedDecimals": 6,
+   "tokenDecimals": 6,
+   "escrowTokens": 32127.399199,
+   "eids": [
+    30102,
+    30106,
+    30109,
+    30110,
+    30125,
+    30168,
+    30212,
+    30339,
+    30343,
+    30367,
+    30383,
+    30390,
+    30396
+   ],
+   "peers": {
+    "30102": "0x53c3a64c8942288e12813c1f8457db45980bcfc2",
+    "30106": "0x7e7866bc840aff9f517a49afdbfc9e7c7aba9a68",
+    "30109": "0x5421cf4288d8007d3c43ac4246eafce5b049e352",
+    "30110": "0xf40542a7b66ad7c68c459ee3679635d2fdb6df39",
+    "30125": "0x21caef8a43163eea865baee23b9c2e327696a3bf",
+    "30168": "0x07d14aef03aacfde37c37ac84805f0265d8936e95426b86af95b082f5a567f00",
+    "30212": "0x06d886ff518b5e642e7e6aad3ce797b7dabd8e9a",
+    "30339": "0xa1be1572b4beef24f812efdc58bdc41d56a0dab2",
+    "30343": "0x90d9ff1c7814705fcc74f8b7598476d65f3b9536fc132729b0606f0be82e617f",
+    "30367": "0x4e41cfc3f3b19e29e323d2c36f8f202a1e151daf",
+    "30383": "0x63ab93cbc9d4ecd9c4947b1a38f458147c08e6f7",
+    "30390": "0x21caef8a43163eea865baee23b9c2e327696a3bf",
+    "30396": "0xd8479f87686ed263d00ca7505f86327dbed4171a"
+   },
+   "routes": [
+    {
+     "eid": 30102,
+     "status": "LIVE",
+     "verifiers": 3,
+     "operators": [
+      "usdt0",
+      "layerzero-labs",
+      "canary"
+     ],
+     "unmapped": [],
+     "library": "0xc02Ab410f0734EFa3F14628780e6e695156024C2",
+     "libraryIsDefault": false,
+     "confirmations": "1200"
+    },
+    {
+     "eid": 30106,
+     "status": "LIVE",
+     "verifiers": 3,
+     "operators": [
+      "usdt0",
+      "layerzero-labs",
+      "canary"
+     ],
+     "unmapped": [],
+     "library": "0xc02Ab410f0734EFa3F14628780e6e695156024C2",
+     "libraryIsDefault": false,
+     "confirmations": "60"
+    },
+    {
+     "eid": 30109,
+     "status": "LIVE",
+     "verifiers": 3,
+     "operators": [
+      "usdt0",
+      "layerzero-labs",
+      "canary"
+     ],
+     "unmapped": [],
+     "library": "0xc02Ab410f0734EFa3F14628780e6e695156024C2",
+     "libraryIsDefault": false,
+     "confirmations": "32"
+    },
+    {
+     "eid": 30110,
+     "status": "LIVE",
+     "verifiers": 3,
+     "operators": [
+      "usdt0",
+      "layerzero-labs",
+      "canary"
+     ],
+     "unmapped": [],
+     "library": "0xc02Ab410f0734EFa3F14628780e6e695156024C2",
+     "libraryIsDefault": false,
+     "confirmations": "60"
+    },
+    {
+     "eid": 30125,
+     "status": "LIVE",
+     "verifiers": 3,
+     "operators": [
+      "usdt0",
+      "layerzero-labs",
+      "canary"
+     ],
+     "unmapped": [],
+     "library": "0xc02Ab410f0734EFa3F14628780e6e695156024C2",
+     "libraryIsDefault": false,
+     "confirmations": "2500"
+    },
+    {
+     "eid": 30168,
+     "status": "LIVE",
+     "verifiers": 3,
+     "operators": [
+      "usdt0",
+      "layerzero-labs",
+      "canary"
+     ],
+     "unmapped": [],
+     "library": "0xc02Ab410f0734EFa3F14628780e6e695156024C2",
+     "libraryIsDefault": false,
+     "confirmations": "128"
+    },
+    {
+     "eid": 30212,
+     "status": "LIVE",
+     "verifiers": 3,
+     "operators": [
+      "usdt0",
+      "layerzero-labs",
+      "canary"
+     ],
+     "unmapped": [],
+     "library": "0xc02Ab410f0734EFa3F14628780e6e695156024C2",
+     "libraryIsDefault": false,
+     "confirmations": "2800"
+    },
+    {
+     "eid": 30339,
+     "status": "LIVE",
+     "verifiers": 3,
+     "operators": [
+      "usdt0",
+      "layerzero-labs",
+      "canary"
+     ],
+     "unmapped": [],
+     "library": "0xc02Ab410f0734EFa3F14628780e6e695156024C2",
+     "libraryIsDefault": false,
+     "confirmations": "3000"
+    },
+    {
+     "eid": 30343,
+     "status": "LIVE",
+     "verifiers": 2,
+     "operators": [
+      "usdt0",
+      "layerzero-labs"
+     ],
+     "unmapped": [],
+     "library": "0xc02Ab410f0734EFa3F14628780e6e695156024C2",
+     "libraryIsDefault": false,
+     "confirmations": "60"
+    },
+    {
+     "eid": 30367,
+     "status": "LIVE",
+     "verifiers": 3,
+     "operators": [
+      "usdt0",
+      "layerzero-labs",
+      "canary"
+     ],
+     "unmapped": [],
+     "library": "0xc02Ab410f0734EFa3F14628780e6e695156024C2",
+     "libraryIsDefault": false,
+     "confirmations": "43200"
+    },
+    {
+     "eid": 30383,
+     "status": "LIVE",
+     "verifiers": 3,
+     "operators": [
+      "usdt0",
+      "layerzero-labs",
+      "canary"
+     ],
+     "unmapped": [],
+     "library": "0xc02Ab410f0734EFa3F14628780e6e695156024C2",
+     "libraryIsDefault": false,
+     "confirmations": "3600"
+    },
+    {
+     "eid": 30390,
+     "status": "LIVE",
+     "verifiers": 3,
+     "operators": [
+      "usdt0",
+      "layerzero-labs",
+      "canary"
+     ],
+     "unmapped": [],
+     "library": "0xc02Ab410f0734EFa3F14628780e6e695156024C2",
+     "libraryIsDefault": false,
+     "confirmations": "3600"
+    },
+    {
+     "eid": 30396,
+     "status": "LIVE",
+     "verifiers": 3,
+     "operators": [
+      "usdt0",
+      "layerzero-labs",
+      "canary"
+     ],
+     "unmapped": [],
+     "library": "0xc02Ab410f0734EFa3F14628780e6e695156024C2",
+     "libraryIsDefault": false,
+     "confirmations": "3600"
+    }
+   ],
+   "closedEids": [],
+   "outcome": "NO_INBOUND_LIMIT",
+   "routeCounts": {
+    "NO_INBOUND_LIMIT": 13
+   },
+   "results": [
+    {
+     "name": "inbound-limit",
+     "eid": 30102,
+     "forkBlock": 26513938,
+     "escrowSD": "32127399199",
+     "outcome": "NO_INBOUND_LIMIT",
+     "revert": null,
+     "maxAcceptedSD": "32127399199",
+     "proof": "full escrow released in one inbound message · full+1 reverts (Error(ERC20: transfer amount exceeds balance)) → escrow is the only ceiling"
+    },
+    {
+     "name": "inbound-limit",
+     "eid": 30106,
+     "forkBlock": 26513938,
+     "escrowSD": "32127399199",
+     "outcome": "NO_INBOUND_LIMIT",
+     "revert": null,
+     "maxAcceptedSD": "32127399199",
+     "proof": "full escrow released in one inbound message · full+1 reverts (Error(ERC20: transfer amount exceeds balance)) → escrow is the only ceiling"
+    },
+    {
+     "name": "inbound-limit",
+     "eid": 30109,
+     "forkBlock": 26513938,
+     "escrowSD": "32127399199",
+     "outcome": "NO_INBOUND_LIMIT",
+     "revert": null,
+     "maxAcceptedSD": "32127399199",
+     "proof": "full escrow released in one inbound message · full+1 reverts (Error(ERC20: transfer amount exceeds balance)) → escrow is the only ceiling"
+    },
+    {
+     "name": "inbound-limit",
+     "eid": 30110,
+     "forkBlock": 26513938,
+     "escrowSD": "32127399199",
+     "outcome": "NO_INBOUND_LIMIT",
+     "revert": null,
+     "maxAcceptedSD": "32127399199",
+     "proof": "full escrow released in one inbound message · full+1 reverts (Error(ERC20: transfer amount exceeds balance)) → escrow is the only ceiling"
+    },
+    {
+     "name": "inbound-limit",
+     "eid": 30125,
+     "forkBlock": 26513938,
+     "escrowSD": "32127399199",
+     "outcome": "NO_INBOUND_LIMIT",
+     "revert": null,
+     "maxAcceptedSD": "32127399199",
+     "proof": "full escrow released in one inbound message · full+1 reverts (Error(ERC20: transfer amount exceeds balance)) → escrow is the only ceiling"
+    },
+    {
+     "name": "inbound-limit",
+     "eid": 30168,
+     "forkBlock": 26513938,
+     "escrowSD": "32127399199",
+     "outcome": "NO_INBOUND_LIMIT",
+     "revert": null,
+     "maxAcceptedSD": "32127399199",
+     "proof": "full escrow released in one inbound message · full+1 reverts (Error(ERC20: transfer amount exceeds balance)) → escrow is the only ceiling"
+    },
+    {
+     "name": "inbound-limit",
+     "eid": 30212,
+     "forkBlock": 26513938,
+     "escrowSD": "32127399199",
+     "outcome": "NO_INBOUND_LIMIT",
+     "revert": null,
+     "maxAcceptedSD": "32127399199",
+     "proof": "full escrow released in one inbound message · full+1 reverts (Error(ERC20: transfer amount exceeds balance)) → escrow is the only ceiling"
+    },
+    {
+     "name": "inbound-limit",
+     "eid": 30339,
+     "forkBlock": 26513938,
+     "escrowSD": "32127399199",
+     "outcome": "NO_INBOUND_LIMIT",
+     "revert": null,
+     "maxAcceptedSD": "32127399199",
+     "proof": "full escrow released in one inbound message · full+1 reverts (Error(ERC20: transfer amount exceeds balance)) → escrow is the only ceiling"
+    },
+    {
+     "name": "inbound-limit",
+     "eid": 30343,
+     "forkBlock": 26513938,
+     "escrowSD": "32127399199",
+     "outcome": "NO_INBOUND_LIMIT",
+     "revert": null,
+     "maxAcceptedSD": "32127399199",
+     "proof": "full escrow released in one inbound message · full+1 reverts (Error(ERC20: transfer amount exceeds balance)) → escrow is the only ceiling"
+    },
+    {
+     "name": "inbound-limit",
+     "eid": 30367,
+     "forkBlock": 26513938,
+     "escrowSD": "32127399199",
+     "outcome": "NO_INBOUND_LIMIT",
+     "revert": null,
+     "maxAcceptedSD": "32127399199",
+     "proof": "full escrow released in one inbound message · full+1 reverts (Error(ERC20: transfer amount exceeds balance)) → escrow is the only ceiling"
+    },
+    {
+     "name": "inbound-limit",
+     "eid": 30383,
+     "forkBlock": 26513938,
+     "escrowSD": "32127399199",
+     "outcome": "NO_INBOUND_LIMIT",
+     "revert": null,
+     "maxAcceptedSD": "32127399199",
+     "proof": "full escrow released in one inbound message · full+1 reverts (Error(ERC20: transfer amount exceeds balance)) → escrow is the only ceiling"
+    },
+    {
+     "name": "inbound-limit",
+     "eid": 30390,
+     "forkBlock": 26513938,
+     "escrowSD": "32127399199",
+     "outcome": "NO_INBOUND_LIMIT",
+     "revert": null,
+     "maxAcceptedSD": "32127399199",
+     "proof": "full escrow released in one inbound message · full+1 reverts (Error(ERC20: transfer amount exceeds balance)) → escrow is the only ceiling"
+    },
+    {
+     "name": "inbound-limit",
+     "eid": 30396,
+     "forkBlock": 26513938,
+     "escrowSD": "32127399199",
+     "outcome": "NO_INBOUND_LIMIT",
+     "revert": null,
+     "maxAcceptedSD": "32127399199",
+     "proof": "full escrow released in one inbound message · full+1 reverts (Error(ERC20: transfer amount exceeds balance)) → escrow is the only ceiling"
+    }
+   ],
+   "crossCheck": "agree",
+   "weakestUnboundedVerifiers": 2
   },
   {
    "oapp": "0x85d456b2dff1fd8245387c0bfb64dfb700e98ef3",
@@ -426,7 +3703,52 @@
    "underlying": "0xa1290d69c65a6fe4df752f95823fae25cb99e5a7",
    "issuer": "kelpdao",
    "type": "ProxyOFT",
-   "error": "RPC Request failed."
+   "kind": "adapter",
+   "sharedDecimals": 6,
+   "tokenDecimals": 18,
+   "escrowTokens": 16972.32158,
+   "eids": [
+    30110
+   ],
+   "peers": {
+    "30110": "0x4186bfc76e2e237523cbc30fd220fe055156b41f"
+   },
+   "routes": [
+    {
+     "eid": 30110,
+     "status": "LIVE",
+     "verifiers": 4,
+     "operators": [
+      "horizen-labs",
+      "layerzero-labs",
+      "canary",
+      "google-cloud"
+     ],
+     "unmapped": [],
+     "library": "0xc02Ab410f0734EFa3F14628780e6e695156024C2",
+     "libraryIsDefault": false,
+     "confirmations": "64"
+    }
+   ],
+   "closedEids": [],
+   "outcome": "NO_INBOUND_LIMIT",
+   "routeCounts": {
+    "NO_INBOUND_LIMIT": 1
+   },
+   "results": [
+    {
+     "name": "inbound-limit",
+     "eid": 30110,
+     "forkBlock": 26513938,
+     "escrowSD": "16972321580",
+     "outcome": "NO_INBOUND_LIMIT",
+     "revert": null,
+     "maxAcceptedSD": "16972321580",
+     "proof": "full escrow released in one inbound message · full+1 reverts (Error(ERC20: transfer amount exceeds balance)) → escrow is the only ceiling"
+    }
+   ],
+   "crossCheck": "agree",
+   "weakestUnboundedVerifiers": 4
   },
   {
    "oapp": "0x211cc4dd073734da055fbf44a2b4667d5e5fe5d2",
@@ -434,7 +3756,592 @@
    "underlying": "0x9d39a5de30e57443bff2a8307a4256c8797a3497",
    "issuer": "ethena",
    "type": "ProxyOFT",
-   "error": "RPC Request failed."
+   "kind": "adapter",
+   "sharedDecimals": 6,
+   "tokenDecimals": 18,
+   "escrowTokens": 126681944.250349,
+   "eids": [
+    30102,
+    30106,
+    30108,
+    30110,
+    30111,
+    30168,
+    30181,
+    30184,
+    30255,
+    30274,
+    30322,
+    30339,
+    30362,
+    30367,
+    30383,
+    30390,
+    30398,
+    30410,
+    30416,
+    30420,
+    30600
+   ],
+   "peers": {
+    "30102": "0x211cc4dd073734da055fbf44a2b4667d5e5fe5d2",
+    "30106": "0x211cc4dd073734da055fbf44a2b4667d5e5fe5d2",
+    "30108": "0xa84fcc405fa7e5415f02f50167aac3d4ec2947187aabb9087f6b16d31c8715e5",
+    "30110": "0x211cc4dd073734da055fbf44a2b4667d5e5fe5d2",
+    "30111": "0x211cc4dd073734da055fbf44a2b4667d5e5fe5d2",
+    "30168": "0xb2953a744464aac979ffe7b20a9612cc33e9ba1c687e5eb7336f8e5c9c89aafe",
+    "30181": "0x211cc4dd073734da055fbf44a2b4667d5e5fe5d2",
+    "30184": "0x211cc4dd073734da055fbf44a2b4667d5e5fe5d2",
+    "30255": "0x211cc4dd073734da055fbf44a2b4667d5e5fe5d2",
+    "30274": "0x211cc4dd073734da055fbf44a2b4667d5e5fe5d2",
+    "30322": "0x211cc4dd073734da055fbf44a2b4667d5e5fe5d2",
+    "30339": "0x211cc4dd073734da055fbf44a2b4667d5e5fe5d2",
+    "30362": "0x211cc4dd073734da055fbf44a2b4667d5e5fe5d2",
+    "30367": "0x211cc4dd073734da055fbf44a2b4667d5e5fe5d2",
+    "30383": "0x211cc4dd073734da055fbf44a2b4667d5e5fe5d2",
+    "30390": "0x211cc4dd073734da055fbf44a2b4667d5e5fe5d2",
+    "30398": "0x211cc4dd073734da055fbf44a2b4667d5e5fe5d2",
+    "30410": "0x100c123770be9015321a9fcfa4ae3e77dcb2cf1a",
+    "30416": "0x211cc4dd073734da055fbf44a2b4667d5e5fe5d2",
+    "30420": "0xa83141d7f9acbcf7bcedbf1755524c9df8ff6917",
+    "30600": "0x5cc4fee9023c4934f14c55e5808ea0e1ed064405823096cd574658b088b34463"
+   },
+   "routes": [
+    {
+     "eid": 30102,
+     "status": "LIVE",
+     "verifiers": 4,
+     "operators": [
+      "layerzero-labs",
+      "canary",
+      "horizen-labs",
+      "stablecoinx"
+     ],
+     "unmapped": [],
+     "library": "0xc02Ab410f0734EFa3F14628780e6e695156024C2",
+     "libraryIsDefault": false,
+     "confirmations": "20"
+    },
+    {
+     "eid": 30106,
+     "status": "LIVE",
+     "verifiers": 4,
+     "operators": [
+      "layerzero-labs",
+      "canary",
+      "horizen-labs",
+      "stablecoinx"
+     ],
+     "unmapped": [],
+     "library": "0xc02Ab410f0734EFa3F14628780e6e695156024C2",
+     "libraryIsDefault": false,
+     "confirmations": "12"
+    },
+    {
+     "eid": 30108,
+     "status": "LIVE",
+     "verifiers": 4,
+     "operators": [
+      "horizen-labs",
+      "layerzero-labs",
+      "deutsche-telekom",
+      "stablecoinx"
+     ],
+     "unmapped": [],
+     "library": "0xc02Ab410f0734EFa3F14628780e6e695156024C2",
+     "libraryIsDefault": false,
+     "confirmations": "260"
+    },
+    {
+     "eid": 30110,
+     "status": "LIVE",
+     "verifiers": 4,
+     "operators": [
+      "layerzero-labs",
+      "canary",
+      "horizen-labs",
+      "stablecoinx"
+     ],
+     "unmapped": [],
+     "library": "0xc02Ab410f0734EFa3F14628780e6e695156024C2",
+     "libraryIsDefault": false,
+     "confirmations": "20"
+    },
+    {
+     "eid": 30111,
+     "status": "LIVE",
+     "verifiers": 4,
+     "operators": [
+      "layerzero-labs",
+      "canary",
+      "horizen-labs",
+      "stablecoinx"
+     ],
+     "unmapped": [],
+     "library": "0xc02Ab410f0734EFa3F14628780e6e695156024C2",
+     "libraryIsDefault": false,
+     "confirmations": "20"
+    },
+    {
+     "eid": 30168,
+     "status": "LIVE",
+     "verifiers": 4,
+     "operators": [
+      "layerzero-labs",
+      "canary",
+      "horizen-labs",
+      "stablecoinx"
+     ],
+     "unmapped": [],
+     "library": "0xc02Ab410f0734EFa3F14628780e6e695156024C2",
+     "libraryIsDefault": false,
+     "confirmations": "32"
+    },
+    {
+     "eid": 30181,
+     "status": "LIVE",
+     "verifiers": 4,
+     "operators": [
+      "layerzero-labs",
+      "canary",
+      "horizen-labs",
+      "stablecoinx"
+     ],
+     "unmapped": [],
+     "library": "0xc02Ab410f0734EFa3F14628780e6e695156024C2",
+     "libraryIsDefault": false,
+     "confirmations": "2"
+    },
+    {
+     "eid": 30184,
+     "status": "LIVE",
+     "verifiers": 4,
+     "operators": [
+      "layerzero-labs",
+      "canary",
+      "horizen-labs",
+      "stablecoinx"
+     ],
+     "unmapped": [],
+     "library": "0xc02Ab410f0734EFa3F14628780e6e695156024C2",
+     "libraryIsDefault": false,
+     "confirmations": "10"
+    },
+    {
+     "eid": 30255,
+     "status": "LIVE",
+     "verifiers": 4,
+     "operators": [
+      "layerzero-labs",
+      "canary",
+      "horizen-labs",
+      "stablecoinx"
+     ],
+     "unmapped": [],
+     "library": "0xc02Ab410f0734EFa3F14628780e6e695156024C2",
+     "libraryIsDefault": false,
+     "confirmations": "5"
+    },
+    {
+     "eid": 30274,
+     "status": "LIVE",
+     "verifiers": 4,
+     "operators": [
+      "layerzero-labs",
+      "canary",
+      "horizen-labs",
+      "stablecoinx"
+     ],
+     "unmapped": [],
+     "library": "0xc02Ab410f0734EFa3F14628780e6e695156024C2",
+     "libraryIsDefault": false,
+     "confirmations": "6000"
+    },
+    {
+     "eid": 30322,
+     "status": "LIVE",
+     "verifiers": 4,
+     "operators": [
+      "layerzero-labs",
+      "canary",
+      "horizen-labs",
+      "stablecoinx"
+     ],
+     "unmapped": [],
+     "library": "0xc02Ab410f0734EFa3F14628780e6e695156024C2",
+     "libraryIsDefault": false,
+     "confirmations": "20"
+    },
+    {
+     "eid": 30339,
+     "status": "LIVE",
+     "verifiers": 4,
+     "operators": [
+      "layerzero-labs",
+      "canary",
+      "horizen-labs",
+      "stablecoinx"
+     ],
+     "unmapped": [],
+     "library": "0xc02Ab410f0734EFa3F14628780e6e695156024C2",
+     "libraryIsDefault": false,
+     "confirmations": "20"
+    },
+    {
+     "eid": 30362,
+     "status": "LIVE",
+     "verifiers": 4,
+     "operators": [
+      "layerzero-labs",
+      "canary",
+      "horizen-labs",
+      "stablecoinx"
+     ],
+     "unmapped": [],
+     "library": "0xc02Ab410f0734EFa3F14628780e6e695156024C2",
+     "libraryIsDefault": false,
+     "confirmations": "20"
+    },
+    {
+     "eid": 30367,
+     "status": "LIVE",
+     "verifiers": 4,
+     "operators": [
+      "layerzero-labs",
+      "canary",
+      "horizen-labs",
+      "stablecoinx"
+     ],
+     "unmapped": [],
+     "library": "0xc02Ab410f0734EFa3F14628780e6e695156024C2",
+     "libraryIsDefault": false,
+     "confirmations": "1"
+    },
+    {
+     "eid": 30383,
+     "status": "LIVE",
+     "verifiers": 4,
+     "operators": [
+      "layerzero-labs",
+      "canary",
+      "horizen-labs",
+      "stablecoinx"
+     ],
+     "unmapped": [],
+     "library": "0xc02Ab410f0734EFa3F14628780e6e695156024C2",
+     "libraryIsDefault": false,
+     "confirmations": "5"
+    },
+    {
+     "eid": 30390,
+     "status": "LIVE",
+     "verifiers": 4,
+     "operators": [
+      "layerzero-labs",
+      "canary",
+      "horizen-labs",
+      "stablecoinx"
+     ],
+     "unmapped": [],
+     "library": "0xc02Ab410f0734EFa3F14628780e6e695156024C2",
+     "libraryIsDefault": false,
+     "confirmations": "8"
+    },
+    {
+     "eid": 30398,
+     "status": "LIVE",
+     "verifiers": 4,
+     "operators": [
+      "layerzero-labs",
+      "canary",
+      "horizen-labs",
+      "stablecoinx"
+     ],
+     "unmapped": [],
+     "library": "0xc02Ab410f0734EFa3F14628780e6e695156024C2",
+     "libraryIsDefault": false,
+     "confirmations": "300"
+    },
+    {
+     "eid": 30410,
+     "status": "LIVE",
+     "verifiers": 4,
+     "operators": [
+      "layerzero-labs",
+      "canary",
+      "horizen-labs",
+      "stablecoinx"
+     ],
+     "unmapped": [],
+     "library": "0xc02Ab410f0734EFa3F14628780e6e695156024C2",
+     "libraryIsDefault": false,
+     "confirmations": "20"
+    },
+    {
+     "eid": 30416,
+     "status": "LIVE",
+     "verifiers": 4,
+     "operators": [
+      "layerzero-labs",
+      "canary",
+      "horizen-labs",
+      "stablecoinx"
+     ],
+     "unmapped": [],
+     "library": "0xc02Ab410f0734EFa3F14628780e6e695156024C2",
+     "libraryIsDefault": false,
+     "confirmations": "20"
+    },
+    {
+     "eid": 30420,
+     "status": "LIVE",
+     "verifiers": 4,
+     "operators": [
+      "layerzero-labs",
+      "canary",
+      "horizen-labs",
+      "stablecoinx"
+     ],
+     "unmapped": [],
+     "library": "0xc02Ab410f0734EFa3F14628780e6e695156024C2",
+     "libraryIsDefault": false,
+     "confirmations": "5"
+    },
+    {
+     "eid": 30600,
+     "status": "LIVE",
+     "verifiers": 4,
+     "operators": [
+      "layerzero-labs",
+      "canary",
+      "horizen-labs",
+      "stablecoinx"
+     ],
+     "unmapped": [],
+     "library": "0xc02Ab410f0734EFa3F14628780e6e695156024C2",
+     "libraryIsDefault": false,
+     "confirmations": "10"
+    }
+   ],
+   "closedEids": [],
+   "outcome": "NO_INBOUND_LIMIT",
+   "routeCounts": {
+    "NO_INBOUND_LIMIT": 21
+   },
+   "results": [
+    {
+     "name": "inbound-limit",
+     "eid": 30102,
+     "forkBlock": 26513938,
+     "escrowSD": "126681944250349",
+     "outcome": "NO_INBOUND_LIMIT",
+     "revert": null,
+     "maxAcceptedSD": "126681944250349",
+     "proof": "full escrow released in one inbound message · full+1 reverts (Error(ERC20: transfer amount exceeds balance)) → escrow is the only ceiling"
+    },
+    {
+     "name": "inbound-limit",
+     "eid": 30106,
+     "forkBlock": 26513938,
+     "escrowSD": "126681944250349",
+     "outcome": "NO_INBOUND_LIMIT",
+     "revert": null,
+     "maxAcceptedSD": "126681944250349",
+     "proof": "full escrow released in one inbound message · full+1 reverts (Error(ERC20: transfer amount exceeds balance)) → escrow is the only ceiling"
+    },
+    {
+     "name": "inbound-limit",
+     "eid": 30108,
+     "forkBlock": 26513938,
+     "escrowSD": "126681944250349",
+     "outcome": "NO_INBOUND_LIMIT",
+     "revert": null,
+     "maxAcceptedSD": "126681944250349",
+     "proof": "full escrow released in one inbound message · full+1 reverts (Error(ERC20: transfer amount exceeds balance)) → escrow is the only ceiling"
+    },
+    {
+     "name": "inbound-limit",
+     "eid": 30110,
+     "forkBlock": 26513938,
+     "escrowSD": "126681944250349",
+     "outcome": "NO_INBOUND_LIMIT",
+     "revert": null,
+     "maxAcceptedSD": "126681944250349",
+     "proof": "full escrow released in one inbound message · full+1 reverts (Error(ERC20: transfer amount exceeds balance)) → escrow is the only ceiling"
+    },
+    {
+     "name": "inbound-limit",
+     "eid": 30111,
+     "forkBlock": 26513938,
+     "escrowSD": "126681944250349",
+     "outcome": "NO_INBOUND_LIMIT",
+     "revert": null,
+     "maxAcceptedSD": "126681944250349",
+     "proof": "full escrow released in one inbound message · full+1 reverts (Error(ERC20: transfer amount exceeds balance)) → escrow is the only ceiling"
+    },
+    {
+     "name": "inbound-limit",
+     "eid": 30168,
+     "forkBlock": 26513938,
+     "escrowSD": "126681944250349",
+     "outcome": "NO_INBOUND_LIMIT",
+     "revert": null,
+     "maxAcceptedSD": "126681944250349",
+     "proof": "full escrow released in one inbound message · full+1 reverts (Error(ERC20: transfer amount exceeds balance)) → escrow is the only ceiling"
+    },
+    {
+     "name": "inbound-limit",
+     "eid": 30181,
+     "forkBlock": 26513938,
+     "escrowSD": "126681944250349",
+     "outcome": "NO_INBOUND_LIMIT",
+     "revert": null,
+     "maxAcceptedSD": "126681944250349",
+     "proof": "full escrow released in one inbound message · full+1 reverts (Error(ERC20: transfer amount exceeds balance)) → escrow is the only ceiling"
+    },
+    {
+     "name": "inbound-limit",
+     "eid": 30184,
+     "forkBlock": 26513938,
+     "escrowSD": "126681944250349",
+     "outcome": "NO_INBOUND_LIMIT",
+     "revert": null,
+     "maxAcceptedSD": "126681944250349",
+     "proof": "full escrow released in one inbound message · full+1 reverts (Error(ERC20: transfer amount exceeds balance)) → escrow is the only ceiling"
+    },
+    {
+     "name": "inbound-limit",
+     "eid": 30255,
+     "forkBlock": 26513938,
+     "escrowSD": "126681944250349",
+     "outcome": "NO_INBOUND_LIMIT",
+     "revert": null,
+     "maxAcceptedSD": "126681944250349",
+     "proof": "full escrow released in one inbound message · full+1 reverts (Error(ERC20: transfer amount exceeds balance)) → escrow is the only ceiling"
+    },
+    {
+     "name": "inbound-limit",
+     "eid": 30274,
+     "forkBlock": 26513938,
+     "escrowSD": "126681944250349",
+     "outcome": "NO_INBOUND_LIMIT",
+     "revert": null,
+     "maxAcceptedSD": "126681944250349",
+     "proof": "full escrow released in one inbound message · full+1 reverts (Error(ERC20: transfer amount exceeds balance)) → escrow is the only ceiling"
+    },
+    {
+     "name": "inbound-limit",
+     "eid": 30322,
+     "forkBlock": 26513938,
+     "escrowSD": "126681944250349",
+     "outcome": "NO_INBOUND_LIMIT",
+     "revert": null,
+     "maxAcceptedSD": "126681944250349",
+     "proof": "full escrow released in one inbound message · full+1 reverts (Error(ERC20: transfer amount exceeds balance)) → escrow is the only ceiling"
+    },
+    {
+     "name": "inbound-limit",
+     "eid": 30339,
+     "forkBlock": 26513938,
+     "escrowSD": "126681944250349",
+     "outcome": "NO_INBOUND_LIMIT",
+     "revert": null,
+     "maxAcceptedSD": "126681944250349",
+     "proof": "full escrow released in one inbound message · full+1 reverts (Error(ERC20: transfer amount exceeds balance)) → escrow is the only ceiling"
+    },
+    {
+     "name": "inbound-limit",
+     "eid": 30362,
+     "forkBlock": 26513938,
+     "escrowSD": "126681944250349",
+     "outcome": "NO_INBOUND_LIMIT",
+     "revert": null,
+     "maxAcceptedSD": "126681944250349",
+     "proof": "full escrow released in one inbound message · full+1 reverts (Error(ERC20: transfer amount exceeds balance)) → escrow is the only ceiling"
+    },
+    {
+     "name": "inbound-limit",
+     "eid": 30367,
+     "forkBlock": 26513938,
+     "escrowSD": "126681944250349",
+     "outcome": "NO_INBOUND_LIMIT",
+     "revert": null,
+     "maxAcceptedSD": "126681944250349",
+     "proof": "full escrow released in one inbound message · full+1 reverts (Error(ERC20: transfer amount exceeds balance)) → escrow is the only ceiling"
+    },
+    {
+     "name": "inbound-limit",
+     "eid": 30383,
+     "forkBlock": 26513938,
+     "escrowSD": "126681944250349",
+     "outcome": "NO_INBOUND_LIMIT",
+     "revert": null,
+     "maxAcceptedSD": "126681944250349",
+     "proof": "full escrow released in one inbound message · full+1 reverts (Error(ERC20: transfer amount exceeds balance)) → escrow is the only ceiling"
+    },
+    {
+     "name": "inbound-limit",
+     "eid": 30390,
+     "forkBlock": 26513938,
+     "escrowSD": "126681944250349",
+     "outcome": "NO_INBOUND_LIMIT",
+     "revert": null,
+     "maxAcceptedSD": "126681944250349",
+     "proof": "full escrow released in one inbound message · full+1 reverts (Error(ERC20: transfer amount exceeds balance)) → escrow is the only ceiling"
+    },
+    {
+     "name": "inbound-limit",
+     "eid": 30398,
+     "forkBlock": 26513938,
+     "escrowSD": "126681944250349",
+     "outcome": "NO_INBOUND_LIMIT",
+     "revert": null,
+     "maxAcceptedSD": "126681944250349",
+     "proof": "full escrow released in one inbound message · full+1 reverts (Error(ERC20: transfer amount exceeds balance)) → escrow is the only ceiling"
+    },
+    {
+     "name": "inbound-limit",
+     "eid": 30410,
+     "forkBlock": 26513938,
+     "escrowSD": "126681944250349",
+     "outcome": "NO_INBOUND_LIMIT",
+     "revert": null,
+     "maxAcceptedSD": "126681944250349",
+     "proof": "full escrow released in one inbound message · full+1 reverts (Error(ERC20: transfer amount exceeds balance)) → escrow is the only ceiling"
+    },
+    {
+     "name": "inbound-limit",
+     "eid": 30416,
+     "forkBlock": 26513938,
+     "escrowSD": "126681944250349",
+     "outcome": "NO_INBOUND_LIMIT",
+     "revert": null,
+     "maxAcceptedSD": "126681944250349",
+     "proof": "full escrow released in one inbound message · full+1 reverts (Error(ERC20: transfer amount exceeds balance)) → escrow is the only ceiling"
+    },
+    {
+     "name": "inbound-limit",
+     "eid": 30420,
+     "forkBlock": 26513938,
+     "escrowSD": "126681944250349",
+     "outcome": "NO_INBOUND_LIMIT",
+     "revert": null,
+     "maxAcceptedSD": "126681944250349",
+     "proof": "full escrow released in one inbound message · full+1 reverts (Error(ERC20: transfer amount exceeds balance)) → escrow is the only ceiling"
+    },
+    {
+     "name": "inbound-limit",
+     "eid": 30600,
+     "forkBlock": 26513938,
+     "escrowSD": "126681944250349",
+     "outcome": "NO_INBOUND_LIMIT",
+     "revert": null,
+     "maxAcceptedSD": "126681944250349",
+     "proof": "full escrow released in one inbound message · full+1 reverts (Error(ERC20: transfer amount exceeds balance)) → escrow is the only ceiling"
+    }
+   ],
+   "crossCheck": "agree",
+   "weakestUnboundedVerifiers": 4
   },
   {
    "oapp": "0x4eaf10d30a9e988c5e73b328a0ddbd4ffad73913",
@@ -442,7 +4349,50 @@
    "underlying": "0xcd5fe23c85820f7b72d0926fc9b05b43e359b7ee",
    "issuer": "etherfi",
    "type": "ProxyOFT",
-   "error": "RPC Request failed."
+   "kind": "adapter",
+   "sharedDecimals": 6,
+   "tokenDecimals": 18,
+   "escrowTokens": 0.021471,
+   "eids": [
+    30326
+   ],
+   "peers": {
+    "30326": "0xb14774f27e0ccea61f68fd522d20058c285a68a1b45d9a581ff754b326e186cc"
+   },
+   "routes": [
+    {
+     "eid": 30326,
+     "status": "LIVE",
+     "verifiers": 2,
+     "operators": [
+      "layerzero-labs",
+      "nethermind"
+     ],
+     "unmapped": [],
+     "library": "0xc02Ab410f0734EFa3F14628780e6e695156024C2",
+     "libraryIsDefault": false,
+     "confirmations": "40000"
+    }
+   ],
+   "closedEids": [],
+   "outcome": "NO_INBOUND_LIMIT",
+   "routeCounts": {
+    "NO_INBOUND_LIMIT": 1
+   },
+   "results": [
+    {
+     "name": "inbound-limit",
+     "eid": 30326,
+     "forkBlock": 26513938,
+     "escrowSD": "21471",
+     "outcome": "NO_INBOUND_LIMIT",
+     "revert": null,
+     "maxAcceptedSD": "21471",
+     "proof": "full escrow released in one inbound message · full+1 reverts (Error(ERC20: transfer amount exceeds balance)) → escrow is the only ceiling"
+    }
+   ],
+   "crossCheck": "agree",
+   "weakestUnboundedVerifiers": 2
   },
   {
    "oapp": "0xcd2eb13d6831d4602d80e5db9230a57596cdca63",
@@ -450,7 +4400,565 @@
    "underlying": "0xcd5fe23c85820f7b72d0926fc9b05b43e359b7ee",
    "issuer": "etherfi",
    "type": "ProxyOFT",
-   "error": "RPC Request failed."
+   "kind": "adapter",
+   "sharedDecimals": 6,
+   "tokenDecimals": 18,
+   "escrowTokens": 185689.071823,
+   "eids": [
+    30102,
+    30106,
+    30111,
+    30165,
+    30183,
+    30184,
+    30214,
+    30243,
+    30260,
+    30320,
+    30322,
+    30335,
+    30339,
+    30362,
+    30367,
+    30383,
+    30390,
+    30396,
+    30416,
+    30417
+   ],
+   "peers": {
+    "30102": "0x04c0599ae5a44757c0af6f9ec3b93da8976c150a",
+    "30106": "0xa3d68b74bf0528fdd07263c60d6488749044914b",
+    "30111": "0x5a7facb970d094b6c7ff1df0ea68d99e6e73cbff",
+    "30165": "0xc1fa6e2e8667d9be0ca938a54c7e0285e9df924a",
+    "30183": "0x1bf74c010e6320bab11e2e5a532b5ac15e0b8aa6",
+    "30184": "0x04c0599ae5a44757c0af6f9ec3b93da8976c150a",
+    "30214": "0x01f0a31698c4d065659b9bdc21b3610292a1c506",
+    "30243": "0x04c0599ae5a44757c0af6f9ec3b93da8976c150a",
+    "30260": "0x04c0599ae5a44757c0af6f9ec3b93da8976c150a",
+    "30320": "0x7dcc39b4d1c53cb31e1abc0e358b43987fef80f7",
+    "30322": "0x7dcc39b4d1c53cb31e1abc0e358b43987fef80f7",
+    "30335": "0xa6cb988942610f6731e664379d15ffcfbf282b44",
+    "30339": "0xa3d68b74bf0528fdd07263c60d6488749044914b",
+    "30362": "0x7dcc39b4d1c53cb31e1abc0e358b43987fef80f7",
+    "30367": "0xa3d68b74bf0528fdd07263c60d6488749044914b",
+    "30383": "0xa3d68b74bf0528fdd07263c60d6488749044914b",
+    "30390": "0xa3d68b74bf0528fdd07263c60d6488749044914b",
+    "30396": "0x60a08269e5f3406d8fd7892567d53188c7f75009",
+    "30416": "0xa3d68b74bf0528fdd07263c60d6488749044914b",
+    "30417": "0xa3d68b74bf0528fdd07263c60d6488749044914b"
+   },
+   "routes": [
+    {
+     "eid": 30102,
+     "status": "LIVE",
+     "verifiers": 4,
+     "operators": [
+      "p2p",
+      "horizen-labs",
+      "layerzero-labs",
+      "nethermind"
+     ],
+     "unmapped": [],
+     "library": "0xc02Ab410f0734EFa3F14628780e6e695156024C2",
+     "libraryIsDefault": false,
+     "confirmations": "45"
+    },
+    {
+     "eid": 30106,
+     "status": "LIVE",
+     "verifiers": 4,
+     "operators": [
+      "p2p",
+      "horizen-labs",
+      "layerzero-labs",
+      "nethermind"
+     ],
+     "unmapped": [],
+     "library": "0xc02Ab410f0734EFa3F14628780e6e695156024C2",
+     "libraryIsDefault": false,
+     "confirmations": "45"
+    },
+    {
+     "eid": 30111,
+     "status": "LIVE",
+     "verifiers": 4,
+     "operators": [
+      "p2p",
+      "horizen-labs",
+      "layerzero-labs",
+      "nethermind"
+     ],
+     "unmapped": [],
+     "library": "0xc02Ab410f0734EFa3F14628780e6e695156024C2",
+     "libraryIsDefault": false,
+     "confirmations": "45"
+    },
+    {
+     "eid": 30165,
+     "status": "LIVE",
+     "verifiers": 4,
+     "operators": [
+      "horizen-labs",
+      "layerzero-labs",
+      "canary",
+      "nethermind"
+     ],
+     "unmapped": [],
+     "library": "0xc02Ab410f0734EFa3F14628780e6e695156024C2",
+     "libraryIsDefault": false,
+     "confirmations": "45"
+    },
+    {
+     "eid": 30183,
+     "status": "LIVE",
+     "verifiers": 4,
+     "operators": [
+      "p2p",
+      "horizen-labs",
+      "layerzero-labs",
+      "nethermind"
+     ],
+     "unmapped": [],
+     "library": "0xc02Ab410f0734EFa3F14628780e6e695156024C2",
+     "libraryIsDefault": false,
+     "confirmations": "45"
+    },
+    {
+     "eid": 30184,
+     "status": "LIVE",
+     "verifiers": 4,
+     "operators": [
+      "p2p",
+      "horizen-labs",
+      "layerzero-labs",
+      "nethermind"
+     ],
+     "unmapped": [],
+     "library": "0xc02Ab410f0734EFa3F14628780e6e695156024C2",
+     "libraryIsDefault": false,
+     "confirmations": "45"
+    },
+    {
+     "eid": 30214,
+     "status": "LIVE",
+     "verifiers": 4,
+     "operators": [
+      "horizen-labs",
+      "layerzero-labs",
+      "canary",
+      "nethermind"
+     ],
+     "unmapped": [],
+     "library": "0xc02Ab410f0734EFa3F14628780e6e695156024C2",
+     "libraryIsDefault": false,
+     "confirmations": "45"
+    },
+    {
+     "eid": 30243,
+     "status": "LIVE",
+     "verifiers": 4,
+     "operators": [
+      "horizen-labs",
+      "layerzero-labs",
+      "canary",
+      "nethermind"
+     ],
+     "unmapped": [],
+     "library": "0xc02Ab410f0734EFa3F14628780e6e695156024C2",
+     "libraryIsDefault": false,
+     "confirmations": "45"
+    },
+    {
+     "eid": 30260,
+     "status": "LIVE",
+     "verifiers": 4,
+     "operators": [
+      "horizen-labs",
+      "layerzero-labs",
+      "canary",
+      "nethermind"
+     ],
+     "unmapped": [],
+     "library": "0xc02Ab410f0734EFa3F14628780e6e695156024C2",
+     "libraryIsDefault": false,
+     "confirmations": "45"
+    },
+    {
+     "eid": 30320,
+     "status": "LIVE",
+     "verifiers": 4,
+     "operators": [
+      "p2p",
+      "horizen-labs",
+      "layerzero-labs",
+      "nethermind"
+     ],
+     "unmapped": [],
+     "library": "0xc02Ab410f0734EFa3F14628780e6e695156024C2",
+     "libraryIsDefault": false,
+     "confirmations": "45"
+    },
+    {
+     "eid": 30322,
+     "status": "LIVE",
+     "verifiers": 4,
+     "operators": [
+      "horizen-labs",
+      "layerzero-labs",
+      "canary",
+      "nethermind"
+     ],
+     "unmapped": [],
+     "library": "0xc02Ab410f0734EFa3F14628780e6e695156024C2",
+     "libraryIsDefault": false,
+     "confirmations": "45"
+    },
+    {
+     "eid": 30335,
+     "status": "LIVE",
+     "verifiers": 4,
+     "operators": [
+      "horizen-labs",
+      "layerzero-labs",
+      "canary",
+      "nethermind"
+     ],
+     "unmapped": [],
+     "library": "0xc02Ab410f0734EFa3F14628780e6e695156024C2",
+     "libraryIsDefault": false,
+     "confirmations": "45"
+    },
+    {
+     "eid": 30339,
+     "status": "LIVE",
+     "verifiers": 4,
+     "operators": [
+      "p2p",
+      "horizen-labs",
+      "layerzero-labs",
+      "nethermind"
+     ],
+     "unmapped": [],
+     "library": "0xc02Ab410f0734EFa3F14628780e6e695156024C2",
+     "libraryIsDefault": false,
+     "confirmations": "45"
+    },
+    {
+     "eid": 30362,
+     "status": "LIVE",
+     "verifiers": 4,
+     "operators": [
+      "horizen-labs",
+      "layerzero-labs",
+      "canary",
+      "nethermind"
+     ],
+     "unmapped": [],
+     "library": "0xc02Ab410f0734EFa3F14628780e6e695156024C2",
+     "libraryIsDefault": false,
+     "confirmations": "45"
+    },
+    {
+     "eid": 30367,
+     "status": "LIVE",
+     "verifiers": 4,
+     "operators": [
+      "p2p",
+      "horizen-labs",
+      "layerzero-labs",
+      "nethermind"
+     ],
+     "unmapped": [],
+     "library": "0xc02Ab410f0734EFa3F14628780e6e695156024C2",
+     "libraryIsDefault": false,
+     "confirmations": "45"
+    },
+    {
+     "eid": 30383,
+     "status": "LIVE",
+     "verifiers": 4,
+     "operators": [
+      "p2p",
+      "horizen-labs",
+      "layerzero-labs",
+      "nethermind"
+     ],
+     "unmapped": [],
+     "library": "0xc02Ab410f0734EFa3F14628780e6e695156024C2",
+     "libraryIsDefault": false,
+     "confirmations": "45"
+    },
+    {
+     "eid": 30390,
+     "status": "LIVE",
+     "verifiers": 4,
+     "operators": [
+      "p2p",
+      "horizen-labs",
+      "layerzero-labs",
+      "nethermind"
+     ],
+     "unmapped": [],
+     "library": "0xc02Ab410f0734EFa3F14628780e6e695156024C2",
+     "libraryIsDefault": false,
+     "confirmations": "45"
+    },
+    {
+     "eid": 30396,
+     "status": "LIVE",
+     "verifiers": 4,
+     "operators": [
+      "horizen-labs",
+      "layerzero-labs",
+      "canary",
+      "nethermind"
+     ],
+     "unmapped": [],
+     "library": "0xc02Ab410f0734EFa3F14628780e6e695156024C2",
+     "libraryIsDefault": false,
+     "confirmations": "45"
+    },
+    {
+     "eid": 30416,
+     "status": "LIVE",
+     "verifiers": 4,
+     "operators": [
+      "p2p",
+      "horizen-labs",
+      "layerzero-labs",
+      "nethermind"
+     ],
+     "unmapped": [],
+     "library": "0xc02Ab410f0734EFa3F14628780e6e695156024C2",
+     "libraryIsDefault": false,
+     "confirmations": "45"
+    },
+    {
+     "eid": 30417,
+     "status": "LIVE",
+     "verifiers": 4,
+     "operators": [
+      "p2p",
+      "horizen-labs",
+      "layerzero-labs",
+      "nethermind"
+     ],
+     "unmapped": [],
+     "library": "0xc02Ab410f0734EFa3F14628780e6e695156024C2",
+     "libraryIsDefault": false,
+     "confirmations": "45"
+    }
+   ],
+   "closedEids": [],
+   "outcome": "INBOUND_LIMIT",
+   "routeCounts": {
+    "INBOUND_LIMIT": 20
+   },
+   "results": [
+    {
+     "name": "inbound-limit",
+     "eid": 30102,
+     "forkBlock": 26513938,
+     "escrowSD": "185689071823",
+     "outcome": "INBOUND_LIMIT",
+     "revert": "InboundRateLimitExceeded()",
+     "maxAcceptedSD": "20000000",
+     "proof": "small ok · full reverts (InboundRateLimitExceeded()) · max accepted 20000000 SD (0.01% of escrow)"
+    },
+    {
+     "name": "inbound-limit",
+     "eid": 30106,
+     "forkBlock": 26513938,
+     "escrowSD": "185689071823",
+     "outcome": "INBOUND_LIMIT",
+     "revert": "InboundRateLimitExceeded()",
+     "maxAcceptedSD": "20000000",
+     "proof": "small ok · full reverts (InboundRateLimitExceeded()) · max accepted 20000000 SD (0.01% of escrow)"
+    },
+    {
+     "name": "inbound-limit",
+     "eid": 30111,
+     "forkBlock": 26513938,
+     "escrowSD": "185689071823",
+     "outcome": "INBOUND_LIMIT",
+     "revert": "InboundRateLimitExceeded()",
+     "maxAcceptedSD": "3000000000",
+     "proof": "small ok · full reverts (InboundRateLimitExceeded()) · max accepted 3000000000 SD (1.61% of escrow)"
+    },
+    {
+     "name": "inbound-limit",
+     "eid": 30165,
+     "forkBlock": 26513938,
+     "escrowSD": "185689071823",
+     "outcome": "INBOUND_LIMIT",
+     "revert": "InboundRateLimitExceeded()",
+     "maxAcceptedSD": "10000000",
+     "proof": "small ok · full reverts (InboundRateLimitExceeded()) · max accepted 10000000 SD (0% of escrow)"
+    },
+    {
+     "name": "inbound-limit",
+     "eid": 30183,
+     "forkBlock": 26513938,
+     "escrowSD": "185689071823",
+     "outcome": "INBOUND_LIMIT",
+     "revert": "InboundRateLimitExceeded()",
+     "maxAcceptedSD": "2000000000",
+     "proof": "small ok · full reverts (InboundRateLimitExceeded()) · max accepted 2000000000 SD (1.07% of escrow)"
+    },
+    {
+     "name": "inbound-limit",
+     "eid": 30184,
+     "forkBlock": 26513938,
+     "escrowSD": "185689071823",
+     "outcome": "INBOUND_LIMIT",
+     "revert": "InboundRateLimitExceeded()",
+     "maxAcceptedSD": "10000000000",
+     "proof": "small ok · full reverts (InboundRateLimitExceeded()) · max accepted 10000000000 SD (5.38% of escrow)"
+    },
+    {
+     "name": "inbound-limit",
+     "eid": 30214,
+     "forkBlock": 26513938,
+     "escrowSD": "185689071823",
+     "outcome": "INBOUND_LIMIT",
+     "revert": "InboundRateLimitExceeded()",
+     "maxAcceptedSD": "10000000",
+     "proof": "small ok · full reverts (InboundRateLimitExceeded()) · max accepted 10000000 SD (0% of escrow)"
+    },
+    {
+     "name": "inbound-limit",
+     "eid": 30243,
+     "forkBlock": 26513938,
+     "escrowSD": "185689071823",
+     "outcome": "INBOUND_LIMIT",
+     "revert": "InboundRateLimitExceeded()",
+     "maxAcceptedSD": "10000000",
+     "proof": "small ok · full reverts (InboundRateLimitExceeded()) · max accepted 10000000 SD (0% of escrow)"
+    },
+    {
+     "name": "inbound-limit",
+     "eid": 30260,
+     "forkBlock": 26513938,
+     "escrowSD": "185689071823",
+     "outcome": "INBOUND_LIMIT",
+     "revert": "InboundRateLimitExceeded()",
+     "maxAcceptedSD": "10000000",
+     "proof": "small ok · full reverts (InboundRateLimitExceeded()) · max accepted 10000000 SD (0% of escrow)"
+    },
+    {
+     "name": "inbound-limit",
+     "eid": 30320,
+     "forkBlock": 26513938,
+     "escrowSD": "185689071823",
+     "outcome": "INBOUND_LIMIT",
+     "revert": "InboundRateLimitExceeded()",
+     "maxAcceptedSD": "2000000000",
+     "proof": "small ok · full reverts (InboundRateLimitExceeded()) · max accepted 2000000000 SD (1.07% of escrow)"
+    },
+    {
+     "name": "inbound-limit",
+     "eid": 30322,
+     "forkBlock": 26513938,
+     "escrowSD": "185689071823",
+     "outcome": "INBOUND_LIMIT",
+     "revert": "InboundRateLimitExceeded()",
+     "maxAcceptedSD": "10000000",
+     "proof": "small ok · full reverts (InboundRateLimitExceeded()) · max accepted 10000000 SD (0% of escrow)"
+    },
+    {
+     "name": "inbound-limit",
+     "eid": 30335,
+     "forkBlock": 26513938,
+     "escrowSD": "185689071823",
+     "outcome": "INBOUND_LIMIT",
+     "revert": "InboundRateLimitExceeded()",
+     "maxAcceptedSD": "10000000",
+     "proof": "small ok · full reverts (InboundRateLimitExceeded()) · max accepted 10000000 SD (0% of escrow)"
+    },
+    {
+     "name": "inbound-limit",
+     "eid": 30339,
+     "forkBlock": 26513938,
+     "escrowSD": "185689071823",
+     "outcome": "INBOUND_LIMIT",
+     "revert": "InboundRateLimitExceeded()",
+     "maxAcceptedSD": "2000000000",
+     "proof": "small ok · full reverts (InboundRateLimitExceeded()) · max accepted 2000000000 SD (1.07% of escrow)"
+    },
+    {
+     "name": "inbound-limit",
+     "eid": 30362,
+     "forkBlock": 26513938,
+     "escrowSD": "185689071823",
+     "outcome": "INBOUND_LIMIT",
+     "revert": "InboundRateLimitExceeded()",
+     "maxAcceptedSD": "10000000",
+     "proof": "small ok · full reverts (InboundRateLimitExceeded()) · max accepted 10000000 SD (0% of escrow)"
+    },
+    {
+     "name": "inbound-limit",
+     "eid": 30367,
+     "forkBlock": 26513938,
+     "escrowSD": "185689071823",
+     "outcome": "INBOUND_LIMIT",
+     "revert": "InboundRateLimitExceeded()",
+     "maxAcceptedSD": "2000000000",
+     "proof": "small ok · full reverts (InboundRateLimitExceeded()) · max accepted 2000000000 SD (1.07% of escrow)"
+    },
+    {
+     "name": "inbound-limit",
+     "eid": 30383,
+     "forkBlock": 26513938,
+     "escrowSD": "185689071823",
+     "outcome": "INBOUND_LIMIT",
+     "revert": "InboundRateLimitExceeded()",
+     "maxAcceptedSD": "2000000000",
+     "proof": "small ok · full reverts (InboundRateLimitExceeded()) · max accepted 2000000000 SD (1.07% of escrow)"
+    },
+    {
+     "name": "inbound-limit",
+     "eid": 30390,
+     "forkBlock": 26513938,
+     "escrowSD": "185689071823",
+     "outcome": "INBOUND_LIMIT",
+     "revert": "InboundRateLimitExceeded()",
+     "maxAcceptedSD": "2000000000",
+     "proof": "small ok · full reverts (InboundRateLimitExceeded()) · max accepted 2000000000 SD (1.07% of escrow)"
+    },
+    {
+     "name": "inbound-limit",
+     "eid": 30396,
+     "forkBlock": 26513938,
+     "escrowSD": "185689071823",
+     "outcome": "INBOUND_LIMIT",
+     "revert": "InboundRateLimitExceeded()",
+     "maxAcceptedSD": "20000000",
+     "proof": "small ok · full reverts (InboundRateLimitExceeded()) · max accepted 20000000 SD (0.01% of escrow)"
+    },
+    {
+     "name": "inbound-limit",
+     "eid": 30416,
+     "forkBlock": 26513938,
+     "escrowSD": "185689071823",
+     "outcome": "INBOUND_LIMIT",
+     "revert": "InboundRateLimitExceeded()",
+     "maxAcceptedSD": "1000000000",
+     "proof": "small ok · full reverts (InboundRateLimitExceeded()) · max accepted 1000000000 SD (0.53% of escrow)"
+    },
+    {
+     "name": "inbound-limit",
+     "eid": 30417,
+     "forkBlock": 26513938,
+     "escrowSD": "185689071823",
+     "outcome": "INBOUND_LIMIT",
+     "revert": "InboundRateLimitExceeded()",
+     "maxAcceptedSD": "1000000000",
+     "proof": "small ok · full reverts (InboundRateLimitExceeded()) · max accepted 1000000000 SD (0.53% of escrow)"
+    }
+   ],
+   "crossCheck": "agree",
+   "weakestUnboundedVerifiers": null
   },
   {
    "oapp": "0xfe7fe01f8b9a76803af3750144c2715d9bcf7d0d",
@@ -475,6 +4983,167 @@
     30280,
     30303
    ],
+   "peers": {
+    "30102": "0x04c0599ae5a44757c0af6f9ec3b93da8976c150a",
+    "30110": "0x703956bea5f198d63379f28a2d6179cbd9c1c9c5",
+    "30111": "0x5a7facb970d094b6c7ff1df0ea68d99e6e73cbff",
+    "30165": "0xc1fa6e2e8667d9be0ca938a54c7e0285e9df924a",
+    "30183": "0x1bf74c010e6320bab11e2e5a532b5ac15e0b8aa6",
+    "30184": "0x04c0599ae5a44757c0af6f9ec3b93da8976c150a",
+    "30214": "0x01f0a31698c4d065659b9bdc21b3610292a1c506",
+    "30243": "0x04c0599ae5a44757c0af6f9ec3b93da8976c150a",
+    "30260": "0x04c0599ae5a44757c0af6f9ec3b93da8976c150a",
+    "30280": "0xfdfa0d084ab270ceffc6ae051da354c809a86007",
+    "30303": "0x88a19f30e1254b37b66899893ab1f73ad82bd2c3"
+   },
+   "routes": [
+    {
+     "eid": 30102,
+     "status": "LIVE",
+     "verifiers": 2,
+     "operators": [
+      "layerzero-labs",
+      "nethermind"
+     ],
+     "unmapped": [],
+     "library": "0xc02Ab410f0734EFa3F14628780e6e695156024C2",
+     "libraryIsDefault": true,
+     "confirmations": "64"
+    },
+    {
+     "eid": 30110,
+     "status": "LIVE",
+     "verifiers": 2,
+     "operators": [
+      "layerzero-labs",
+      "nethermind"
+     ],
+     "unmapped": [],
+     "library": "0xc02Ab410f0734EFa3F14628780e6e695156024C2",
+     "libraryIsDefault": true,
+     "confirmations": "64"
+    },
+    {
+     "eid": 30111,
+     "status": "LIVE",
+     "verifiers": 2,
+     "operators": [
+      "layerzero-labs",
+      "nethermind"
+     ],
+     "unmapped": [],
+     "library": "0xc02Ab410f0734EFa3F14628780e6e695156024C2",
+     "libraryIsDefault": true,
+     "confirmations": "64"
+    },
+    {
+     "eid": 30165,
+     "status": "LIVE",
+     "verifiers": 2,
+     "operators": [
+      "layerzero-labs",
+      "nethermind"
+     ],
+     "unmapped": [],
+     "library": "0xc02Ab410f0734EFa3F14628780e6e695156024C2",
+     "libraryIsDefault": true,
+     "confirmations": "64"
+    },
+    {
+     "eid": 30183,
+     "status": "LIVE",
+     "verifiers": 2,
+     "operators": [
+      "layerzero-labs",
+      "nethermind"
+     ],
+     "unmapped": [],
+     "library": "0xc02Ab410f0734EFa3F14628780e6e695156024C2",
+     "libraryIsDefault": true,
+     "confirmations": "64"
+    },
+    {
+     "eid": 30184,
+     "status": "LIVE",
+     "verifiers": 2,
+     "operators": [
+      "layerzero-labs",
+      "nethermind"
+     ],
+     "unmapped": [],
+     "library": "0xc02Ab410f0734EFa3F14628780e6e695156024C2",
+     "libraryIsDefault": true,
+     "confirmations": "64"
+    },
+    {
+     "eid": 30214,
+     "status": "LIVE",
+     "verifiers": 2,
+     "operators": [
+      "layerzero-labs",
+      "nethermind"
+     ],
+     "unmapped": [],
+     "library": "0xc02Ab410f0734EFa3F14628780e6e695156024C2",
+     "libraryIsDefault": true,
+     "confirmations": "64"
+    },
+    {
+     "eid": 30243,
+     "status": "LIVE",
+     "verifiers": 2,
+     "operators": [
+      "layerzero-labs",
+      "nethermind"
+     ],
+     "unmapped": [],
+     "library": "0xc02Ab410f0734EFa3F14628780e6e695156024C2",
+     "libraryIsDefault": true,
+     "confirmations": "64"
+    },
+    {
+     "eid": 30260,
+     "status": "LIVE",
+     "verifiers": 2,
+     "operators": [
+      "layerzero-labs",
+      "nethermind"
+     ],
+     "unmapped": [],
+     "library": "0xc02Ab410f0734EFa3F14628780e6e695156024C2",
+     "libraryIsDefault": true,
+     "confirmations": "64"
+    },
+    {
+     "eid": 30280,
+     "status": "LIVE",
+     "verifiers": 1,
+     "operators": [
+      "unmapped:0x000000000000000000000000000000000000dead"
+     ],
+     "unmapped": [
+      "0x000000000000000000000000000000000000dead"
+     ],
+     "library": "0xc02Ab410f0734EFa3F14628780e6e695156024C2",
+     "libraryIsDefault": true,
+     "confirmations": "5"
+    },
+    {
+     "eid": 30303,
+     "status": "LIVE",
+     "verifiers": 1,
+     "operators": [
+      "unmapped:0x000000000000000000000000000000000000dead"
+     ],
+     "unmapped": [
+      "0x000000000000000000000000000000000000dead"
+     ],
+     "library": "0xc02Ab410f0734EFa3F14628780e6e695156024C2",
+     "libraryIsDefault": true,
+     "confirmations": "64"
+    }
+   ],
+   "closedEids": [],
    "outcome": "UNKNOWN",
    "routeCounts": {
     "UNKNOWN": 11
@@ -483,7 +5152,7 @@
     {
      "name": "inbound-limit",
      "eid": 30102,
-     "forkBlock": 26513037,
+     "forkBlock": 26513938,
      "escrowSD": "0",
      "outcome": "UNKNOWN",
      "revert": "Error(ERC20: transfer amount exceeds balance)",
@@ -493,7 +5162,7 @@
     {
      "name": "inbound-limit",
      "eid": 30110,
-     "forkBlock": 26513037,
+     "forkBlock": 26513938,
      "escrowSD": "0",
      "outcome": "UNKNOWN",
      "revert": "Error(ERC20: transfer amount exceeds balance)",
@@ -503,7 +5172,7 @@
     {
      "name": "inbound-limit",
      "eid": 30111,
-     "forkBlock": 26513037,
+     "forkBlock": 26513938,
      "escrowSD": "0",
      "outcome": "UNKNOWN",
      "revert": "Error(ERC20: transfer amount exceeds balance)",
@@ -513,7 +5182,7 @@
     {
      "name": "inbound-limit",
      "eid": 30165,
-     "forkBlock": 26513037,
+     "forkBlock": 26513938,
      "escrowSD": "0",
      "outcome": "UNKNOWN",
      "revert": "Error(ERC20: transfer amount exceeds balance)",
@@ -523,7 +5192,7 @@
     {
      "name": "inbound-limit",
      "eid": 30183,
-     "forkBlock": 26513037,
+     "forkBlock": 26513938,
      "escrowSD": "0",
      "outcome": "UNKNOWN",
      "revert": "Error(ERC20: transfer amount exceeds balance)",
@@ -533,7 +5202,7 @@
     {
      "name": "inbound-limit",
      "eid": 30184,
-     "forkBlock": 26513037,
+     "forkBlock": 26513938,
      "escrowSD": "0",
      "outcome": "UNKNOWN",
      "revert": "Error(ERC20: transfer amount exceeds balance)",
@@ -543,7 +5212,7 @@
     {
      "name": "inbound-limit",
      "eid": 30214,
-     "forkBlock": 26513037,
+     "forkBlock": 26513938,
      "escrowSD": "0",
      "outcome": "UNKNOWN",
      "revert": "Error(ERC20: transfer amount exceeds balance)",
@@ -553,7 +5222,7 @@
     {
      "name": "inbound-limit",
      "eid": 30243,
-     "forkBlock": 26513037,
+     "forkBlock": 26513938,
      "escrowSD": "0",
      "outcome": "UNKNOWN",
      "revert": "Error(ERC20: transfer amount exceeds balance)",
@@ -563,7 +5232,7 @@
     {
      "name": "inbound-limit",
      "eid": 30260,
-     "forkBlock": 26513037,
+     "forkBlock": 26513938,
      "escrowSD": "0",
      "outcome": "UNKNOWN",
      "revert": "Error(ERC20: transfer amount exceeds balance)",
@@ -573,7 +5242,7 @@
     {
      "name": "inbound-limit",
      "eid": 30280,
-     "forkBlock": 26513037,
+     "forkBlock": 26513938,
      "escrowSD": "0",
      "outcome": "UNKNOWN",
      "revert": "Error(ERC20: transfer amount exceeds balance)",
@@ -583,7 +5252,7 @@
     {
      "name": "inbound-limit",
      "eid": 30303,
-     "forkBlock": 26513037,
+     "forkBlock": 26513938,
      "escrowSD": "0",
      "outcome": "UNKNOWN",
      "revert": "Error(ERC20: transfer amount exceeds balance)",
@@ -591,11 +5260,14 @@
      "proof": "escrow is empty: nothing to bound (1-unit credit reverts: Error(ERC20: transfer amount exceeds balance))"
     }
    ],
-   "crossCheck": "agree"
+   "crossCheck": "unavailable",
+   "weakestUnboundedVerifiers": null
   }
  ],
  "tally": {
+  "NO_INBOUND_LIMIT": 20,
   "NO_PEERS": 6,
+  "INBOUND_LIMIT": 3,
   "TEST_ERROR": 2,
   "UNKNOWN": 3
  },

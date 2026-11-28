@@ -49,9 +49,10 @@ Two documents. Attribute them correctly.
 |---|---|---|---|---|---|---|
 | `AAVE-RF-2.2` | LlamaRisk §2.2 | Effective independent verifiers per route (required + optional threshold, defaults resolved, operators deduped) | ≥3 | 2 | ≤1 | `EndpointV2.getConfig` / `ReceiveUln302.getUlnConfig`; DVN→operator map |
 | `AAVE-TALF-R7` | Aave Labs reply #7 | Same-entity / shared-infra collapse | distinct | — | collapses to 1 | operator map (curated) |
-| `AAVE-RF-2.4` | §2.4 | Receive library pinned | pinned, no grace period | grace period active | unpinned (`isDefault`) | `getReceiveLibrary`, `receiveLibraryTimeout` |
+| `AAVE-RF-2.4` | §2.4 | Receive library pinned | pinned, no grace period | grace period active, or unpinned on a route the default disables today (dead DVN) | unpinned (`isDefault`) on a live route | `getReceiveLibrary`, `receiveLibraryTimeout` |
 | `AAVE-RF-2.5` | §2.5 + TALF | Who can change bridge config; timelock | Safe ≥3 signers + timelock ≥24h | Safe, no timelock | EOA delegate/owner | `delegates()`, `owner()`, Safe `getThreshold/getOwners/getModulesPaginated`, guard slot, `getMinDelay` |
-| `AAVE-RF-2.8` | §2.8 | Inbound rate limit exists (fork-tested) | inbound bounded | outbound only | none | forged-message fork test ([09](09-inbound-limit-test.md)) |
+| `AAVE-RF-2.8` | §2.8 | Inbound rate limit exists (fork-tested) | inbound bounded | none (§2.8 makes it "a hard constraint on the asset's exposure tier", not a hard block; changed from BREACHED on 2026-11-28) | — | forged-message fork test ([09](09-inbound-limit-test.md)) |
+| `SCAN-COVERAGE` | AGENTS.md rule 2 | Every peer route resolved | all resolved (routes on BlockedMessageLib count as closed) | — | — (UNKNOWN when a receive route could not be read, or nothing resolved) | scan |
 | `AAVE-RF-2.9` | §2.9 | Inbound limit sized vs sustained flow | bounded headroom | — | unbounded | rate limiter config vs flow history |
 | `CONF-DEPTH` | TALF reply #7 | Confirmations vs chain reorg depth | ≥ chain norm | low | 0 / inherit weak default | ULN config |
 | `UPGRADE` | §2.5 | Proxy admin / implementation | timelock ≥48h | multisig | single key | EIP-1967 slots |

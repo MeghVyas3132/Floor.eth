@@ -10,6 +10,8 @@ import { readFileSync } from "node:fs";
 import { DEPLOYMENT } from "@floor/deployments";
 import ethRegistry from "../data/adapters-ethereum.json" with { type: "json" };
 import { oappAbi } from "./abis.js";
+import { ENDPOINT_V2 } from "./abis.js";
+import { effectiveReceiveRoute, type EffectiveRoute } from "./effective.js";
 import { confirmOutcome, harnessSelfCheck, probeInbound, useEndpoint } from "./inbound.js";
 import { batch, makeRpcs } from "./rpc.js";
 
@@ -29,11 +31,20 @@ const only = args.only ? new Set(args.only.toLowerCase().split(",")) : null;
 // LayerZero v2 mainnet endpoint ids run 30101..30600 (LZ metadata, 2026-11-07); scan to 30699 for headroom.
 const EIDS = Array.from({ length: 600 }, (_, i) => 30100 + i);
 
-async function peersOf(oapp: Address): Promise<number[]> {
+const CHAIN = args.chain ?? "ethereum";
+const ENDPOINT = chainReg ? getAddress(chainReg.endpoint) : ENDPOINT_V2;
+
+/** eid -> peer (bytes32) for every configured peer. */
+async function peerMap(oapp: Address): Promise<Map<number, Hex>> {
   const calls = EIDS.map((eid) => ({ to: oapp, sig: "peers", data: encodeFunctionData({ abi: oappAbi, functionName: "peers", args: [eid] }) }));
   const { results } = await batch([rpcs[0]!], calls, block);
-  return EIDS.filter((_, i) => results[i]!.ok && !/^0x0*$/.test(results[i]!.result as Hex));
+  const out = new Map<number, Hex>();
+  EIDS.forEach((eid, i) => {
+    if (results[i]!.ok && !/^0x0*$/.test(results[i]!.result as Hex)) out.set(eid, results[i]!.result as Hex);
+  });
+  return out;
 }
+const peersOf = async (oapp: Address) => [...(await peerMap(oapp)).keys()];
 
 // Negative control first: if the harness accepts a call from a non-endpoint address, every result is void.
 // Ethereum: the rsETH adapter (Arbitrum route). Other chains: the first adapter in the registry that has a peer.
@@ -55,26 +66,46 @@ const tally: Record<string, number> = {};
 /** Adapter-level outcome: any unbounded route makes the adapter unbounded. */
 const adapterOutcome = (outs: string[]) =>
   outs.includes("NO_INBOUND_LIMIT") ? "NO_INBOUND_LIMIT" : outs.length && outs.every((o) => o === "INBOUND_LIMIT") ? "INBOUND_LIMIT" : outs.includes("TEST_ERROR") ? "TEST_ERROR" : "UNKNOWN";
+/** "0x000…<20-byte address>" -> lowercase address (EVM peers); anything else kept as bytes32. */
+const peerAddr = (p: Hex) => (/^0x0{24}/i.test(p) ? `0x${p.slice(26)}`.toLowerCase() : p.toLowerCase());
 console.log(`inbound-limit probe @ block ${block} (${rpcs.map((r) => r.name).join(", ")})\n`);
 console.log(" symbol  adapter      kind     peers  adapter outcome    cross-check  routes");
 for (const a of registry.adapters) {
   if (only && !only.has(a.oapp)) continue;
   const oapp = getAddress(a.oapp);
   try {
-    const eids = await peersOf(oapp);
+    const pm = await peerMap(oapp);
+    const eids = [...pm.keys()];
+    const peers = Object.fromEntries([...pm].map(([e, p]) => [e, peerAddr(p)]));
     if (eids.length === 0) { console.log(` ${a.symbol.padEnd(7)} ${oapp.slice(0, 10)}   -        0      NO_PEERS (not an active route)`); tally.NO_PEERS = (tally.NO_PEERS ?? 0) + 1; rows.push({ ...a, eids, outcome: "NO_PEERS", results: [] }); continue; }
-    const { results, kind, sharedDecimals, tokenDecimals } = await probeInbound(rpcs, { oapp, symbol: a.symbol, eids }, block);
+    // Effective receive state per route (docs/07): a route on LayerZero's BlockedMessageLib, or one whose verifier
+    // set can never sign (dead DVN), cannot receive anything, so its app-layer limit is irrelevant. Probe only the rest.
+    const routes: EffectiveRoute[] = [];
+    for (const eid of eids) routes.push(await effectiveReceiveRoute(rpcs[0]!.client, ENDPOINT, oapp, eid, CHAIN, block));
+    const closed = routes.filter((r) => r.status === "CLOSED").map((r) => r.eid);
+    const probeEids = eids.filter((e) => !closed.includes(e));
+    if (probeEids.length === 0) {
+      console.log(` ${a.symbol.padEnd(7)} ${oapp.slice(0, 10)}   -        ${String(eids.length).padEnd(6)} NO_LIVE_ROUTES (every peer route is closed)`);
+      tally.NO_LIVE_ROUTES = (tally.NO_LIVE_ROUTES ?? 0) + 1;
+      rows.push({ ...a, eids, peers, routes, outcome: "NO_LIVE_ROUTES", results: [] });
+      continue;
+    }
+    const { results, kind, sharedDecimals, tokenDecimals } = await probeInbound(rpcs, { oapp, symbol: a.symbol, eids: probeEids }, block);
     const escrowSD = results[0]?.escrowSD ?? null;
     /** Whole-token escrow, using THIS adapter's shared decimals (never assume 6). */
     const escrowTokens = escrowSD === null ? null : Number(BigInt(escrowSD)) / 10 ** sharedDecimals;
     // Cross-check the decisive result of every route on a second provider.
-    const checks = rpcs[1] ? await Promise.all(results.map((r) => confirmOutcome(rpcs[1]!, { oapp, symbol: a.symbol, eids }, r))) : results.map(() => true);
+    const checks = rpcs.length > 1 ? await Promise.all(results.map((r) => confirmOutcome(rpcs.slice(1), { oapp, symbol: a.symbol, eids: probeEids }, r))) : results.map(() => "unavailable" as const);
     const routeCounts = results.reduce<Record<string, number>>((m, r) => ((m[r.outcome] = (m[r.outcome] ?? 0) + 1), m), {});
     const outcomes = adapterOutcome(results.map((r) => r.outcome));
     tally[outcomes] = (tally[outcomes] ?? 0) + 1;
-    const agree = checks.every(Boolean);
-    console.log(` ${a.symbol.padEnd(7)} ${oapp.slice(0, 10)}   ${kind.padEnd(8)} ${String(eids.length).padEnd(6)} ${outcomes.padEnd(18)} ${agree ? "agree" : "DISAGREE"}       ${Object.entries(routeCounts).map(([k, v]) => `${k}:${v}`).join(" ")}`);
-    rows.push({ ...a, kind, sharedDecimals, tokenDecimals, escrowTokens, eids, outcome: outcomes, routeCounts, results, crossCheck: agree ? "agree" : "disagree" });
+    const crossCheck = checks.includes("disagree") ? "disagree" : checks.includes("agree") ? (checks.includes("unavailable") ? "partial" : "agree") : "unavailable";
+    // Weakest LIVE route among those with no inbound limit: what an attacker would need to compromise to use it.
+    const unbounded = results.filter((r) => r.outcome === "NO_INBOUND_LIMIT").map((r) => routes.find((x) => x.eid === r.eid)!);
+    const known = unbounded.filter((r) => r.status === "LIVE" && r.verifiers !== null).map((r) => r.verifiers!);
+    const weakestUnboundedVerifiers = unbounded.length === 0 ? null : known.length === unbounded.length ? Math.min(...known) : null;
+    console.log(` ${a.symbol.padEnd(7)} ${oapp.slice(0, 10)}   ${kind.padEnd(8)} ${String(eids.length).padEnd(6)} ${outcomes.padEnd(18)} ${crossCheck.padEnd(12)} ${Object.entries(routeCounts).map(([k, v]) => `${k}:${v}`).join(" ")}${closed.length ? ` closed:${closed.length}` : ""}${weakestUnboundedVerifiers !== null ? ` weakest-unbounded-verifiers:${weakestUnboundedVerifiers}` : ""}`);
+    rows.push({ ...a, kind, sharedDecimals, tokenDecimals, escrowTokens, eids, peers, routes, closedEids: closed, outcome: outcomes, routeCounts, results, crossCheck, weakestUnboundedVerifiers });
   } catch (e) {
     console.log(` ${a.symbol.padEnd(7)} ${oapp.slice(0, 10)}   ERROR: ${(e as Error).message.split("\n")[0]}`);
     rows.push({ ...a, error: (e as Error).message.split("\n")[0] });

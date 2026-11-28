@@ -89,8 +89,33 @@ async function simulate(rpc: Rpc, oapp: Address, eid: number, peer: Hex, amountS
   } catch (e) {
     const err = e as { data?: Hex; cause?: { data?: Hex; cause?: { data?: Hex } }; walk?: (f: (x: unknown) => boolean) => { data?: Hex } | null };
     const raw = err.walk?.((x) => typeof (x as { data?: unknown }).data === "string")?.data ?? err.data ?? err.cause?.data ?? null;
+    // A transport failure (timeout, rate limit, provider error) is NOT a revert. Treating it as "revert (no data)"
+    // would read as "ran out of escrow" (looksBalance) and could fake a NO_INBOUND_LIMIT or a cap. Surface it instead.
+    if (!raw && !isExecutionRevert(e)) throw new ProbeRpcError(`${rpc.name}: ${(e as Error).message.split("\n")[0]}`);
     return { ok: false, data: (raw as Hex) ?? null, reason: describeRevert((raw as Hex) ?? null) };
   }
+}
+
+/** The RPC could not answer; the probe result for that route is unknown, not a finding. */
+export class ProbeRpcError extends Error {}
+
+/** true if the error is the EVM reverting (with or without data), as opposed to the RPC failing. */
+function isExecutionRevert(e: unknown): boolean {
+  const chain: unknown[] = [];
+  let cur: unknown = e;
+  for (let i = 0; cur && i < 8; i++) {
+    chain.push(cur);
+    cur = (cur as { cause?: unknown }).cause;
+  }
+  return chain.some((x) => {
+    const o = x as { name?: string; code?: number; details?: string; shortMessage?: string; message?: string };
+    return (
+      o.name === "ExecutionRevertedError" ||
+      o.name === "ContractFunctionRevertedError" ||
+      o.code === 3 ||
+      /execution reverted|reverted|revert/i.test(`${o.details ?? ""} ${o.shortMessage ?? ""}`)
+    );
+  });
 }
 
 export async function probeInbound(rpcs: Rpc[], t: ProbeTarget, block: bigint): Promise<{ results: ForkTestResult[]; kind: "adapter" | "mint"; token: Address; sharedDecimals: number; tokenDecimals: number }> {
@@ -126,6 +151,7 @@ export async function probeInbound(rpcs: Rpc[], t: ProbeTarget, block: bigint): 
   }
   for (const eid of t.eids) {
     const base = { name: "inbound-limit" as const, eid, forkBlock: Number(block), escrowSD: escrowSD?.toString() ?? null };
+    try {
     const peer = await read<Hex>(t.oapp, oftAbi, "peers", [eid]);
     if (/^0x0+$/.test(peer)) { results.push({ ...base, outcome: "TEST_ERROR", revert: "no peer", maxAcceptedSD: null, proof: "no peer configured" }); continue; }
     if (ceiling === 0n) {
@@ -169,16 +195,31 @@ export async function probeInbound(rpcs: Rpc[], t: ProbeTarget, block: bigint): 
     }
     const pct = Number((lo * 10000n) / ceiling) / 100;
     results.push({ ...base, outcome: "INBOUND_LIMIT", revert: full.reason, maxAcceptedSD: lo.toString(), proof: `small ok · full reverts (${full.reason}) · max accepted ${lo} SD (${pct}% of escrow)` });
+    } catch (e) {
+      if (!(e instanceof ProbeRpcError)) throw e;
+      // The RPC failed mid-ladder: this route's result is unknown. Never guess from a partial ladder.
+      results.push({ ...base, outcome: "UNKNOWN", revert: "rpc failure", maxAcceptedSD: null, proof: `probe could not finish: ${e.message}` });
+    }
   }
   return { results, kind, token, sharedDecimals: Number(sd), tokenDecimals: Number(dec) };
 }
 
-/** Cross-check: rerun the decisive outcome on another provider. */
-export async function confirmOutcome(rpc: Rpc, t: ProbeTarget, r: ForkTestResult): Promise<boolean> {
-  if (!r.maxAcceptedSD) return true;
-  const peer = (await rpc.client.readContract({ address: t.oapp, abi: oftAbi, functionName: "peers", args: [r.eid], blockNumber: BigInt(r.forkBlock) })) as Hex;
-  const ok = await simulate(rpc, t.oapp, r.eid, peer, BigInt(r.maxAcceptedSD), BigInt(r.forkBlock), 777);
-  return ok.ok;
+/**
+ * Cross-check: rerun the decisive outcome on other providers, in order, until one answers.
+ * "unavailable" (no secondary could answer) is reported as such; it never turns a result into an error.
+ */
+export async function confirmOutcome(rpcs: Rpc[], t: ProbeTarget, r: ForkTestResult): Promise<"agree" | "disagree" | "unavailable" | "n/a"> {
+  if (!r.maxAcceptedSD) return "n/a";
+  for (const rpc of rpcs) {
+    try {
+      const peer = (await rpc.client.readContract({ address: t.oapp, abi: oftAbi, functionName: "peers", args: [r.eid], blockNumber: BigInt(r.forkBlock) })) as Hex;
+      const ok = await simulate(rpc, t.oapp, r.eid, peer, BigInt(r.maxAcceptedSD), BigInt(r.forkBlock), 777);
+      return ok.ok ? "agree" : "disagree";
+    } catch {
+      continue; // this provider cannot serve the call (no archive state, rate limit, rejects state overrides): try the next
+    }
+  }
+  return "unavailable";
 }
 
 /**

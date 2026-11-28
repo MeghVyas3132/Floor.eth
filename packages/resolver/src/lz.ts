@@ -1,5 +1,5 @@
 import type { AssetState, ControllerState, EvidenceCall, RouteState, UlnConfig } from "@floor/core";
-import { decodeFunctionResult, encodeFunctionData, getAddress, zeroAddress, type Abi, type Address, type Hex } from "viem";
+import { decodeFunctionResult, encodeFunctionData, getAddress, parseAbi, zeroAddress, type Abi, type Address, type Hex } from "viem";
 import { ENDPOINT_V2, SAFE_GUARD_SLOT, SAFE_SENTINEL, endpointAbi, oappAbi, safeAbi, timelockAbi, ulnAbi } from "./abis.js";
 import { batch, type Rpc } from "./rpc.js";
 
@@ -13,7 +13,10 @@ export interface ScanOptions {
 }
 
 const ZERO32 = `0x${"0".repeat(64)}` as Hex;
-const DEFAULT_EIDS = Array.from({ length: 30500 - 30100 }, (_, i) => 30100 + i);
+/** LayerZero v2 mainnet eids run 30101..30600 (LZ metadata, 2026-11-07); same headroom as the inbound probe (30100..30699). */
+const DEFAULT_EIDS = Array.from({ length: 600 }, (_, i) => 30100 + i);
+/** BlockedMessageLib.version() = (type(uint64).max, type(uint8).max, 2): see effective.ts. */
+const libVersionAbi = parseAbi(["function version() view returns (uint64 major, uint8 minor, uint8 endpointVersion)"]);
 
 /** Collects every read as evidence, then decodes. One instance per scan. */
 class Recorder {
@@ -132,8 +135,23 @@ export async function scanOApp(o: ScanOptions): Promise<AssetState> {
   });
   const cfg = await rec.run(cfgReqs as never);
 
+  // Receive routes whose config read failed: is the library LayerZero's BlockedMessageLib (route closed)?
+  const failedRecv = peers.map((p, i) => ({ p, i })).filter(({ i }) => lib[i * 4]!.ok && !cfg[i * 4]!.ok);
+  const ver = failedRecv.length
+    ? await rec.run(failedRecv.map(({ i }) => ({ abi: libVersionAbi, fn: "version", to: (lib[i * 4]!.value as readonly [Address, boolean])[0], args: [] })) as never)
+    : [];
+  const closedEids = new Set<number>();
+  failedRecv.forEach(({ p }, k) => {
+    const v = ver[k]!;
+    if (v.ok) {
+      const [major, minor, ev] = v.value as readonly [bigint, number, number];
+      if (major === (1n << 64n) - 1n && Number(minor) === 255 && Number(ev) === 2) closedEids.add(p.eid);
+    }
+  });
+
   const routes: RouteState[] = [];
   const unresolved: string[] = [];
+  const closed: string[] = [];
   peers.forEach((p, i) => {
     const [rl, rt, sl, sd] = [lib[i * 4]!, lib[i * 4 + 1]!, lib[i * 4 + 2]!, lib[i * 4 + 3]!];
     const [re, ra, se, sa] = [cfg[i * 4]!, cfg[i * 4 + 1]!, cfg[i * 4 + 2]!, cfg[i * 4 + 3]!];
@@ -146,14 +164,15 @@ export async function scanOApp(o: ScanOptions): Promise<AssetState> {
         effective: toUln(re.value as UlnTuple), app: ra.ok ? toUln(ra.value as UlnTuple) : null,
         evidence: [p.id, rl.id, rt.id, re.id, ra.id],
       });
-    } else unresolved.push(`receive:${p.eid}`);
+    } else if (closedEids.has(p.eid)) closed.push(`receive:${p.eid}`);
+    else unresolved.push(`receive:${p.eid}`);
     if (sl.ok && se.ok) {
       routes.push({
         eid: p.eid, direction: "send", peer: p.peer, library: getAddress(sl.value as Address), libraryIsDefault: sd.ok ? (sd.value as boolean) : false,
         timeout: null, effective: toUln(se.value as UlnTuple), app: sa.ok ? toUln(sa.value as UlnTuple) : null,
         evidence: [p.id, sl.id, sd.id, se.id, sa.id],
       });
-    } else unresolved.push(`send:${p.eid}`);
+    } else unresolved.push(`send:${p.eid}`); // send side is recorded, not graded (inbound security is decided on receive)
   });
   if (unresolved.length) console.warn(`[scan] unresolved routes (non-ULN library or failed read): ${unresolved.join(", ")}`);
 
@@ -179,5 +198,6 @@ export async function scanOApp(o: ScanOptions): Promise<AssetState> {
     forkTests: [],
     calls: rec.calls,
     ...(unresolved.length ? { unresolved } : {}),
+    ...(closed.length ? { closed } : {}),
   } as AssetState;
 }

@@ -84,6 +84,10 @@ export interface AssetState {
   controllers: ControllerState[];
   forkTests: ForkTestResult[];
   calls: EvidenceCall[];
+  /** Routes with a peer whose state could not be read (failed read, or a non-ULN library): graded UNKNOWN, never dropped. */
+  unresolved?: string[];
+  /** Routes with a peer whose receive library is LayerZero's BlockedMessageLib: nothing can be received on them. */
+  closed?: string[];
 }
 
 export interface OperatorInfo {
@@ -116,5 +120,7 @@ export interface Verdict {
   rulePack: { id: string; version: string; framework: string };
   routes: RouteVerdict[];
   controllers: RuleResult[];
+  /** Scan coverage: routes that could not be resolved, or no route resolved at all (present only when non-empty). */
+  coverage?: RuleResult[];
   summary: string[];
 }

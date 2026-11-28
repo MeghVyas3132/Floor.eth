@@ -102,8 +102,12 @@ export function ruleVerifiers(r: RouteState, map: OperatorMap): { result: RuleRe
   return { ind, result: rule("AAVE-RF-2.2", "BREACHED", `${base} (<3; single effective verifier is below bar)`, ev) };
 }
 
-export function rulePinned(r: RouteState, block: number): RuleResult | null {
+export function rulePinned(r: RouteState, block: number, routeDisabled = false): RuleResult | null {
   if (r.direction !== "receive") return null;
+  // A route the default config disables today (dead DVN) still follows defaults LayerZero can change (docs/07 rule 8):
+  // a real but latent risk, so DEGRADED rather than BREACHED.
+  if (r.libraryIsDefault && routeDisabled)
+    return rule("AAVE-RF-2.4", "DEGRADED", "receive library unpinned; the route is disabled today, but follows defaults LayerZero can change", r.evidence);
   if (r.libraryIsDefault)
     return rule("AAVE-RF-2.4", "BREACHED", "receive library unpinned (follows endpoint default)", r.evidence);
   if (r.timeout && BigInt(r.timeout.expiry) > BigInt(block))
@@ -120,7 +124,10 @@ export function ruleInbound(r: RouteState, s: AssetState): RuleResult | null {
     case "INBOUND_LIMIT":
       return rule("AAVE-RF-2.8", "OK", "app-level inbound limit present (fork-tested)", ev);
     case "NO_INBOUND_LIMIT":
-      return rule("AAVE-RF-2.8", "BREACHED", "no app-level inbound limit (fork-tested; not a claim of drainability)", ev);
+      // §2.8: routes without effective rate limits "carrying material Aave exposure are treated as a hard constraint on
+      // the asset's exposure tier" (docs/04). That is a cap on exposure, not a hard block like §2.2, so DEGRADED.
+      // Whether one message can actually be approved is §2.2's job (verifiers), not this rule's.
+      return rule("AAVE-RF-2.8", "DEGRADED", "no app-level inbound limit (fork-tested; caps the exposure tier; not a claim of drainability)", ev);
     default:
       return rule("AAVE-RF-2.8", "UNKNOWN", `fork test inconclusive: ${t.outcome}${t.revert ? ` (${t.revert})` : ""}`, ev);
   }
@@ -157,7 +164,7 @@ const gradeOf = (rs: RuleResult[]): Grade =>
 export function evaluate(s: AssetState, map: OperatorMap): Verdict {
   const routes: RouteVerdict[] = s.routes.map((r) => {
     const { result, ind } = ruleVerifiers(r, map);
-    const results = [result, rulePinned(r, s.scan.block), ruleInbound(r, s)].filter((x): x is RuleResult => !!x);
+    const results = [result, rulePinned(r, s.scan.block, ind.blocked), ruleInbound(r, s)].filter((x): x is RuleResult => !!x);
     return {
       eid: r.eid,
       direction: r.direction,
@@ -168,7 +175,14 @@ export function evaluate(s: AssetState, map: OperatorMap): Verdict {
     };
   });
   const controllers = s.controllers.map(ruleController).filter((x): x is RuleResult => !!x);
-  const grade = worst([...routes.map((r) => r.grade), gradeOf(controllers)]);
+  // Failed reads are UNKNOWN, never silently dropped (AGENTS.md rule 2). Closed routes (blocked library) are not counted.
+  const coverage: RuleResult[] = [];
+  const unresolvedRecv = (s.unresolved ?? []).filter((u) => u.startsWith("receive:"));
+  if (unresolvedRecv.length)
+    coverage.push(rule("SCAN-COVERAGE", "UNKNOWN", `${unresolvedRecv.length} receive route(s) with a peer could not be resolved: ${unresolvedRecv.join(", ")}`, []));
+  if (routes.length === 0 && (s.closed ?? []).length === 0)
+    coverage.push(rule("SCAN-COVERAGE", "UNKNOWN", "no route resolved: nothing to grade", []));
+  const grade = worst([...routes.map((r) => r.grade), gradeOf(controllers), gradeOf(coverage)]);
 
   const recv = routes.filter((r) => r.direction === "receive");
   const single = recv.filter((r) => r.effectiveIndependent === 1).length;
@@ -177,7 +191,9 @@ export function evaluate(s: AssetState, map: OperatorMap): Verdict {
     `${recv.length} receive route(s) at block ${s.scan.block}`,
     `${single} with a single effective verifier`,
     `${unpinned} with an unpinned receive library`,
+    ...((s.closed ?? []).length ? [`${s.closed!.length} route(s) closed (blocked library)`] : []),
     ...controllers.map((c) => c.reason),
+    ...coverage.map((c) => c.reason),
   ];
-  return { grade, rulePack: { ...RULE_PACK }, routes, controllers, summary };
+  return { grade, rulePack: { ...RULE_PACK }, routes, controllers, ...(coverage.length ? { coverage } : {}), summary };
 }

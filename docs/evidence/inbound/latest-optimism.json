@@ -1,5 +1,5 @@
 {
- "block": 160131185,
+ "block": 160137100,
  "rpcs": [
   "mainnet.optimism.io",
   "optimism-rpc.publicnode.com"
@@ -20,6 +20,43 @@
     30106,
     30110
    ],
+   "peers": {
+    "30106": "0xac800fd6159c2a2cb8fc31ef74621eb430287a5a",
+    "30110": "0xac800fd6159c2a2cb8fc31ef74621eb430287a5a"
+   },
+   "routes": [
+    {
+     "eid": 30106,
+     "status": "LIVE",
+     "verifiers": 4,
+     "operators": [
+      "canary",
+      "layerzero-labs",
+      "horizen-labs",
+      "nethermind"
+     ],
+     "unmapped": [],
+     "library": "0x3c4962Ff6258dcfCafD23a814237B7d6Eb712063",
+     "libraryIsDefault": true,
+     "confirmations": "12"
+    },
+    {
+     "eid": 30110,
+     "status": "LIVE",
+     "verifiers": 4,
+     "operators": [
+      "canary",
+      "layerzero-labs",
+      "horizen-labs",
+      "nethermind"
+     ],
+     "unmapped": [],
+     "library": "0x3c4962Ff6258dcfCafD23a814237B7d6Eb712063",
+     "libraryIsDefault": true,
+     "confirmations": "20"
+    }
+   ],
+   "closedEids": [],
    "outcome": "NO_INBOUND_LIMIT",
    "routeCounts": {
     "NO_INBOUND_LIMIT": 2
@@ -28,7 +65,7 @@
     {
      "name": "inbound-limit",
      "eid": 30106,
-     "forkBlock": 160131185,
+     "forkBlock": 160137100,
      "escrowSD": "368061663677",
      "outcome": "NO_INBOUND_LIMIT",
      "revert": null,
@@ -38,7 +75,7 @@
     {
      "name": "inbound-limit",
      "eid": 30110,
-     "forkBlock": 160131185,
+     "forkBlock": 160137100,
      "escrowSD": "368061663677",
      "outcome": "NO_INBOUND_LIMIT",
      "revert": null,
@@ -46,7 +83,8 @@
      "proof": "full escrow released in one inbound message · full+1 reverts (Error(ERC20: transfer amount exceeds balance)) → escrow is the only ceiling"
     }
    ],
-   "crossCheck": "agree"
+   "crossCheck": "agree",
+   "weakestUnboundedVerifiers": 4
   }
  ],
  "tally": {

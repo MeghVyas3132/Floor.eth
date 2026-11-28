@@ -26,7 +26,7 @@ import {
 } from "@chainlink/cre-sdk";
 import { type Address, type Hex, zeroAddress } from "viem";
 import { z } from "zod";
-import { decodeUlnConfigSet, encodeReport, eventEntry, feedSchema, planReads, ulnConfigCall, ULN_CONFIG_SET_TOPIC, verifyEntry, type Feed } from "./logic";
+import { decodeUlnConfigSet, encodeReport, eventEntry, feedSchema, planReads, receiveLibraryCall, ulnConfigCall, ULN_CONFIG_SET_TOPIC, verifyEntry, type Feed } from "./logic";
 
 export const configSchema = z.object({
   schedule: z.string(),
@@ -42,6 +42,8 @@ export const configSchema = z.object({
   /** Event path: LayerZero receive library to watch on the source chain, and which adapter maps to which rated asset. */
   receiveLib: z.string(),
   watch: z.array(z.object({ oapp: z.string(), asset: z.string() })),
+  /** LayerZero EndpointV2 on the source chain (same address on most chains); used to read the library in use. */
+  endpoint: z.string(),
   ruleVersion: z.number(),
 });
 export type Config = z.infer<typeof configSchema>;
@@ -112,12 +114,17 @@ export const onConfigChange = (runtime: Runtime<Config>, log: { address: Uint8Ar
   const src = getNetwork({ chainFamily: "evm", chainSelectorName: cfg.sourceChainSelectorName, isTestnet: false });
   const dst = getNetwork({ chainFamily: "evm", chainSelectorName: cfg.registryChainSelectorName, isTestnet: cfg.isTestnet });
   if (!src || !dst) throw new Error("unknown chain selector name");
-  const read = new EVMClient(src.chainSelector.selector)
+  const evm = new EVMClient(src.chainSelector.selector);
+  const read = evm
     .callContract(runtime, { call: encodeCallMsg({ from: zeroAddress, to: lib, data: ulnConfigCall(oapp, eid) }), blockNumber: blockNumber(block) })
     .result();
-  const entry = eventEntry({ asset: watched.asset as Address, lib, oapp, eid, block: Number(block), read: bytesToHex(read.data) as Hex, ruleVersion: cfg.ruleVersion });
+  // Which library does the OApp actually receive through at that block? A config on an unused library is no downgrade.
+  const active = evm
+    .callContract(runtime, { call: encodeCallMsg({ from: zeroAddress, to: cfg.endpoint as Address, data: receiveLibraryCall(oapp, eid) }), blockNumber: blockNumber(block) })
+    .result();
+  const entry = eventEntry({ asset: watched.asset as Address, lib, oapp, eid, block: Number(block), read: bytesToHex(read.data) as Hex, ruleVersion: cfg.ruleVersion, activeLibRead: bytesToHex(active.data) as Hex });
   if (!entry) {
-    runtime.log(`${watched.asset}: route ${eid} changed in tx ${tx} at block ${block}; config read at that block keeps more than one verifier: no downgrade, full re-scan decides`);
+    runtime.log(`${watched.asset}: route ${eid} changed in tx ${tx} at block ${block}; no downgrade (more than one verifier, a disabled route, or a library the OApp does not use): full re-scan decides`);
     return { written: 0 };
   }
   runtime.log(`${watched.asset}: route ${eid} changed in tx ${tx} at block ${block}; config read at that block needs ONE verifier -> BREACHED`);

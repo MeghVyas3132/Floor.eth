@@ -1,6 +1,6 @@
 import { describe, expect, it } from "vitest";
 import { readFileSync } from "node:fs";
-import { createPublicClient, decodeAbiParameters, http, type Hex } from "viem";
+import { createPublicClient, decodeAbiParameters, encodeAbiParameters, http, type Hex } from "viem";
 import { mainnet } from "viem/chains";
 import feedJson from "../fixtures/feed-rseth-prehack.json" with { type: "json" };
 import { decodeUlnConfigSet, encodeReport, eventEntry, feedSchema, GRADE, impliedFloor, planReads, verifyEntry, type Entry } from "../logic";
@@ -101,6 +101,23 @@ describe("event path: CRE reacts to Kelp's real Apr 2 2025 config change", () =>
     const entry = eventEntry({ asset: RSETH, lib: fx.lib, oapp: e.oapp, eid: e.eid, block: fx.block, read: fx.readAt, ruleVersion: 100 });
     expect(entry?.grade).toBe("BREACHED");
     expect(entry?.scanBlock).toBe(22179964);
+  });
+  it("with the library in use read at that block (the one that emitted the change), still BREACHED", () => {
+    const e = decodeUlnConfigSet(fx.logData);
+    const entry = eventEntry({ asset: RSETH, lib: fx.lib, oapp: e.oapp, eid: e.eid, block: fx.block, read: fx.readAt, ruleVersion: 100, activeLibRead: fx.activeLibAt });
+    expect(entry?.grade).toBe("BREACHED");
+  });
+  it("a config written to a library the OApp does not use is never a downgrade (Frax on Metis, 2026)", () => {
+    const e = decodeUlnConfigSet(fx.logData);
+    const blocked = encodeAbiParameters([{ type: "address" }, { type: "bool" }], ["0x1ccBf0db9C192d969de57E25B3fF09A25bb1D862", false]);
+    expect(eventEntry({ asset: RSETH, lib: fx.lib, oapp: e.oapp, eid: e.eid, block: fx.block, read: fx.readAt, ruleVersion: 100, activeLibRead: blocked })).toBeNull();
+  });
+  it("a route whose required verifier is LZDeadDVN is disabled, not BREACHED", () => {
+    const dead = encodeAbiParameters(
+      [{ type: "tuple", components: [{ type: "uint64" }, { type: "uint8" }, { type: "uint8" }, { type: "uint8" }, { type: "address[]" }, { type: "address[]" }] }],
+      [[15n, 1, 0, 0, ["0x747C741496a507E4B404b50463e691A8d692f6Ac"], []]],
+    );
+    expect(impliedFloor({ id: "d", to: fx.lib, sig: "getUlnConfig", data: "0x", result: dead })).toBe(GRADE.OK);
   });
   it("after Kelp's fix (4 required verifiers) the same route is not a downgrade", () => {
     const e = decodeUlnConfigSet(fx.logData);
